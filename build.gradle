@@ -1,5 +1,5 @@
 group = 'com.aspose'
-project.version = '18.9'
+project.version = '19.2'
 
 buildscript {
     repositories {
@@ -106,12 +106,4 @@ artifacts {
     archives sourcesJar
 }
 
-//publish {
-//    groupId = 'com.aspose'
-//    artifactId = 'aspose-cloud-cell-android'
-//    publishVersion = '18.9.0'
-//    desc = 'Aspose.Cells Cloud is a REST API for creating and editing Excel files. It can also be used to convert Excel files to different formats like PDF, HTML, XPS, TIFF and many more.'
-//    licences = ['MIT']
-//    website = 'https://products.aspose.cloud/cells/cloud'
-//    repository = 'https://github.com/aspose-cells-cloud/aspose-cells-cloud-android.git'
-//}
+
