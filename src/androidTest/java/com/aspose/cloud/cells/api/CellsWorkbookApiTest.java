@@ -537,19 +537,19 @@ public class CellsWorkbookApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
-    public void cellsWorkbookPutConvertWorkbookTest() throws ApiException {
-        String format ="xlsx";
-        String password = null;
-        String outPath = null;
-        String name = BOOK1;
-        String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        File response = api.cellsWorkbookPutConvertWorkbook(format, password, outPath);
-
-        // TODO: test validations
-    }
-    
+//    @Test
+//    public void cellsWorkbookPutConvertWorkbookTest() throws ApiException {
+//        String format ="xlsx";
+//        String password = null;
+//        String outPath = null;
+//        String name = BOOK1;
+//        String folder = TEMPFOLDER;
+//		api.setApiClient( CellsApiUtil.Ready(folder, name));
+//        File response = api.cellsWorkbookPutConvertWorkbook(format, password, outPath);
+//
+//        // TODO: test validations
+//    }
+//
     /**
      * Protect document from changes.
      *
