@@ -21,6 +21,10 @@ import com.aspose.cloud.cells.model.ImportIntArrayOption;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import com.aspose.cloud.cells.model.NameResponse;
 import com.aspose.cloud.cells.model.NamesResponse;
@@ -184,7 +188,27 @@ public class CellsWorkbookApiTest {
 
         // TODO: test validations
     }
-    
+    /**
+     * Read workbook info or export.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void cellsWorkbookGetWorkbookForMDTest() throws ApiException {
+       String name = BOOK1;
+        String password = null;
+        Boolean isAutoFit = true;
+        Boolean onlySaveTable = true;
+        String format = "md";
+        String folder = TEMPFOLDER;
+		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        File response = api.cellsWorkbookGetWorkbook(name, password, format, isAutoFit, onlySaveTable, folder,null,null);
+
+        // TODO: test validations
+    }
     /**
      * Read workbook default style info.
      *
@@ -528,28 +552,8 @@ public class CellsWorkbookApiTest {
 
         // TODO: test validations
     }
+        
     
-    /**
-     * Convert workbook from request content to some format.
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-//    @Test
-//    public void cellsWorkbookPutConvertWorkbookTest() throws ApiException {
-//        String format ="xlsx";
-//        String password = null;
-//        String outPath = null;
-//        String name = BOOK1;
-//        String folder = TEMPFOLDER;
-//		api.setApiClient( CellsApiUtil.Ready(folder, name));
-//        File response = api.cellsWorkbookPutConvertWorkbook(format, password, outPath);
-//
-//        // TODO: test validations
-//    }
-//
     /**
      * Protect document from changes.
      *
