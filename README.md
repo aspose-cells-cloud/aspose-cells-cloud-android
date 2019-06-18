@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-cells-android</artifactId>
-    <version>19.2.1</version>
+    <version>19.6</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-cells-android-19.2.1.jar
+* target/aspose-cloud-cells-android-19.6.jar
 * target/lib/*.jar
 
 ## Getting Started
