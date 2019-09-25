@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operateType** | **String** |  |  [optional]
 **index** | **Integer** |  |  [optional]
 **endIndex** | **Integer** |  |  [optional]
 **column** | **Integer** |  |  [optional]

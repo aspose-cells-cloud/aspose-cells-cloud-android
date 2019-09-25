@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operateType** | **String** |  |  [optional]
 **pivotFieldColumns** | **List&lt;Integer&gt;** |  |  [optional]
 **pivotTableIndex** | **Integer** |  |  [optional]
 **tableName** | **String** |  |  [optional]

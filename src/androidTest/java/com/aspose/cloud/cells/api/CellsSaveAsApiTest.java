@@ -12,12 +12,22 @@
 
 
 package com.aspose.cloud.cells.api;
+import com.aspose.cloud.cells.client.ApiClient;
 import com.aspose.cloud.cells.client.ApiException;
+import com.aspose.cloud.cells.client.Configuration;
 
 
 import com.aspose.cloud.cells.model.SaveOptions;
 import com.aspose.cloud.cells.model.SaveResponse;
+
 import org.junit.Test;
+import org.junit.Ignore;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for CellsSaveAsApi
@@ -25,7 +35,7 @@ import org.junit.Test;
 
 public class CellsSaveAsApiTest {
 
-    private final CellsSaveAsApi api = new CellsSaveAsApi();
+    private  CellsApi api;
 
     private String BOOK1 = "Book1.xlsx";
     private String MYDOC = "myDocument.xlsx";
@@ -44,7 +54,14 @@ public class CellsSaveAsApiTest {
     private String CELLAREA = "A1:C10";
     
 	
-    
+    public CellsSaveAsApiTest(){
+    	try {
+			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret());
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }  	
     /**
      * Convert document and save result to storage.
      *
@@ -61,7 +78,7 @@ public class CellsSaveAsApiTest {
         Boolean isAutoFitRows = true;
         Boolean isAutoFitColumns = false;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         SaveResponse response = api.cellsSaveAsPostDocumentSaveAs(name, saveOptions, newfilename, isAutoFitRows, isAutoFitColumns, folder,null);
 
         // TODO: test validations
@@ -82,7 +99,7 @@ public class CellsSaveAsApiTest {
         Boolean isAutoFitRows = true;
         Boolean isAutoFitColumns = false;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         SaveResponse response = api.cellsSaveAsPostDocumentSaveAs(name, saveOptions, newfilename, isAutoFitRows, isAutoFitColumns, folder,null);
 
         // TODO: test validations

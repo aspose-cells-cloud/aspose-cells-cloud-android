@@ -12,13 +12,23 @@
 
 
 package com.aspose.cloud.cells.api;
+import com.aspose.cloud.cells.client.ApiClient;
 import com.aspose.cloud.cells.client.ApiException;
+import com.aspose.cloud.cells.client.Configuration;
 
 
 import com.aspose.cloud.cells.model.CellsDocumentPropertiesResponse;
 import com.aspose.cloud.cells.model.CellsDocumentProperty;
 import com.aspose.cloud.cells.model.CellsDocumentPropertyResponse;
+
 import org.junit.Test;
+import org.junit.Ignore;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for CellsPropertiesApi
@@ -26,7 +36,7 @@ import org.junit.Test;
 
 public class CellsPropertiesApiTest {
 
-    private final CellsPropertiesApi api = new CellsPropertiesApi();
+    private CellsApi api;
 
     private String BOOK1 = "Book1.xlsx";
     private String MYDOC = "myDocument.xlsx";
@@ -45,7 +55,14 @@ public class CellsPropertiesApiTest {
     private String CELLAREA = "A1:C10";
     
 	
-    
+    public CellsPropertiesApiTest(){
+    	try {
+			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret());
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }  	
     /**
      * Delete all custom document properties and clean built-in ones.
      *
@@ -58,7 +75,7 @@ public class CellsPropertiesApiTest {
     public void cellsPropertiesDeleteDocumentPropertiesTest() throws ApiException {
         String name = BOOK1;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         CellsDocumentPropertiesResponse response = api.cellsPropertiesDeleteDocumentProperties(name, folder,null);
 
         // TODO: test validations
@@ -77,7 +94,7 @@ public class CellsPropertiesApiTest {
         String name = BOOK1;
         String propertyName = "Author";
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         CellsDocumentPropertiesResponse response = api.cellsPropertiesDeleteDocumentProperty(name, propertyName, folder,null);
 
         // TODO: test validations
@@ -95,7 +112,7 @@ public class CellsPropertiesApiTest {
     public void cellsPropertiesGetDocumentPropertiesTest() throws ApiException {
         String name = BOOK1;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         CellsDocumentPropertiesResponse response = api.cellsPropertiesGetDocumentProperties(name, folder,null);
 
         // TODO: test validations
@@ -114,7 +131,7 @@ public class CellsPropertiesApiTest {
         String name = BOOK1;
         String propertyName ="Author";
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         CellsDocumentPropertyResponse response = api.cellsPropertiesGetDocumentProperty(name, propertyName, folder,null);
 
         // TODO: test validations
@@ -136,7 +153,7 @@ public class CellsPropertiesApiTest {
         property.setName("Name");
         property.setValue("Roy");
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         CellsDocumentPropertyResponse response = api.cellsPropertiesPutDocumentProperty(name, propertyName, property, folder,null);
 
         // TODO: test validations

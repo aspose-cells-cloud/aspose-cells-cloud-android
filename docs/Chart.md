@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 **gapDepth** | **Integer** | Gets or sets the distance between the data series in a 3-D chart, as a percentage of the marker width.The value of this property must be between 0 and 500. |  [optional]
 **shapes** | [**LinkElement**](LinkElement.md) | Returns all drawing shapes in this chart. |  [optional]
 **wallsAndGridlines2D** | **Boolean** | True if gridlines are drawn two-dimensionally on a 3-D chart. |  [optional]
-**nSeries** | [**LinkElement**](LinkElement.md) | Gets a SeriesCollection collection representing the data series in the chart. |  [optional]
+**nseries** | [**LinkElement**](LinkElement.md) | Gets a SeriesCollection collection representing the data series in the chart. |  [optional]
 **rotationAngle** | **Integer** | Represents the rotation of the 3-D chart view (the rotation of the plot area around the z-axis, in degrees). |  [optional]
 **plotArea** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s plot area which includes axis tick lables. |  [optional]
 **categoryAxis** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s X axis. The property is read only |  [optional]

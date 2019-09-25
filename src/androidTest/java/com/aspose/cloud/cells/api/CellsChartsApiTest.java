@@ -12,19 +12,30 @@
 
 
 package com.aspose.cloud.cells.api;
+import com.aspose.cloud.cells.client.ApiClient;
 import com.aspose.cloud.cells.client.ApiException;
+import com.aspose.cloud.cells.client.Configuration;
 
 
 import com.aspose.cloud.cells.model.Chart;
 import com.aspose.cloud.cells.model.ChartsResponse;
+
 import java.io.File;
+
 import com.aspose.cloud.cells.model.Legend;
 import com.aspose.cloud.cells.model.LegendResponse;
-import com.aspose.cloud.cells.model.SaaSposeResponse;
+import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.Title;
 import com.aspose.cloud.cells.model.TitleResponse;
+
 import org.junit.Test;
 import org.junit.Ignore;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for CellsChartsApi
@@ -32,7 +43,7 @@ import org.junit.Ignore;
 
 public class CellsChartsApiTest {
 
-    private final CellsChartsApi api = new CellsChartsApi();
+    private  CellsApi api ;
 
     private String BOOK1 = "Book1.xlsx";
     private String MYDOC = "myDocument.xlsx";
@@ -50,7 +61,14 @@ public class CellsChartsApiTest {
     private String RANGE = "A1:C10";
     private String CELLAREA = "A1:C10";
     
-	
+    public CellsChartsApiTest(){
+    	try {
+			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret());
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
     
     /**
      * Hide legend in chart
@@ -66,8 +84,8 @@ public class CellsChartsApiTest {
         String sheetName = SHEET3;
         Integer chartIndex = 1;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsChartsDeleteWorksheetChartLegend(name, sheetName, chartIndex, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsChartsDeleteWorksheetChartLegend(name, sheetName, chartIndex, folder,null);
 
         // TODO: test validations
     }
@@ -86,8 +104,8 @@ public class CellsChartsApiTest {
         String sheetName = SHEET3;
         Integer chartIndex = 0;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsChartsDeleteWorksheetChartTitle(name, sheetName, chartIndex, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsChartsDeleteWorksheetChartTitle(name, sheetName, chartIndex, folder,null);
 
         // TODO: test validations
     }
@@ -105,8 +123,8 @@ public class CellsChartsApiTest {
         String name = MYDOC;
         String sheetName = SHEET3;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsChartsDeleteWorksheetClearCharts(name, sheetName, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsChartsDeleteWorksheetClearCharts(name, sheetName, folder,null);
 
         // TODO: test validations
     }
@@ -125,7 +143,7 @@ public class CellsChartsApiTest {
         String sheetName = SHEET3;
         Integer chartIndex = 0;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         ChartsResponse response = api.cellsChartsDeleteWorksheetDeleteChart(name, sheetName, chartIndex, folder,null);
 
         // TODO: test validations
@@ -146,7 +164,7 @@ public class CellsChartsApiTest {
         Integer chartNumber = 0;
 		String format = "png";
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         File response = api.cellsChartsGetWorksheetChart(name, sheetName, chartNumber, format, folder,null);
 
         // TODO: test validations
@@ -166,7 +184,7 @@ public class CellsChartsApiTest {
         String sheetName = SHEET3;
         Integer chartIndex = 0;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         LegendResponse response = api.cellsChartsGetWorksheetChartLegend(name, sheetName, chartIndex, folder,null);
 
         // TODO: test validations
@@ -186,7 +204,7 @@ public class CellsChartsApiTest {
         String sheetName = SHEET3;
         Integer chartIndex = 0;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         TitleResponse response = api.cellsChartsGetWorksheetChartTitle(name, sheetName, chartIndex, folder,null);
 
         // TODO: test validations
@@ -205,7 +223,7 @@ public class CellsChartsApiTest {
         String name = MYDOC;
         String sheetName = SHEET3;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         ChartsResponse response = api.cellsChartsGetWorksheetCharts(name, sheetName, folder,null);
 
         // TODO: test validations
@@ -227,8 +245,8 @@ public class CellsChartsApiTest {
         Chart chart = new Chart();
         chart.setAutoScaling(true);
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsChartsPostWorksheetChart(name, sheetName, chartIndex, chart, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsChartsPostWorksheetChart(name, sheetName, chartIndex, chart, folder,null);
 
         // TODO: test validations
     }
@@ -249,7 +267,7 @@ public class CellsChartsApiTest {
         Legend legend = new Legend();
         legend.setWidth(0);
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         LegendResponse response = api.cellsChartsPostWorksheetChartLegend(name, sheetName, chartIndex, legend, folder,null);
 
         // TODO: test validations
@@ -271,7 +289,7 @@ public class CellsChartsApiTest {
         Title title = new Title();
         title.setText("test");
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         TitleResponse response = api.cellsChartsPostWorksheetChartTitle(name, sheetName, chartIndex, title, folder,null);
 
         // TODO: test validations
@@ -300,7 +318,7 @@ public class CellsChartsApiTest {
         Boolean isAutoGetSerialName = null;
         String title = null;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         ChartsResponse response = api.cellsChartsPutWorksheetAddChart(name, sheetName, chartType, upperLeftRow, upperLeftColumn, lowerRightRow, lowerRightColumn, area, isVertical, categoryData, isAutoGetSerialName, title, folder,null);
 
         // TODO: test validations
@@ -320,8 +338,8 @@ public class CellsChartsApiTest {
         String sheetName = SHEET3;
         Integer chartIndex = 0;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsChartsPutWorksheetChartLegend(name, sheetName, chartIndex, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsChartsPutWorksheetChartLegend(name, sheetName, chartIndex, folder,null);
 
         // TODO: test validations
     }
@@ -342,7 +360,7 @@ public class CellsChartsApiTest {
         Title title = new Title();
         title.setText("test");
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         TitleResponse response = api.cellsChartsPutWorksheetChartTitle(name, sheetName, chartIndex, title, folder,null);
 
         // TODO: test validations

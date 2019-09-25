@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **isLockAspectRatio** | **Boolean** |  |  [optional]
 **isGroup** | **Boolean** |  |  [optional]
 **rotationAngle** | **Double** |  |  [optional]
-**zOrderPosition** | **Integer** |  |  [optional]
+**zorderPosition** | **Integer** |  |  [optional]
 **textHorizontalOverflow** | **String** |  |  [optional]
 **msoDrawingType** | **String** |  |  [optional]
 **textOrientationType** | **String** |  |  [optional]

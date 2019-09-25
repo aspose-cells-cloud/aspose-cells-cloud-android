@@ -12,14 +12,24 @@
 
 
 package com.aspose.cloud.cells.api;
+import com.aspose.cloud.cells.client.ApiClient;
 import com.aspose.cloud.cells.client.ApiException;
+import com.aspose.cloud.cells.client.Configuration;
 
 
 import com.aspose.cloud.cells.model.ConditionalFormattingResponse;
 import com.aspose.cloud.cells.model.ConditionalFormattingsResponse;
 import com.aspose.cloud.cells.model.FormatCondition;
-import com.aspose.cloud.cells.model.SaaSposeResponse;
+import com.aspose.cloud.cells.model.CellsCloudResponse;
+
 import org.junit.Test;
+import org.junit.Ignore;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * API tests for CellsConditionalFormattingsApi
@@ -27,7 +37,7 @@ import org.junit.Test;
 
 public class CellsConditionalFormattingsApiTest {
 
-    private final CellsConditionalFormattingsApi api = new CellsConditionalFormattingsApi();
+    private  CellsApi api ;
 
     private String BOOK1 = "Book1.xlsx";
     private String MYDOC = "myDocument.xlsx";
@@ -46,7 +56,14 @@ public class CellsConditionalFormattingsApiTest {
     private String CELLAREA = "A1:C10";
     
 	
-    
+    public CellsConditionalFormattingsApiTest(){
+    	try {
+			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret());
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
     /**
      * Remove conditional formatting
      *
@@ -61,8 +78,8 @@ public class CellsConditionalFormattingsApiTest {
         String sheetName = SHEET1;
         Integer index = 0;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsConditionalFormattingsDeleteWorksheetConditionalFormatting(name, sheetName, index, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsConditionalFormattingsDeleteWorksheetConditionalFormatting(name, sheetName, index, folder,null);
 
         // TODO: test validations
     }
@@ -84,8 +101,8 @@ public class CellsConditionalFormattingsApiTest {
         Integer totalRows = 4;
         Integer totalColumns = 6;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsConditionalFormattingsDeleteWorksheetConditionalFormattingArea(name, sheetName, startRow, startColumn, totalRows, totalColumns, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsConditionalFormattingsDeleteWorksheetConditionalFormattingArea(name, sheetName, startRow, startColumn, totalRows, totalColumns, folder,null);
 
         // TODO: test validations
     }
@@ -103,8 +120,8 @@ public class CellsConditionalFormattingsApiTest {
         String name = BOOK1;
         String sheetName = SHEET1;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsConditionalFormattingsDeleteWorksheetConditionalFormattings(name, sheetName, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsConditionalFormattingsDeleteWorksheetConditionalFormattings(name, sheetName, folder,null);
 
         // TODO: test validations
     }
@@ -123,7 +140,7 @@ public class CellsConditionalFormattingsApiTest {
         String sheetName = SHEET1;
         Integer index = 0;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         ConditionalFormattingResponse response = api.cellsConditionalFormattingsGetWorksheetConditionalFormatting(name, sheetName, index, folder,null);
 
         // TODO: test validations
@@ -142,7 +159,7 @@ public class CellsConditionalFormattingsApiTest {
         String name = BOOK1;
         String sheetName = SHEET1;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
+        CellsApiUtil.Upload(api, folder , name);
         ConditionalFormattingsResponse response = api.cellsConditionalFormattingsGetWorksheetConditionalFormattings(name, sheetName, folder,null);
 
         // TODO: test validations
@@ -167,8 +184,8 @@ public class CellsConditionalFormattingsApiTest {
         formatcondition.setFormula1("v1");
         formatcondition.setFormula2("v2");
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsConditionalFormattingsPutWorksheetConditionalFormatting(name, sheetName, cellArea, formatcondition, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsConditionalFormattingsPutWorksheetConditionalFormatting(name, sheetName, cellArea, formatcondition, folder,null);
 
         // TODO: test validations
     }
@@ -192,8 +209,8 @@ public class CellsConditionalFormattingsApiTest {
         String formula1 = "v1";
         String formula2 = "v2";	
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsConditionalFormattingsPutWorksheetFormatCondition(name, sheetName, index, cellArea, type, operatorType, formula1, formula2, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsConditionalFormattingsPutWorksheetFormatCondition(name, sheetName, index, cellArea, type, operatorType, formula1, formula2, folder,null);
 
         // TODO: test validations
     }
@@ -213,8 +230,8 @@ public class CellsConditionalFormattingsApiTest {
         Integer index = 0;
         String cellArea = CELLAREA;
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsConditionalFormattingsPutWorksheetFormatConditionArea(name, sheetName, index, cellArea, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsConditionalFormattingsPutWorksheetFormatConditionArea(name, sheetName, index, cellArea, folder,null);
 
         // TODO: test validations
     }
@@ -237,8 +254,8 @@ public class CellsConditionalFormattingsApiTest {
         String formula1 = "v1";
         String formula2 = "v2";
         String folder = TEMPFOLDER;
-		api.setApiClient( CellsApiUtil.Ready(folder, name));
-        SaaSposeResponse response = api.cellsConditionalFormattingsPutWorksheetFormatConditionCondition(name, sheetName, index, type, operatorType, formula1, formula2, folder,null);
+        CellsApiUtil.Upload(api, folder , name);
+        CellsCloudResponse response = api.cellsConditionalFormattingsPutWorksheetFormatConditionCondition(name, sheetName, index, type, operatorType, formula1, formula2, folder,null);
 
         // TODO: test validations
     }
