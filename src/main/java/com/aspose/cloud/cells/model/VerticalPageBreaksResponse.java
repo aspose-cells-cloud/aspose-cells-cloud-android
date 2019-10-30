@@ -39,7 +39,7 @@ import java.io.IOException;
 /**
  * VerticalPageBreaksResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-09-17T16:17:23.909+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-28T16:49:34.300+08:00")
 public class VerticalPageBreaksResponse extends CellsCloudResponse {
   @SerializedName("VerticalPageBreaks")
   private VerticalPageBreaks verticalPageBreaks = null;

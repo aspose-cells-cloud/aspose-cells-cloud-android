@@ -24,6 +24,7 @@
 
 package com.aspose.cloud.cells.client;
 
+import com.google.gson.reflect.TypeToken;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.OkHttpClient;
@@ -89,6 +90,7 @@ import com.aspose.cloud.cells.client.auth.Authentication;
 import com.aspose.cloud.cells.client.auth.HttpBasicAuth;
 import com.aspose.cloud.cells.client.auth.ApiKeyAuth;
 import com.aspose.cloud.cells.client.auth.OAuth;
+import com.aspose.cloud.cells.model.AccessTokenResponse;
 
 public class ApiClient {
     public static final double JAVA_VERSION;
@@ -170,7 +172,7 @@ public class ApiClient {
         this.lenientDatetimeFormat = true;
 
         // Set default User-Agent.
-        setUserAgent("Swagger-Codegen/19.9/java");
+        setUserAgent("Swagger-Codegen/19.10/java");
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();
@@ -263,7 +265,56 @@ public class ApiClient {
         applySslSettings();
         return this;
     }
+    /**
+     * Get access token
+     * @param grantType
+     * @param clientId
+     * @param clientSecret
+     * @param version
+     * @return
+     * @throws ApiException
+     */
+    public String getAccessToken(String grantType, String clientId, String clientSecret,String version) throws ApiException {
+        Object localVarPostBody = null;
 
+        // create path and map variables
+
+        String localVarPath = "/connect/token";
+        if( version == "v1.1")
+        {
+            localVarPath ="/oauth2/token";
+        }
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        if (grantType != null)
+            localVarFormParams.put("grant_type", grantType);
+        if (clientId != null)
+            localVarFormParams.put("client_id", clientId);
+        if (clientSecret != null)
+            localVarFormParams.put("client_secret", clientSecret);
+
+        final String[] localVarAccepts = {
+                "application/json"
+        };
+        final String localVarAccept = selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+                "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+
+        com.squareup.okhttp.Call call= buildCall(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, null);
+        Type localVarReturnType = new TypeToken<AccessTokenResponse>(){}.getType();
+        ApiResponse<AccessTokenResponse> resp =  execute(call, localVarReturnType);
+        return resp.getData().getAccessToken();
+    }
     /**
      * Get SSL CA cert.
      *
