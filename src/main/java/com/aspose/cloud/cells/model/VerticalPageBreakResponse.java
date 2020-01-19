@@ -1,6 +1,6 @@
 /* 
  * <summary>
- *  Copyright (c) 2019 Aspose.Cells Cloud
+ *  Copyright (c) 2020 Aspose.Cells Cloud
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
  *  in the Software without restriction, including without limitation the rights
@@ -39,7 +39,7 @@ import java.io.IOException;
 /**
  * VerticalPageBreakResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-28T16:49:34.300+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-03T10:13:15.200+08:00")
 public class VerticalPageBreakResponse extends CellsCloudResponse {
   @SerializedName("VerticalPageBreak")
   private VerticalPageBreak verticalPageBreak = null;
