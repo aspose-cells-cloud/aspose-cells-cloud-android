@@ -161,24 +161,28 @@ public class CellsApi {
     public CellsApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
-    public CellsApi( String appSid,String appKey) throws ApiException{
-        ApiClient apiClient =new ApiClient();
+    public CellsApi(String appSid, String appKey) throws ApiException {
+        ApiClient apiClient = new ApiClient();
         apiClient.setBasePath("https://api.aspose.cloud");
-        setApiClient( apiClient);
-        AccessTokenResponse response = oAuthPost("client_credentials", appSid, appKey);
-        String accesstoken = response.getAccessToken();
+        String accesstoken = apiClient.getAccessToken("client_credentials",
+                appSid, appKey, "v3.0");
+
         apiClient.setBasePath("https://api.aspose.cloud/v3.0");
         apiClient.addDefaultHeader("Authorization", "Bearer " + accesstoken);
-        setApiClient( apiClient);
+        setApiClient(apiClient);
     }
 
-    public CellsApi(String appSID,String appKey ,String Version) throws ApiException {
-        ApiClient apiClient =new ApiClient();
+    public CellsApi(String appSid, String appKey, String Version)
+            throws ApiException {
+
+        ApiClient apiClient = new ApiClient();
         apiClient.setBasePath("https://api.aspose.cloud");
-        String accesstoken = apiClient.getAccessToken("client_credentials", appSID, appKey,Version);
-        apiClient.setBasePath("https://api.aspose.cloud/"+Version);
+        String accesstoken = apiClient.getAccessToken("client_credentials",
+                appSid, appKey, Version);
+
+        apiClient.setBasePath("https://api.aspose.cloud/" + Version);
         apiClient.addDefaultHeader("Authorization", "Bearer " + accesstoken);
-        setApiClient( apiClient);
+        setApiClient(apiClient);
     }
     public ApiClient getApiClient() {
         return apiClient;

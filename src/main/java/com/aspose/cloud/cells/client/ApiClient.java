@@ -93,6 +93,8 @@ import com.aspose.cloud.cells.client.auth.HttpBasicAuth;
 import com.aspose.cloud.cells.client.auth.ApiKeyAuth;
 import com.aspose.cloud.cells.client.auth.OAuth;
 
+import org.joda.time.DateTime;
+
 public class ApiClient {
     public static final double JAVA_VERSION;
     public static final boolean IS_ANDROID;
@@ -173,7 +175,7 @@ public class ApiClient {
         this.lenientDatetimeFormat = true;
 
         // Set default User-Agent.
-        setUserAgent("Swagger-Codegen/20.1/java");
+        setUserAgent("Swagger-Codegen/20.2/java");
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();
@@ -463,6 +465,11 @@ public class ApiClient {
     public Authentication getAuthentication(String authName) {
         return authentications.get(authName);
     }
+    private String appSid;
+    private String appKey;
+    private String appVersion;
+    private String appGrantType;
+    private DateTime getAccessTokenTime;
     /**
      * Get access token
      * @param grantType
@@ -474,7 +481,10 @@ public class ApiClient {
      */
     public String getAccessToken(String grantType, String clientId, String clientSecret,String version) throws ApiException {
         Object localVarPostBody = null;
-
+        appGrantType = grantType;
+        appSid = clientId;
+        appKey = clientSecret;
+        appVersion = version;
         // create path and map variables
 
         String localVarPath = "/connect/token";
@@ -508,12 +518,28 @@ public class ApiClient {
 
         String[] localVarAuthNames = new String[] {  };
 
-        com.squareup.okhttp.Call call= buildCall(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, null);
+        Request request = buildRequest(localVarPath, "POST", localVarQueryParams, localVarPostBody,
+                localVarHeaderParams, localVarFormParams, localVarAuthNames, null);
+
+        com.squareup.okhttp.Call call = httpClient.newCall(request);
         Type localVarReturnType = new TypeToken<AccessTokenResponse>(){}.getType();
         ApiResponse<AccessTokenResponse> resp =  execute(call, localVarReturnType);
+        getAccessTokenTime = DateTime.now();
         return resp.getData().getAccessToken();
     }
-
+    public void checkAccessToken() throws ApiException {
+        if (getAccessTokenTime == null) {
+            return;
+        }
+        if (DateTime.now().compareTo(getAccessTokenTime.plusSeconds(86300))>0 ) {
+            setBasePath("https://api.aspose.cloud");
+            String accessToken = getAccessToken(appGrantType, appSid, appKey,
+                    appVersion);
+            getAccessTokenTime = DateTime.now();
+            setBasePath("https://api.aspose.cloud/" + appVersion);
+            addDefaultHeader("Authorization", "Bearer " + accessToken);
+        }
+    }
     /**
      * Helper method to set username for the first HTTP basic authentication.
      *
@@ -1156,6 +1182,7 @@ public class ApiClient {
      * @throws ApiException If fail to serialize the request body object
      */
     public Call buildCall(String path, String method, List<Pair> queryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String[] authNames, ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        checkAccessToken();
         Request request = buildRequest(path, method, queryParams, body, headerParams, formParams, authNames, progressRequestListener);
 
         return httpClient.newCall(request);

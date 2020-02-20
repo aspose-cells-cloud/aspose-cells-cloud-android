@@ -13,8 +13,8 @@ import com.aspose.cloud.cells.model.AccessTokenResponse;
 
 public class CellsApiUtil {
 	private static String grantType = "client_credentials";
-	private static String clientId = "66164C51-693E-4904-A121-545961673EC1";//"";
-	private static String clientSecret =  "536e76768419db9585afdd37bb5f7533";//"";
+	private static String clientId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";//"";
+	private static String clientSecret =  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";//"";
 	private static String sourceFolder ="/sdcard/Download/TestData/TestData/";
 	public static String GetSourceFolder() {
 		return sourceFolder;
