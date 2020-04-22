@@ -38,7 +38,7 @@ import java.io.IOException;
 /**
  * OoxmlSaveOptions
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-03T10:13:15.200+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-03-24T11:16:56.930+08:00")
 public class OoxmlSaveOptions extends SaveOptions {
   @SerializedName("ExportCellName")
   private Boolean exportCellName = null;

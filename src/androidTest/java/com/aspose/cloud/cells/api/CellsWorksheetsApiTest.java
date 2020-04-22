@@ -242,7 +242,7 @@ public class CellsWorksheetsApiTest {
         String format = "png";
         String folder = TEMPFOLDER;
 		CellsApiUtil.Upload(api, folder , name);
-        File response = api.cellsWorksheetsGetWorksheet(name, sheetName, format,verticalResolution, horizontalResolution, folder,null);
+        File response = api.cellsWorksheetsGetWorksheet(name, sheetName, format,verticalResolution, horizontalResolution, null,null,folder,null);
 
         // TODO: test validations
     }

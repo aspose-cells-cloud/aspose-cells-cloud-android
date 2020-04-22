@@ -70,5 +70,9 @@ public class CellsApiUtil {
         }
 		return null;  
 	}
-	
+
+	public static File GetFileHolder(String filename)	{
+		File file = new File(GetSourceFolder() + filename);
+		return file;
+	}
 }
