@@ -43,7 +43,7 @@ import java.util.List;
 /**
  * ListObject
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-03-24T11:16:56.930+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-02T14:19:58.299+08:00")
 public class ListObject {
   @SerializedName("link")
   private Link link = null;

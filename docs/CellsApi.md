@@ -199,6 +199,7 @@ Method | HTTP request | Description
 [**cellsWorkbookPutDocumentProtectFromChanges**](CellsApi.md#cellsWorkbookPutDocumentProtectFromChanges) | **PUT** /cells/{name}/writeProtection | Protect document from changes.
 [**cellsWorkbookPutWorkbookBackground**](CellsApi.md#cellsWorkbookPutWorkbookBackground) | **PUT** /cells/{name}/background | Set workbook background image.
 [**cellsWorkbookPutWorkbookCreate**](CellsApi.md#cellsWorkbookPutWorkbookCreate) | **PUT** /cells/{name} | Create new workbook using deferent methods.
+[**cellsWorkbookPutWorkbookWaterMarker**](CellsApi.md#cellsWorkbookPutWorkbookWaterMarker) | **PUT** /cells/{name}/watermarker | Set workbook background image.
 [**cellsWorksheetValidationsDeleteWorksheetValidation**](CellsApi.md#cellsWorksheetValidationsDeleteWorksheetValidation) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Delete worksheet validation by index.
 [**cellsWorksheetValidationsDeleteWorksheetValidations**](CellsApi.md#cellsWorksheetValidationsDeleteWorksheetValidations) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations | Clear all validation in worksheet.
 [**cellsWorksheetValidationsGetWorksheetValidation**](CellsApi.md#cellsWorksheetValidationsGetWorksheetValidation) | **GET** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Get worksheet validation by index.
@@ -10546,6 +10547,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WorkbookResponse**](WorkbookResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="cellsWorkbookPutWorkbookWaterMarker"></a>
+# **cellsWorkbookPutWorkbookWaterMarker**
+> CellsCloudResponse cellsWorkbookPutWorkbookWaterMarker(name, folder, storage, textWaterMarkerRequest)
+
+Set workbook background image.
+
+### Example
+```java
+// Import classes:
+//import com.aspose.cloud.cells.client.ApiException;
+//import com.aspose.cloud.cells.api.CellsApi;
+
+
+CellsApi apiInstance = new CellsApi();
+String name = "name_example"; // String | 
+String folder = "folder_example"; // String | 
+String storage = "storage_example"; // String | storage name.
+TextWaterMarkerRequest textWaterMarkerRequest = new TextWaterMarkerRequest(); // TextWaterMarkerRequest | The text water marker request.
+try {
+    CellsCloudResponse result = apiInstance.cellsWorkbookPutWorkbookWaterMarker(name, folder, storage, textWaterMarkerRequest);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CellsApi#cellsWorkbookPutWorkbookWaterMarker");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  |
+ **folder** | **String**|  | [optional]
+ **storage** | **String**| storage name. | [optional]
+ **textWaterMarkerRequest** | [**TextWaterMarkerRequest**](TextWaterMarkerRequest.md)| The text water marker request. | [optional]
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 

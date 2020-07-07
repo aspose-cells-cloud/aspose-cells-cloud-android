@@ -39,7 +39,7 @@ import org.threeten.bp.OffsetDateTime;
  * File or folder information
  */
 @ApiModel(description = "File or folder information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-03-24T11:16:56.930+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-02T14:19:58.299+08:00")
 
 public class StorageFile {
   @SerializedName("Name")

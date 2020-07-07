@@ -117,28 +117,7 @@ public class CellsPivotTablesApiTest {
         // TODO: test validations
     }
     
-    /**
-     * delete  pivot filter for piovt table             
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void cellsPivotTablesDeleteWorksheetPivotTableFilterTest() throws ApiException {
-        String name =PivTestFile;;
-        String sheetName = SHEET4;
-        Integer pivotTableIndex = 0;
-        Integer fieldIndex = 0;
-        Boolean needReCalculate = true;
-        String folder = TEMPFOLDER;
-        CellsApiUtil.Upload(api, folder , name);
-        CellsCloudResponse response = api.cellsPivotTablesDeleteWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, fieldIndex, needReCalculate, folder,null);
 
-        // TODO: test validations
-    }
-    
     /**
      * delete all pivot filters for piovt table
      *
@@ -235,6 +214,7 @@ public class CellsPivotTablesApiTest {
         String sheetName = SHEET4;
         Integer pivotTableIndex = 0;
         Integer filterIndex = 0;
+        Integer fieldIndex = 0;
         String folder = TEMPFOLDER;
         CellsApiUtil.Upload(api, folder , name);
 		
@@ -256,6 +236,7 @@ public class CellsPivotTablesApiTest {
 
 	    CellsCloudResponse response = api.cellsPivotTablesPutWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, filter, needReCalculate, folder,null);
         PivotFilterResponse response1 = api.cellsPivotTablesGetWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, filterIndex, folder,null);
+        CellsCloudResponse response2 = api.cellsPivotTablesDeleteWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, fieldIndex, needReCalculate, folder,null);
 
         // TODO: test validations
     }
