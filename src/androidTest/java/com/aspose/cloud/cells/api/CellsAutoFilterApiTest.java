@@ -44,7 +44,7 @@ public class CellsAutoFilterApiTest {
     private String BOOK1 = "Book1.xlsx";
     private String MYDOC = "myDocument.xlsx";
     private String PivTestFile = "TestCase.xlsx";
-    private String TEMPFOLDER = "Temp";
+    private String TEMPFOLDER = "JavaTest";
     private String SHEET1 = "Sheet1";
     private String SHEET2 = "Sheet2";
     private String SHEET3 = "Sheet3";
@@ -219,7 +219,7 @@ public class CellsAutoFilterApiTest {
         themeColor.setTint(1.0);
         cellsColor.setThemeColor(themeColor);
         colorFilter.setForegroundColor(cellsColor);
-
+        
         Color bcolor = new Color();
         bcolor.setR(255);
         bcolor.setA(255);
@@ -232,6 +232,7 @@ public class CellsAutoFilterApiTest {
         bthemeColor.setTint(1.0);
         backgroundColor.setThemeColor(bthemeColor);
         colorFilter.setBackgroundColor(backgroundColor);
+        
         colorFilter.setPattern("Solid");
         Boolean matchBlanks = true;
         Boolean refresh = true;

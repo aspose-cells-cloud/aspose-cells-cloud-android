@@ -175,7 +175,7 @@ public class ApiClient {
         this.lenientDatetimeFormat = true;
 
         // Set default User-Agent.
-        setUserAgent("Swagger-Codegen/20.6/java");
+        setUserAgent("Swagger-Codegen/20.7/java");
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();
@@ -205,7 +205,10 @@ public class ApiClient {
         this.basePath = basePath;
         return this;
     }
-
+	public ApiClient setApiVersion(String apiVersion) {
+		this.appVersion = apiVersion;
+		return this;
+	}
     /**
      * Get HTTP client
      *
@@ -467,7 +470,7 @@ public class ApiClient {
     }
     private String appSid;
     private String appKey;
-    private String appVersion;
+    private String appVersion = "v3.0";
     private String appGrantType;
     private DateTime getAccessTokenTime;
     /**
@@ -518,8 +521,8 @@ public class ApiClient {
 
         String[] localVarAuthNames = new String[] {  };
 
-        Request request = buildRequest(localVarPath, "POST", localVarQueryParams, localVarPostBody,
-                localVarHeaderParams, localVarFormParams, localVarAuthNames, null);
+        Request request = buildGetAccessTokenRequest(localVarPath,  localVarQueryParams, localVarPostBody,
+				localVarHeaderParams, localVarFormParams, localVarAuthNames);
 
         com.squareup.okhttp.Call call = httpClient.newCall(request);
         Type localVarReturnType = new TypeToken<AccessTokenResponse>(){}.getType();
@@ -532,11 +535,9 @@ public class ApiClient {
             return;
         }
         if (DateTime.now().compareTo(getAccessTokenTime.plusSeconds(86300))>0 ) {
-            setBasePath("https://api.aspose.cloud");
             String accessToken = getAccessToken(appGrantType, appSid, appKey,
                     appVersion);
             getAccessTokenTime = DateTime.now();
-            setBasePath("https://api.aspose.cloud/" + appVersion);
             addDefaultHeader("Authorization", "Bearer " + accessToken);
         }
     }
@@ -1245,7 +1246,68 @@ public class ApiClient {
 
         return request;
     }
+    private Request buildGetAccessTokenRequest(String path, List<Pair> queryParams, Object body,
+    Map<String, String> headerParams, Map<String, Object> formParams,
+    String[] authNames)
+    throws ApiException {
+        updateParamsForAuth(authNames, queryParams, headerParams);
 
+        final StringBuilder urlBuilder = new StringBuilder();
+        urlBuilder.append(basePath).append(path);
+
+        if (queryParams != null && !queryParams.isEmpty()) {
+            // support (constant) query string in `path`, e.g. "/posts?draft=1"
+            String prefix = path.contains("?") ? "&" : "?";
+            for (Pair param : queryParams) {
+                if (param.getValue() != null) {
+                    if (prefix != null) {
+                        urlBuilder.append(prefix);
+                        prefix = null;
+                    } else {
+                        urlBuilder.append("&");
+                    }
+                    String value = parameterToString(param.getValue());
+                    urlBuilder.append(escapeString(param.getName())).append("=")
+                            .append(escapeString(value));
+                }
+            }
+        }
+        final String url = urlBuilder.toString();
+
+        final Request.Builder reqBuilder = new Request.Builder().url(url);
+        processHeaderParams(headerParams, reqBuilder);
+
+        String contentType = (String) headerParams.get("Content-Type");
+        // ensuring a default content type
+        if (contentType == null) {
+            contentType = "application/json";
+        }
+        String method ="POST";
+        RequestBody reqBody;
+        if (!HttpMethod.permitsRequestBody(method)) {
+            reqBody = null;
+        } else if ("application/x-www-form-urlencoded".equals(contentType)) {
+            reqBody = buildRequestBodyFormEncoding(formParams);
+        } else if ("multipart/form-data".equals(contentType)) {
+            reqBody = buildRequestBodyMultipart(formParams);
+        } else if (body == null) {
+            if ("DELETE".equals(method)) {
+                // allow calling DELETE without sending a request body
+                reqBody = null;
+            } else {
+                // use an empty request body (for POST, PUT and PATCH)
+                reqBody = RequestBody.create(MediaType.parse(contentType), "");
+            }
+        } else {
+            reqBody = serialize(body, contentType);
+        }
+
+        Request request = null;
+
+        request = reqBuilder.method(method, reqBody).build();
+
+        return request;
+        }
     /**
      * Build full URL by concatenating base path, the given sub path and query parameters.
      *
@@ -1255,7 +1317,7 @@ public class ApiClient {
      */
     public String buildUrl(String path, List<Pair> queryParams) {
         final StringBuilder url = new StringBuilder();
-        url.append(basePath).append(path);
+        url.append(basePath + "/" + appVersion).append(path);
 
         if (queryParams != null && !queryParams.isEmpty()) {
             // support (constant) query string in `path`, e.g. "/posts?draft=1"

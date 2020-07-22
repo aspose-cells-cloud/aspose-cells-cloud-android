@@ -39,6 +39,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import junit.framework.Assert;
+
 /**
  * API tests for CellsPivotTablesApi
  */
@@ -50,7 +52,7 @@ public class CellsPivotTablesApiTest {
     private String BOOK1 = "Book1.xlsx";
     private String MYDOC = "myDocument.xlsx";
     private String PivTestFile = "TestCase.xlsx";
-    private String TEMPFOLDER = "Temp";
+    private String TEMPFOLDER = "JavaTest";
     private String SHEET1 = "Sheet1";
     private String SHEET2 = "Sheet2";
     private String SHEET3 = "Sheet3";
@@ -117,7 +119,7 @@ public class CellsPivotTablesApiTest {
         // TODO: test validations
     }
     
-
+    
     /**
      * delete all pivot filters for piovt table
      *
@@ -214,7 +216,6 @@ public class CellsPivotTablesApiTest {
         String sheetName = SHEET4;
         Integer pivotTableIndex = 0;
         Integer filterIndex = 0;
-        Integer fieldIndex = 0;
         String folder = TEMPFOLDER;
         CellsApiUtil.Upload(api, folder , name);
 		
@@ -236,7 +237,6 @@ public class CellsPivotTablesApiTest {
 
 	    CellsCloudResponse response = api.cellsPivotTablesPutWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, filter, needReCalculate, folder,null);
         PivotFilterResponse response1 = api.cellsPivotTablesGetWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, filterIndex, folder,null);
-        CellsCloudResponse response2 = api.cellsPivotTablesDeleteWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, fieldIndex, needReCalculate, folder,null);
 
         // TODO: test validations
     }
@@ -481,7 +481,7 @@ public class CellsPivotTablesApiTest {
      *          if the Api call fails
      */
     @Test
-    public void cellsPivotTablesPutWorksheetPivotTableFilterTest() throws ApiException {
+    public void cellsPivotTablesPutAndDeleteWorksheetPivotTableFilterTest() throws ApiException {
         String name =PivTestFile;;
         String sheetName = SHEET4;
         Integer pivotTableIndex = 0;
@@ -503,8 +503,11 @@ public class CellsPivotTablesApiTest {
         String folder = TEMPFOLDER;
         CellsApiUtil.Upload(api, folder , name);
         CellsCloudResponse response = api.cellsPivotTablesPutWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, filter, needReCalculate, folder,null);
-
-        // TODO: test validations
+        Assert.assertEquals("cellsPivotTablesPutWorksheetPivotTableFilterTest is OK.", "OK", response.getStatus());
+        
+        Integer fieldIndex = 0;
+        CellsCloudResponse response1 = api.cellsPivotTablesDeleteWorksheetPivotTableFilter(name, sheetName, pivotTableIndex, fieldIndex, needReCalculate, folder,null);
+        Assert.assertEquals("cellsPivotTablesPutWorksheetPivotTableFilterTest is OK.", "OK", response1.getStatus());
     }
     
 }

@@ -162,9 +162,9 @@ public class CellsApi {
 	public CellsApi(String appSid, String appKey) throws ApiException {
 		ApiClient apiClient = new ApiClient();
 		apiClient.setBasePath("https://api.aspose.cloud");
-		String accesstoken = apiClient.getAccessToken("client_credentials",appSid, appKey, "v3.0");
-
-		apiClient.setBasePath("https://api.aspose.cloud/v3.0");
+		apiClient.setApiVersion("v3.0");
+		String accesstoken = apiClient.getAccessToken("client_credentials",
+				appSid, appKey, "v3.0");
 		apiClient.addDefaultHeader("Authorization", "Bearer " + accesstoken);
 		setApiClient(apiClient);
 	}
@@ -174,13 +174,26 @@ public class CellsApi {
 
 		ApiClient apiClient = new ApiClient();
 		apiClient.setBasePath("https://api.aspose.cloud");
+		apiClient.setApiVersion(Version);
 		String accesstoken = apiClient.getAccessToken("client_credentials",
 				appSid, appKey, Version);
 
-		apiClient.setBasePath("https://api.aspose.cloud/" + Version);
 		apiClient.addDefaultHeader("Authorization", "Bearer " + accesstoken);
 		setApiClient(apiClient);
-    }
+	}
+
+	public CellsApi(String appSid, String appKey, String Version, String baseURI)
+			throws ApiException {
+
+		ApiClient apiClient = new ApiClient();
+		apiClient.setBasePath(baseURI.endsWith("/") ? baseURI.substring(0,
+				baseURI.length() - 1) : baseURI);
+		apiClient.setApiVersion(Version);
+		String accesstoken = apiClient.getAccessToken("client_credentials",
+				appSid, appKey, Version);
+		apiClient.addDefaultHeader("Authorization", "Bearer " + accesstoken);
+		setApiClient(apiClient);
+	}
     
     public CellsApi(ApiClient apiClient) {
         this.apiClient = apiClient;

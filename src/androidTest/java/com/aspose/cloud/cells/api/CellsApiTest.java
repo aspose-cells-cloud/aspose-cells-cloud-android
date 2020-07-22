@@ -65,7 +65,7 @@ public class CellsApiTest {
     private String BOOK1 = "Book1.xlsx";
     private String MYDOC = "myDocument.xlsx";
     private String PivTestFile = "TestCase.xlsx";
-    private String TEMPFOLDER = "Temp";//"CellsTests";
+    private String TEMPFOLDER = "JavaTest";//"CellsTests";
     private String SHEET1 = "Sheet1";
     private String SHEET2 = "Sheet2";
     private String SHEET3 = "Sheet3";
@@ -622,7 +622,7 @@ public class CellsApiTest {
         String folder = TEMPFOLDER;
         String htmlString ="https://api.aspose.cloud/v3.0/cells";
         CellsApiUtil.Upload(api, folder , name);
-        CellResponse response = api.cellsPostSetCellHtmlString(name, sheetName, cellName, htmlString.getBytes(),folder,null);
+        CellResponse response = api.cellsPostSetCellHtmlString(name, sheetName, cellName,htmlString.getBytes() ,folder,null);
         Assert.assertEquals("cellsPostSetCellHtmlStringTest is OK.", "OK", response.getStatus());
         // TODO: test validations
     }
