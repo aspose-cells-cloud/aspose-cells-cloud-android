@@ -40,7 +40,7 @@ import java.util.List;
 /**
  * MultipleFilters
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-02T14:19:58.299+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
 public class MultipleFilters {
   @SerializedName("MultipleFilterList")
   private List<MultipleFilter> multipleFilterList = null;

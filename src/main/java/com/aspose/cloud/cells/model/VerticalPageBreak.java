@@ -37,7 +37,7 @@ import java.io.IOException;
 /**
  * VerticalPageBreak
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-02T14:19:58.299+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
 public class VerticalPageBreak {
   @SerializedName("Column")
   private Integer column = null;

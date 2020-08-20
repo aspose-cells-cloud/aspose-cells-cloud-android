@@ -25,8 +25,6 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.aspose.cloud.cells.model.CellsCloudResponse;
-import com.aspose.cloud.cells.model.PivotTables;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,29 +35,92 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * PivotTablesResponse
+ * CellsCloudFileInfo
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
-public class PivotTablesResponse extends CellsCloudResponse {
-  @SerializedName("PivotTables")
-  private PivotTables pivotTables = null;
+public class CellsCloudFileInfo {
+  @SerializedName("Name")
+  private String name = null;
 
-  public PivotTablesResponse pivotTables(PivotTables pivotTables) {
-    this.pivotTables = pivotTables;
+  @SerializedName("Size")
+  private Integer size = null;
+
+  @SerializedName("Folder")
+  private String folder = null;
+
+  @SerializedName("Storage")
+  private String storage = null;
+
+  public CellsCloudFileInfo name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get pivotTables
-   * @return pivotTables
+   * Get name
+   * @return name
   **/
   @ApiModelProperty(value = "")
-  public PivotTables getPivotTables() {
-    return pivotTables;
+  public String getName() {
+    return name;
   }
 
-  public void setPivotTables(PivotTables pivotTables) {
-    this.pivotTables = pivotTables;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public CellsCloudFileInfo size(Integer size) {
+    this.size = size;
+    return this;
+  }
+
+   /**
+   * Get size
+   * @return size
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getSize() {
+    return size;
+  }
+
+  public void setSize(Integer size) {
+    this.size = size;
+  }
+
+  public CellsCloudFileInfo folder(String folder) {
+    this.folder = folder;
+    return this;
+  }
+
+   /**
+   * Get folder
+   * @return folder
+  **/
+  @ApiModelProperty(value = "")
+  public String getFolder() {
+    return folder;
+  }
+
+  public void setFolder(String folder) {
+    this.folder = folder;
+  }
+
+  public CellsCloudFileInfo storage(String storage) {
+    this.storage = storage;
+    return this;
+  }
+
+   /**
+   * Get storage
+   * @return storage
+  **/
+  @ApiModelProperty(value = "")
+  public String getStorage() {
+    return storage;
+  }
+
+  public void setStorage(String storage) {
+    this.storage = storage;
   }
 
 
@@ -71,23 +132,28 @@ public class PivotTablesResponse extends CellsCloudResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PivotTablesResponse pivotTablesResponse = (PivotTablesResponse) o;
-    return Objects.equals(this.pivotTables, pivotTablesResponse.pivotTables) &&
-        super.equals(o);
+    CellsCloudFileInfo cellsCloudFileInfo = (CellsCloudFileInfo) o;
+    return Objects.equals(this.name, cellsCloudFileInfo.name) &&
+        Objects.equals(this.size, cellsCloudFileInfo.size) &&
+        Objects.equals(this.folder, cellsCloudFileInfo.folder) &&
+        Objects.equals(this.storage, cellsCloudFileInfo.storage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pivotTables, super.hashCode());
+    return Objects.hash(name, size, folder, storage);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PivotTablesResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    pivotTables: ").append(toIndentedString(pivotTables)).append("\n");
+    sb.append("class CellsCloudFileInfo {\n");
+    
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
+    sb.append("    storage: ").append(toIndentedString(storage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

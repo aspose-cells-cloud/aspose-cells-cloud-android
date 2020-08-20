@@ -1,5 +1,5 @@
 group = 'com.aspose'
-project.version = '20.7'
+project.version = '20.8'
 
 buildscript {
     repositories {
@@ -7,9 +7,7 @@ buildscript {
         google()
     }
     dependencies {
-//        classpath 'com.android.tools.build:gradle:3.1.4'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-//        classpath 'com.novoda:bintray-release:0.3.4'
         classpath 'com.novoda:bintray-release:0.5.0'
         classpath 'com.android.tools.build:gradle:3.0.1'
     }
@@ -42,20 +40,6 @@ android {
         provided 'javax.annotation:jsr250-api:1.0'
     }
 
-//    // Rename the aar correctly
-//    libraryVariants.all { variant ->
-//        variant.outputs.each { output ->
-//            def outputFile = output.outputFile
-//            if (outputFile != null && outputFile.name.endsWith('.aar')) {
-//                def fileName = "${project.name}-${variant.baseName}-${version}.aar"
-//                output.outputFile = new File(outputFile.parent, fileName)
-//            }
-//        }
-//    }
-//
-//    testOptions {
-//        unitTests.returnDefaultValues = true
-//    }
 }
 
 

@@ -25,7 +25,7 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.aspose.cloud.cells.model.SplitResultDocument;
+import com.aspose.cloud.cells.model.CellsCloudFileInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,19 +40,19 @@ import java.util.List;
 /**
  * SplitResult
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-02T14:19:58.299+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
 public class SplitResult {
   @SerializedName("Documents")
-  private List<SplitResultDocument> documents = null;
+  private List<CellsCloudFileInfo> documents = null;
 
-  public SplitResult documents(List<SplitResultDocument> documents) {
+  public SplitResult documents(List<CellsCloudFileInfo> documents) {
     this.documents = documents;
     return this;
   }
 
-  public SplitResult addDocumentsItem(SplitResultDocument documentsItem) {
+  public SplitResult addDocumentsItem(CellsCloudFileInfo documentsItem) {
     if (this.documents == null) {
-      this.documents = new ArrayList<SplitResultDocument>();
+      this.documents = new ArrayList<CellsCloudFileInfo>();
     }
     this.documents.add(documentsItem);
     return this;
@@ -63,11 +63,11 @@ public class SplitResult {
    * @return documents
   **/
   @ApiModelProperty(value = "")
-  public List<SplitResultDocument> getDocuments() {
+  public List<CellsCloudFileInfo> getDocuments() {
     return documents;
   }
 
-  public void setDocuments(List<SplitResultDocument> documents) {
+  public void setDocuments(List<CellsCloudFileInfo> documents) {
     this.documents = documents;
   }
 

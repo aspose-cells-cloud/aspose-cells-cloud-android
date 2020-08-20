@@ -39,7 +39,7 @@ import java.io.IOException;
  * Represents the color settings of the data bars for negative values that are    defined by a data bar conditional formating rule.             
  */
 @ApiModel(description = "Represents the color settings of the data bars for negative values that are    defined by a data bar conditional formating rule.             ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-02T14:19:58.299+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
 public class NegativeBarFormat {
   @SerializedName("BorderColor")
   private Color borderColor = null;
