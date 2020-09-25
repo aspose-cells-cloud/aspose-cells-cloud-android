@@ -40,7 +40,7 @@ import java.util.List;
 /**
  * Ranges
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
 public class Ranges {
   @SerializedName("RangeList")
   private List<Range> rangeList = null;

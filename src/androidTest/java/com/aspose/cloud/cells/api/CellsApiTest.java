@@ -12,46 +12,22 @@
 
 
 package com.aspose.cloud.cells.api;
-import com.aspose.cloud.cells.client.ApiClient;
 import com.aspose.cloud.cells.client.ApiException;
-import com.aspose.cloud.cells.client.Configuration;
-
-
 import com.aspose.cloud.cells.model.CalculationOptions;
 import com.aspose.cloud.cells.model.CellResponse;
-import com.aspose.cloud.cells.model.CellsObjectOperateTaskParameter;
 import com.aspose.cloud.cells.model.CellsResponse;
 import com.aspose.cloud.cells.model.ColumnResponse;
 import com.aspose.cloud.cells.model.ColumnsResponse;
-import com.aspose.cloud.cells.model.FileSource;
 import com.aspose.cloud.cells.model.Font;
-
-import java.io.File;
-
 import com.aspose.cloud.cells.model.FontSetting;
-import com.aspose.cloud.cells.model.OperateObject;
-import com.aspose.cloud.cells.model.OperateObjectPosition;
-import com.aspose.cloud.cells.model.ResultDestination;
 import com.aspose.cloud.cells.model.RowResponse;
 import com.aspose.cloud.cells.model.RowsResponse;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
-import com.aspose.cloud.cells.model.SaveResultTaskParameter;
 import com.aspose.cloud.cells.model.Style;
 import com.aspose.cloud.cells.model.StyleResponse;
-import com.aspose.cloud.cells.model.TaskData;
-import com.aspose.cloud.cells.model.TaskDescription;
-import com.aspose.cloud.cells.model.WorkbookSettings;
-import com.aspose.cloud.cells.model.WorkbookSettingsOperateParameter;
-
 import org.junit.Test;
-import org.junit.Ignore;
-
-import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
 import junit.framework.Assert;
 
 /**
@@ -81,7 +57,7 @@ public class CellsApiTest {
  
     public CellsApiTest(){
     	try {
-			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret());
+			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret(),CellsApiUtil.GetAPIVersion(),CellsApiUtil.GetBaseUrl());
 		} catch (ApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

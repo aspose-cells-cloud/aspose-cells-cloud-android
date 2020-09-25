@@ -57,7 +57,7 @@ public class CellsShapesApiTest {
     
     public CellsShapesApiTest(){
     	try {
-			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret());
+			 api = new CellsApi(CellsApiUtil.GetClientId(),CellsApiUtil.GetClientSecret(),CellsApiUtil.GetAPIVersion(),CellsApiUtil.GetBaseUrl());
 		} catch (ApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -185,7 +185,7 @@ public class CellsShapesApiTest {
         Integer height = 90;
         String folder = TEMPFOLDER;
         CellsApiUtil.Upload(api, folder , name);
-        ShapeResponse response = api.cellsShapesPutWorksheetShape(name, sheetName,null, drawingType, upperLeftRow, upperLeftColumn, top, left, width, height, folder,null);
+        ShapeResponse response = api.cellsShapesPutWorksheetShape(name, sheetName, null,drawingType, upperLeftRow, upperLeftColumn, top, left, width, height, folder,null);
 
         // TODO: test validations
     }

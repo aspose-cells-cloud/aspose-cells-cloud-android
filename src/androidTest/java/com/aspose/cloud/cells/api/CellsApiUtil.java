@@ -13,16 +13,13 @@ import com.aspose.cloud.cells.model.AccessTokenResponse;
 
 public class CellsApiUtil {
 	private static String grantType = "client_credentials";
-	private static String clientId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";//"";
-	private static String clientSecret =  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";//"";
-	private static String sourceFolder ="/sdcard/Download/TestData/TestData/";
+	private static String clientId = "91A2FD07-BBA1-4B32-9112-ABFB1FE8AEBD";//"";
+	private static String clientSecret =  "0fbf678c5ecabdb5caca48452a736dd0";//"";
+	private static String sourceFolder ="/sdcard/Download/TestData/";
 	public static String GetSourceFolder() {
 		return sourceFolder;
 	}
-	public static String GetGrantType() {
-		return grantType;
-	}
-
+	
 	public static String GetClientId() {
 		return clientId;
 	}
@@ -31,23 +28,30 @@ public class CellsApiUtil {
 		return clientSecret;
 	}
 
-	
-	public static void Upload(CellsApi cellsApi,String folder ,String filename) {		
+	public static String GetAPIVersion() {
+		return "v3.0";
+	}
+	public static String GetBaseUrl() {
+		return "https://api-qa.aspose.cloud";
+	}
+	public static void Upload(CellsApi cellsApi,String folder ,String filename)throws ApiException  {
 		File file = new File(sourceFolder + filename);
 		try {
 			cellsApi.uploadFile(folder +"\\" + filename, file, null);
 		} catch (ApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			throw e;
 		}		
 	}
-	public static void Upload(CellsApi cellsApi,String filename) {		
+	public static void Upload(CellsApi cellsApi,String filename) throws ApiException {
 		File file = new File(sourceFolder + filename);
 		try {
 			cellsApi.uploadFile( filename, file, null);
 		} catch (ApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			throw e;
 		}		
 	}
 	public static byte[] GetFileData(String filename)	{		

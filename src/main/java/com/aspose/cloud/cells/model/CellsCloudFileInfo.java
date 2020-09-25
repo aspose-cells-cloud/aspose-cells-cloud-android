@@ -37,13 +37,13 @@ import java.io.IOException;
 /**
  * CellsCloudFileInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
 public class CellsCloudFileInfo {
   @SerializedName("Name")
   private String name = null;
 
   @SerializedName("Size")
-  private Integer size = null;
+  private Long size = null;
 
   @SerializedName("Folder")
   private String folder = null;
@@ -69,7 +69,7 @@ public class CellsCloudFileInfo {
     this.name = name;
   }
 
-  public CellsCloudFileInfo size(Integer size) {
+  public CellsCloudFileInfo size(Long size) {
     this.size = size;
     return this;
   }
@@ -79,11 +79,11 @@ public class CellsCloudFileInfo {
    * @return size
   **/
   @ApiModelProperty(required = true, value = "")
-  public Integer getSize() {
+  public Long getSize() {
     return size;
   }
 
-  public void setSize(Integer size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

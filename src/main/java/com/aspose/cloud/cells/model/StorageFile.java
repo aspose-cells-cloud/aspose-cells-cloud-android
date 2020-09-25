@@ -39,7 +39,7 @@ import org.threeten.bp.OffsetDateTime;
  * File or folder information
  */
 @ApiModel(description = "File or folder information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
 
 public class StorageFile {
   @SerializedName("Name")
@@ -52,7 +52,7 @@ public class StorageFile {
   private OffsetDateTime modifiedDate = null;
 
   @SerializedName("Size")
-  private Integer size = null;
+  private Long size = null;
 
   @SerializedName("Path")
   private String path = null;
@@ -111,7 +111,7 @@ public class StorageFile {
     this.modifiedDate = modifiedDate;
   }
 
-  public StorageFile size(Integer size) {
+  public StorageFile size(Long size) {
     this.size = size;
     return this;
   }
@@ -121,11 +121,11 @@ public class StorageFile {
    * @return size
   **/
   @ApiModelProperty(required = true, value = "File or folder size.")
-  public Integer getSize() {
+  public Long getSize() {
     return size;
   }
 
-  public void setSize(Integer size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

@@ -30,7 +30,7 @@ import com.aspose.cloud.cells.model.SaveOptions;
 /**
  * DifSaveOptions
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
 public class DifSaveOptions extends SaveOptions {
 
   @Override

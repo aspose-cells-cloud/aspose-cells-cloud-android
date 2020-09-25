@@ -80,7 +80,7 @@ public class CellsStorageApiTests {
 	public CellsStorageApiTests() {
 		try {
 			api = new CellsApi(CellsApiUtil.GetClientId(),
-					CellsApiUtil.GetClientSecret());
+					CellsApiUtil.GetClientSecret(),CellsApiUtil.GetAPIVersion(),CellsApiUtil.GetBaseUrl());
 		} catch (ApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -93,8 +93,9 @@ public class CellsStorageApiTests {
 		String folder = TEMPFOLDER + "\\NewFolder";
 		api.createFolder(folder, null);
 		File file = new File(CellsApiUtil.GetSourceFolder() + name);
-		api.uploadFile(folder + "\\" + name, file, null);
-		CellsApiUtil.Upload(api, folder + "\\" + name);
+		String  filename =  folder + "\\" + name;
+//		filename = filename.replace("\\","/");
+		api.uploadFile(filename, file, null);
 		api.copyFile(folder + "\\" + name, folder + "\\1" + name, null, null,
 				null); // error
 		api.copyFolder(folder, folder + "1", null, null);

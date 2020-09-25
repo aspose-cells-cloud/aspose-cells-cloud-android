@@ -1,4 +1,4 @@
-/* 
+/*
  * <summary>
  *  Copyright (c) 2020 Aspose.Cells Cloud
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -7,10 +7,10 @@
  *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  *  copies of the Software, and to permit persons to whom the Software is
  *  furnished to do so, subject to the following conditions:
- * 
- *  The above copyright notice and this permission notice shall be included in all 
+ *
+ *  The above copyright notice and this permission notice shall be included in all
  *  copies or substantial portions of the Software.
- * 
+ *
  *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -205,10 +205,10 @@ public class ApiClient {
         this.basePath = basePath;
         return this;
     }
-	public ApiClient setApiVersion(String apiVersion) {
-		this.appVersion = apiVersion;
-		return this;
-	}
+    public ApiClient setApiVersion(String apiVersion) {
+        this.appVersion = apiVersion;
+        return this;
+    }
     /**
      * Get HTTP client
      *
@@ -522,7 +522,7 @@ public class ApiClient {
         String[] localVarAuthNames = new String[] {  };
 
         Request request = buildGetAccessTokenRequest(localVarPath,  localVarQueryParams, localVarPostBody,
-				localVarHeaderParams, localVarFormParams, localVarAuthNames);
+                localVarHeaderParams, localVarFormParams, localVarAuthNames);
 
         com.squareup.okhttp.Call call = httpClient.newCall(request);
         Type localVarReturnType = new TypeToken<AccessTokenResponse>(){}.getType();
@@ -841,8 +841,8 @@ public class ApiClient {
      * @return True if the given MIME is JSON, false otherwise.
      */
     public boolean isJsonMime(String mime) {
-      String jsonMime = "(?i)^(application/json|[^;/ \t]+/[^;/ \t]+[+]json)[ \t]*(;.*)?$";
-      return mime != null && (mime.matches(jsonMime) || mime.equalsIgnoreCase("application/json-patch+json"));
+        String jsonMime = "(?i)^(application/json|[^;/ \t]+/[^;/ \t]+[+]json)[ \t]*(;.*)?$";
+        return mime != null && (mime.matches(jsonMime) || mime.equalsIgnoreCase("application/json-patch+json"));
     }
 
     /**
@@ -1200,7 +1200,7 @@ public class ApiClient {
      * @param formParams The form parameters
      * @param authNames The authentications to apply
      * @param progressRequestListener Progress request listener
-     * @return The HTTP request 
+     * @return The HTTP request
      * @throws ApiException If fail to serialize the request body object
      */
     public Request buildRequest(String path, String method, List<Pair> queryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String[] authNames, ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
@@ -1247,9 +1247,9 @@ public class ApiClient {
         return request;
     }
     private Request buildGetAccessTokenRequest(String path, List<Pair> queryParams, Object body,
-    Map<String, String> headerParams, Map<String, Object> formParams,
-    String[] authNames)
-    throws ApiException {
+                                               Map<String, String> headerParams, Map<String, Object> formParams,
+                                               String[] authNames)
+            throws ApiException {
         updateParamsForAuth(authNames, queryParams, headerParams);
 
         final StringBuilder urlBuilder = new StringBuilder();
@@ -1307,7 +1307,7 @@ public class ApiClient {
         request = reqBuilder.method(method, reqBody).build();
 
         return request;
-        }
+    }
     /**
      * Build full URL by concatenating base path, the given sub path and query parameters.
      *

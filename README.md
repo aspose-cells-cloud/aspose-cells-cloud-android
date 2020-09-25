@@ -18,7 +18,7 @@ This Cloud SDK enhances your Android cloud-based apps to [process & manipulate M
 - Cloud SDK to Read & Process Excel Worksheets.
 - Leverage the Power of Pivot Tables & Ranges.
 
-## Enhancements in Version 20.8
+## Enhancements in Version 20.9
 
 - Aspose.Cells Cloud API calls are not working with explicit storage name but only default storage.
 - Get output file size without downloading during conversion.

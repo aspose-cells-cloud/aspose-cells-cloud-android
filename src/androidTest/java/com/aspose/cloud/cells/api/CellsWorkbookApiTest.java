@@ -76,7 +76,7 @@ public class CellsWorkbookApiTest {
 	public CellsWorkbookApiTest() {
 		try {
 			api = new CellsApi(CellsApiUtil.GetClientId(),
-					CellsApiUtil.GetClientSecret(),"v3.0","https://api.aspose.cloud");
+					CellsApiUtil.GetClientSecret(),CellsApiUtil.GetAPIVersion(),CellsApiUtil.GetBaseUrl());
 		} catch (ApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

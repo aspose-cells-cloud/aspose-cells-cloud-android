@@ -43,7 +43,7 @@ import java.util.List;
  * excel print page setting
  */
 @ApiModel(description = "excel print page setting")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-20T11:06:31.203+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
 public class PageSetup {
   @SerializedName("link")
   private Link link = null;
