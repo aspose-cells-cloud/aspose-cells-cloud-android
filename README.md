@@ -70,7 +70,7 @@ First, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/
     <dependency>
         <groupId>com.aspose</groupId>
         <artifactId>aspose-cells-cloud-android</artifactId>
-        <version>20.4.0</version>
+        <version>20.9</version>
     </dependency>
 </dependencies>
 ```
