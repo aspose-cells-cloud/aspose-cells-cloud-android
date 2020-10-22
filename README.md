@@ -53,7 +53,7 @@ SDK includes support of storage operations for better user experience and unific
 - Copy and move files and folders across separate storages in scope of a single operation.
 - Check if certain file, folder or storage exists.
 
-## Get Started with Aspose.Cells Cloud SDK for Java
+## Get Started with Aspose.Cells Cloud SDK for Android
 
 First, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) and get your application information. Then, add the following dependency to your project's POM:
 ```
