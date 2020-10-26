@@ -25,27 +25,17 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
+import java.util.Date;
 
 /**
  * The error details
  */
 @ApiModel(description = "The error details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ErrorDetails {
-  @SerializedName("RequestId")
   private String requestId = null;
 
-  @SerializedName("Date")
-  private OffsetDateTime date = null;
+  private Date date = null;
 
   public ErrorDetails requestId(String requestId) {
     this.requestId = requestId;
@@ -65,7 +55,7 @@ public class ErrorDetails {
     this.requestId = requestId;
   }
 
-  public ErrorDetails date(OffsetDateTime date) {
+  public ErrorDetails date(Date date) {
     this.date = date;
     return this;
   }
@@ -75,11 +65,11 @@ public class ErrorDetails {
    * @return date
   **/
   @ApiModelProperty(required = true, value = "Date")
-  public OffsetDateTime getDate() {
+  public Date getDate() {
     return date;
   }
 
-  public void setDate(OffsetDateTime date) {
+  public void setDate(Date date) {
     this.date = date;
   }
 

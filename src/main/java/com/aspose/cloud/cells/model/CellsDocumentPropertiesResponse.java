@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.CellsDocumentProperties;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * CellsDocumentPropertiesResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class CellsDocumentPropertiesResponse extends CellsCloudResponse {
-  @SerializedName("DocumentProperties")
+  private String status = null;
+
+  private Integer code = null;
+
   private CellsDocumentProperties documentProperties = null;
+
+  public CellsDocumentPropertiesResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public CellsDocumentPropertiesResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public CellsDocumentPropertiesResponse documentProperties(CellsDocumentProperties documentProperties) {
     this.documentProperties = documentProperties;
@@ -72,13 +103,15 @@ public class CellsDocumentPropertiesResponse extends CellsCloudResponse {
       return false;
     }
     CellsDocumentPropertiesResponse cellsDocumentPropertiesResponse = (CellsDocumentPropertiesResponse) o;
-    return Objects.equals(this.documentProperties, cellsDocumentPropertiesResponse.documentProperties) &&
+    return Objects.equals(this.status, cellsDocumentPropertiesResponse.status) &&
+        Objects.equals(this.code, cellsDocumentPropertiesResponse.code) &&
+        Objects.equals(this.documentProperties, cellsDocumentPropertiesResponse.documentProperties) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentProperties, super.hashCode());
+    return Objects.hash(status, code, documentProperties, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class CellsDocumentPropertiesResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CellsDocumentPropertiesResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    documentProperties: ").append(toIndentedString(documentProperties)).append("\n");
     sb.append("}");
     return sb.toString();

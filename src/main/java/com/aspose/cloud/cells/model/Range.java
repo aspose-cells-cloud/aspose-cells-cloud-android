@@ -25,45 +25,28 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Range
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Range {
-  @SerializedName("ColumnCount")
   private Integer columnCount = null;
 
-  @SerializedName("RowHeight")
   private Double rowHeight = null;
 
-  @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("FirstColumn")
   private Integer firstColumn = null;
 
-  @SerializedName("ColumnWidth")
   private Double columnWidth = null;
 
-  @SerializedName("RefersTo")
   private String refersTo = null;
 
-  @SerializedName("RowCount")
   private Integer rowCount = null;
 
-  @SerializedName("FirstRow")
   private Integer firstRow = null;
 
-  @SerializedName("Worksheet")
   private String worksheet = null;
 
   public Range columnCount(Integer columnCount) {

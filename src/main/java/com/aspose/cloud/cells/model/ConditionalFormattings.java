@@ -28,29 +28,17 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.ConditionalFormatting;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * ConditionalFormattings
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ConditionalFormattings {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("Count")
   private Integer count = null;
 
-  @SerializedName("ConditionalFormattingList")
   private List<ConditionalFormatting> conditionalFormattingList = null;
 
   public ConditionalFormattings link(Link link) {
@@ -96,7 +84,7 @@ public class ConditionalFormattings {
 
   public ConditionalFormattings addConditionalFormattingListItem(ConditionalFormatting conditionalFormattingListItem) {
     if (this.conditionalFormattingList == null) {
-      this.conditionalFormattingList = new ArrayList<ConditionalFormatting>();
+      this.conditionalFormattingList = null;
     }
     this.conditionalFormattingList.add(conditionalFormattingListItem);
     return this;

@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.Worksheets;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * WorksheetsResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class WorksheetsResponse extends CellsCloudResponse {
-  @SerializedName("Worksheets")
+  private String status = null;
+
+  private Integer code = null;
+
   private Worksheets worksheets = null;
+
+  public WorksheetsResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public WorksheetsResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public WorksheetsResponse worksheets(Worksheets worksheets) {
     this.worksheets = worksheets;
@@ -72,13 +103,15 @@ public class WorksheetsResponse extends CellsCloudResponse {
       return false;
     }
     WorksheetsResponse worksheetsResponse = (WorksheetsResponse) o;
-    return Objects.equals(this.worksheets, worksheetsResponse.worksheets) &&
+    return Objects.equals(this.status, worksheetsResponse.status) &&
+        Objects.equals(this.code, worksheetsResponse.code) &&
+        Objects.equals(this.worksheets, worksheetsResponse.worksheets) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(worksheets, super.hashCode());
+    return Objects.hash(status, code, worksheets, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class WorksheetsResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorksheetsResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    worksheets: ").append(toIndentedString(worksheets)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -25,28 +25,17 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Describe the AboveAverage conditional formatting rule. This conditional formatting     rule highlights cells that are above or below the average for all values     in the range.
  */
 @ApiModel(description = "Describe the AboveAverage conditional formatting rule. This conditional formatting     rule highlights cells that are above or below the average for all values     in the range.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class AboveAverage {
-  @SerializedName("IsAboveAverage")
   private Boolean isAboveAverage = null;
 
-  @SerializedName("IsEqualAverage")
   private Boolean isEqualAverage = null;
 
-  @SerializedName("StdDev")
   private Integer stdDev = null;
 
   public AboveAverage isAboveAverage(Boolean isAboveAverage) {
@@ -59,7 +48,7 @@ public class AboveAverage {
    * @return isAboveAverage
   **/
   @ApiModelProperty(required = true, value = "Get or set the flag indicating whether the rule is an \"above average\" rule.    'true' indicates 'above average'.  Default value is true.             ")
-  public Boolean IsAboveAverage() {
+  public Boolean getIsAboveAverage() {
     return isAboveAverage;
   }
 
@@ -77,7 +66,7 @@ public class AboveAverage {
    * @return isEqualAverage
   **/
   @ApiModelProperty(required = true, value = "Get or set the flag indicating whether the 'aboveAverage' and 'belowAverage'    criteria is inclusive of the average itself, or exclusive of that value.    'true' indicates to include the average value in the criteria.  Default value    is false.             ")
-  public Boolean IsEqualAverage() {
+  public Boolean getIsEqualAverage() {
     return isEqualAverage;
   }
 

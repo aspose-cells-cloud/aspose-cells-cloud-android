@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.MergedCells;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * MergedCellsResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class MergedCellsResponse extends CellsCloudResponse {
-  @SerializedName("MergedCells")
+  private String status = null;
+
+  private Integer code = null;
+
   private MergedCells mergedCells = null;
+
+  public MergedCellsResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public MergedCellsResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public MergedCellsResponse mergedCells(MergedCells mergedCells) {
     this.mergedCells = mergedCells;
@@ -72,13 +103,15 @@ public class MergedCellsResponse extends CellsCloudResponse {
       return false;
     }
     MergedCellsResponse mergedCellsResponse = (MergedCellsResponse) o;
-    return Objects.equals(this.mergedCells, mergedCellsResponse.mergedCells) &&
+    return Objects.equals(this.status, mergedCellsResponse.status) &&
+        Objects.equals(this.code, mergedCellsResponse.code) &&
+        Objects.equals(this.mergedCells, mergedCellsResponse.mergedCells) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mergedCells, super.hashCode());
+    return Objects.hash(status, code, mergedCells, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class MergedCellsResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class MergedCellsResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    mergedCells: ").append(toIndentedString(mergedCells)).append("\n");
     sb.append("}");
     return sb.toString();

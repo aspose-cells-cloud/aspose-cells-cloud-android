@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.Names;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * NamesResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class NamesResponse extends CellsCloudResponse {
-  @SerializedName("Names")
+  private String status = null;
+
+  private Integer code = null;
+
   private Names names = null;
+
+  public NamesResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public NamesResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public NamesResponse names(Names names) {
     this.names = names;
@@ -72,13 +103,15 @@ public class NamesResponse extends CellsCloudResponse {
       return false;
     }
     NamesResponse namesResponse = (NamesResponse) o;
-    return Objects.equals(this.names, namesResponse.names) &&
+    return Objects.equals(this.status, namesResponse.status) &&
+        Objects.equals(this.code, namesResponse.code) &&
+        Objects.equals(this.names, namesResponse.names) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(names, super.hashCode());
+    return Objects.hash(status, code, names, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class NamesResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class NamesResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    names: ").append(toIndentedString(names)).append("\n");
     sb.append("}");
     return sb.toString();

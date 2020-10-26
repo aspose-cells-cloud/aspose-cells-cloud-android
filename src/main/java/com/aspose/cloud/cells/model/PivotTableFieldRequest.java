@@ -25,23 +25,13 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * PivotTableFieldRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class PivotTableFieldRequest {
-  @SerializedName("Data")
   private List<Integer> data = null;
 
   public PivotTableFieldRequest data(List<Integer> data) {
@@ -51,7 +41,7 @@ public class PivotTableFieldRequest {
 
   public PivotTableFieldRequest addDataItem(Integer dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<Integer>();
+      this.data = null;
     }
     this.data.add(dataItem);
     return this;

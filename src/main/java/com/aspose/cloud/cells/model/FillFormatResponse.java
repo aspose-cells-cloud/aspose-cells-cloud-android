@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.FillFormat;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * FillFormatResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class FillFormatResponse extends CellsCloudResponse {
-  @SerializedName("FillFormat")
+  private String status = null;
+
+  private Integer code = null;
+
   private FillFormat fillFormat = null;
+
+  public FillFormatResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public FillFormatResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public FillFormatResponse fillFormat(FillFormat fillFormat) {
     this.fillFormat = fillFormat;
@@ -72,13 +103,15 @@ public class FillFormatResponse extends CellsCloudResponse {
       return false;
     }
     FillFormatResponse fillFormatResponse = (FillFormatResponse) o;
-    return Objects.equals(this.fillFormat, fillFormatResponse.fillFormat) &&
+    return Objects.equals(this.status, fillFormatResponse.status) &&
+        Objects.equals(this.code, fillFormatResponse.code) &&
+        Objects.equals(this.fillFormat, fillFormatResponse.fillFormat) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fillFormat, super.hashCode());
+    return Objects.hash(status, code, fillFormat, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class FillFormatResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class FillFormatResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    fillFormat: ").append(toIndentedString(fillFormat)).append("\n");
     sb.append("}");
     return sb.toString();

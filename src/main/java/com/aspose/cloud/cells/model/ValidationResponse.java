@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.Validation;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * ValidationResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ValidationResponse extends CellsCloudResponse {
-  @SerializedName("Validation")
+  private String status = null;
+
+  private Integer code = null;
+
   private Validation validation = null;
+
+  public ValidationResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public ValidationResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public ValidationResponse validation(Validation validation) {
     this.validation = validation;
@@ -72,13 +103,15 @@ public class ValidationResponse extends CellsCloudResponse {
       return false;
     }
     ValidationResponse validationResponse = (ValidationResponse) o;
-    return Objects.equals(this.validation, validationResponse.validation) &&
+    return Objects.equals(this.status, validationResponse.status) &&
+        Objects.equals(this.code, validationResponse.code) &&
+        Objects.equals(this.validation, validationResponse.validation) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(validation, super.hashCode());
+    return Objects.hash(status, code, validation, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class ValidationResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ValidationResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    validation: ").append(toIndentedString(validation)).append("\n");
     sb.append("}");
     return sb.toString();

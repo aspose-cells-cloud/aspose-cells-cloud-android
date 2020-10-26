@@ -27,24 +27,54 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Cell;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * RangeValueResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class RangeValueResponse extends CellsCloudResponse {
-  @SerializedName("CellsList")
+  private String status = null;
+
+  private Integer code = null;
+
   private List<Cell> cellsList = null;
+
+  public RangeValueResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public RangeValueResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public RangeValueResponse cellsList(List<Cell> cellsList) {
     this.cellsList = cellsList;
@@ -53,7 +83,7 @@ public class RangeValueResponse extends CellsCloudResponse {
 
   public RangeValueResponse addCellsListItem(Cell cellsListItem) {
     if (this.cellsList == null) {
-      this.cellsList = new ArrayList<Cell>();
+      this.cellsList = null;
     }
     this.cellsList.add(cellsListItem);
     return this;
@@ -82,13 +112,15 @@ public class RangeValueResponse extends CellsCloudResponse {
       return false;
     }
     RangeValueResponse rangeValueResponse = (RangeValueResponse) o;
-    return Objects.equals(this.cellsList, rangeValueResponse.cellsList) &&
+    return Objects.equals(this.status, rangeValueResponse.status) &&
+        Objects.equals(this.code, rangeValueResponse.code) &&
+        Objects.equals(this.cellsList, rangeValueResponse.cellsList) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cellsList, super.hashCode());
+    return Objects.hash(status, code, cellsList, super.hashCode());
   }
 
 
@@ -97,6 +129,8 @@ public class RangeValueResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class RangeValueResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    cellsList: ").append(toIndentedString(cellsList)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -26,31 +26,19 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.FileSource;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * ImportOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 
 public class ImportOption {
-  @SerializedName("Source")
   private FileSource source = null;
 
-  @SerializedName("ImportDataType")
   private String importDataType = null;
 
-  @SerializedName("DestinationWorksheet")
   private String destinationWorksheet = null;
 
-  @SerializedName("IsInsert")
   private Boolean isInsert = null;
 
   public ImportOption source(FileSource source) {
@@ -117,7 +105,7 @@ public class ImportOption {
    * @return isInsert
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsInsert() {
+  public Boolean getIsInsert() {
     return isInsert;
   }
 

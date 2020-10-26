@@ -27,75 +27,48 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Color;
 import com.aspose.cloud.cells.model.GradientFill;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Line
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Line {
-  @SerializedName("Style")
   private String style = null;
 
-  @SerializedName("IsAuto")
   private Boolean isAuto = null;
 
-  @SerializedName("BeginArrowLength")
   private String beginArrowLength = null;
 
-  @SerializedName("Weight")
   private String weight = null;
 
-  @SerializedName("GradientFill")
   private GradientFill gradientFill = null;
 
-  @SerializedName("Color")
   private Color color = null;
 
-  @SerializedName("CompoundType")
   private String compoundType = null;
 
-  @SerializedName("WeightPt")
   private Double weightPt = null;
 
-  @SerializedName("IsVisible")
   private Boolean isVisible = null;
 
-  @SerializedName("JoinType")
   private String joinType = null;
 
-  @SerializedName("EndArrowLength")
   private String endArrowLength = null;
 
-  @SerializedName("IsAutomaticColor")
   private Boolean isAutomaticColor = null;
 
-  @SerializedName("DashType")
   private String dashType = null;
 
-  @SerializedName("BeginType")
   private String beginType = null;
 
-  @SerializedName("CapType")
   private String capType = null;
 
-  @SerializedName("EndType")
   private String endType = null;
 
-  @SerializedName("BeginArrowWidth")
   private String beginArrowWidth = null;
 
-  @SerializedName("EndArrowWidth")
   private String endArrowWidth = null;
 
-  @SerializedName("Transparency")
   private Double transparency = null;
 
   public Line style(String style) {
@@ -126,7 +99,7 @@ public class Line {
    * @return isAuto
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAuto() {
+  public Boolean getIsAuto() {
     return isAuto;
   }
 
@@ -252,7 +225,7 @@ public class Line {
    * @return isVisible
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsVisible() {
+  public Boolean getIsVisible() {
     return isVisible;
   }
 
@@ -306,7 +279,7 @@ public class Line {
    * @return isAutomaticColor
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAutomaticColor() {
+  public Boolean getIsAutomaticColor() {
     return isAutomaticColor;
   }
 

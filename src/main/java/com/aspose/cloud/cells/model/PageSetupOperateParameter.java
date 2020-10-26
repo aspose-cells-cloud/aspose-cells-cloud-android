@@ -27,22 +27,33 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.OperateParameter;
 import com.aspose.cloud.cells.model.PageSetup;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * PageSetupOperateParameter
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class PageSetupOperateParameter extends OperateParameter {
-  @SerializedName("PageSetup")
+  private String operateType = null;
+
   private PageSetup pageSetup = null;
+
+  public PageSetupOperateParameter operateType(String operateType) {
+    this.operateType = operateType;
+    return this;
+  }
+
+   /**
+   * Get operateType
+   * @return operateType
+  **/
+  @ApiModelProperty(value = "")
+  public String getOperateType() {
+    return operateType;
+  }
+
+  public void setOperateType(String operateType) {
+    this.operateType = operateType;
+  }
 
   public PageSetupOperateParameter pageSetup(PageSetup pageSetup) {
     this.pageSetup = pageSetup;
@@ -72,13 +83,14 @@ public class PageSetupOperateParameter extends OperateParameter {
       return false;
     }
     PageSetupOperateParameter pageSetupOperateParameter = (PageSetupOperateParameter) o;
-    return Objects.equals(this.pageSetup, pageSetupOperateParameter.pageSetup) &&
+    return Objects.equals(this.operateType, pageSetupOperateParameter.operateType) &&
+        Objects.equals(this.pageSetup, pageSetupOperateParameter.pageSetup) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageSetup, super.hashCode());
+    return Objects.hash(operateType, pageSetup, super.hashCode());
   }
 
 
@@ -87,6 +99,7 @@ public class PageSetupOperateParameter extends OperateParameter {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageSetupOperateParameter {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    operateType: ").append(toIndentedString(operateType)).append("\n");
     sb.append("    pageSetup: ").append(toIndentedString(pageSetup)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -28,33 +28,20 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.CellArea;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Hyperlink
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Hyperlink {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("ScreenTip")
   private String screenTip = null;
 
-  @SerializedName("Area")
   private CellArea area = null;
 
-  @SerializedName("TextToDisplay")
   private String textToDisplay = null;
 
-  @SerializedName("Address")
   private String address = null;
 
   public Hyperlink link(Link link) {

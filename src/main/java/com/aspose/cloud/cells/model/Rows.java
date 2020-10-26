@@ -27,32 +27,19 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Rows
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Rows {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("MaxRow")
   private Integer maxRow = null;
 
-  @SerializedName("RowsList")
   private List<LinkElement> rowsList = null;
 
-  @SerializedName("RowsCount")
   private Integer rowsCount = null;
 
   public Rows link(Link link) {
@@ -98,7 +85,7 @@ public class Rows {
 
   public Rows addRowsListItem(LinkElement rowsListItem) {
     if (this.rowsList == null) {
-      this.rowsList = new ArrayList<LinkElement>();
+      this.rowsList = null;
     }
     this.rowsList.add(rowsListItem);
     return this;

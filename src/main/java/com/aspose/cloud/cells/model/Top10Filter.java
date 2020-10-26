@@ -25,30 +25,18 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Top10Filter
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Top10Filter {
-  @SerializedName("Items")
   private Integer items = null;
 
-  @SerializedName("IsPercent")
   private Boolean isPercent = null;
 
-  @SerializedName("IsTop")
   private Boolean isTop = null;
 
-  @SerializedName("Criteria")
   private String criteria = null;
 
   public Top10Filter items(Integer items) {
@@ -79,7 +67,7 @@ public class Top10Filter {
    * @return isPercent
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean IsPercent() {
+  public Boolean getIsPercent() {
     return isPercent;
   }
 
@@ -97,7 +85,7 @@ public class Top10Filter {
    * @return isTop
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean IsTop() {
+  public Boolean getIsTop() {
     return isTop;
   }
 

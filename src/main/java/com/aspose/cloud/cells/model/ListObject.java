@@ -29,68 +29,43 @@ import com.aspose.cloud.cells.model.AutoFilter;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
 import com.aspose.cloud.cells.model.ListColumn;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * ListObject
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ListObject {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("ShowTotals")
   private Boolean showTotals = null;
 
-  @SerializedName("TableStyleType")
   private String tableStyleType = null;
 
-  @SerializedName("DisplayName")
   private String displayName = null;
 
-  @SerializedName("ShowHeaderRow")
   private Boolean showHeaderRow = null;
 
-  @SerializedName("StartColumn")
   private Integer startColumn = null;
 
-  @SerializedName("ShowTableStyleLastColumn")
   private Boolean showTableStyleLastColumn = null;
 
-  @SerializedName("ShowTableStyleColumnStripes")
   private Boolean showTableStyleColumnStripes = null;
 
-  @SerializedName("ShowTableStyleFirstColumn")
   private Boolean showTableStyleFirstColumn = null;
 
-  @SerializedName("StartRow")
   private Integer startRow = null;
 
-  @SerializedName("AutoFilter")
   private AutoFilter autoFilter = null;
 
-  @SerializedName("ShowTableStyleRowStripes")
   private Boolean showTableStyleRowStripes = null;
 
-  @SerializedName("EndColumn")
   private Integer endColumn = null;
 
-  @SerializedName("TableStyleName")
   private String tableStyleName = null;
 
-  @SerializedName("ListColumns")
   private List<ListColumn> listColumns = null;
 
-  @SerializedName("EndRow")
   private Integer endRow = null;
 
   public ListObject link(Link link) {
@@ -121,7 +96,7 @@ public class ListObject {
    * @return showTotals
   **/
   @ApiModelProperty(value = "Gets and sets whether this ListObject show total row.")
-  public Boolean ShowTotals() {
+  public Boolean getShowTotals() {
     return showTotals;
   }
 
@@ -175,7 +150,7 @@ public class ListObject {
    * @return showHeaderRow
   **/
   @ApiModelProperty(value = "Gets and sets whether this ListObject show header row.             ")
-  public Boolean ShowHeaderRow() {
+  public Boolean getShowHeaderRow() {
     return showHeaderRow;
   }
 
@@ -211,7 +186,7 @@ public class ListObject {
    * @return showTableStyleLastColumn
   **/
   @ApiModelProperty(value = "Indicates whether the last column in the table should have the style applied.")
-  public Boolean ShowTableStyleLastColumn() {
+  public Boolean getShowTableStyleLastColumn() {
     return showTableStyleLastColumn;
   }
 
@@ -229,7 +204,7 @@ public class ListObject {
    * @return showTableStyleColumnStripes
   **/
   @ApiModelProperty(value = "Indicates whether column stripe formatting is applied.")
-  public Boolean ShowTableStyleColumnStripes() {
+  public Boolean getShowTableStyleColumnStripes() {
     return showTableStyleColumnStripes;
   }
 
@@ -247,7 +222,7 @@ public class ListObject {
    * @return showTableStyleFirstColumn
   **/
   @ApiModelProperty(value = "Inidicates whether the first column in the table should have the style applied.")
-  public Boolean ShowTableStyleFirstColumn() {
+  public Boolean getShowTableStyleFirstColumn() {
     return showTableStyleFirstColumn;
   }
 
@@ -301,7 +276,7 @@ public class ListObject {
    * @return showTableStyleRowStripes
   **/
   @ApiModelProperty(value = "Indicates whether row stripe formatting is applied.")
-  public Boolean ShowTableStyleRowStripes() {
+  public Boolean getShowTableStyleRowStripes() {
     return showTableStyleRowStripes;
   }
 
@@ -352,7 +327,7 @@ public class ListObject {
 
   public ListObject addListColumnsItem(ListColumn listColumnsItem) {
     if (this.listColumns == null) {
-      this.listColumns = new ArrayList<ListColumn>();
+      this.listColumns = null;
     }
     this.listColumns.add(listColumnsItem);
     return this;

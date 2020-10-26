@@ -25,30 +25,18 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * PasteOptions
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class PasteOptions {
-  @SerializedName("PasteType")
   private String pasteType = null;
 
-  @SerializedName("SkipBlanks")
   private Boolean skipBlanks = null;
 
-  @SerializedName("OnlyVisibleCells")
   private Boolean onlyVisibleCells = null;
 
-  @SerializedName("Transpose")
   private Boolean transpose = null;
 
   public PasteOptions pasteType(String pasteType) {
@@ -79,7 +67,7 @@ public class PasteOptions {
    * @return skipBlanks
   **/
   @ApiModelProperty(value = "")
-  public Boolean SkipBlanks() {
+  public Boolean getSkipBlanks() {
     return skipBlanks;
   }
 
@@ -97,7 +85,7 @@ public class PasteOptions {
    * @return onlyVisibleCells
   **/
   @ApiModelProperty(value = "")
-  public Boolean OnlyVisibleCells() {
+  public Boolean getOnlyVisibleCells() {
     return onlyVisibleCells;
   }
 
@@ -115,7 +103,7 @@ public class PasteOptions {
    * @return transpose
   **/
   @ApiModelProperty(value = "")
-  public Boolean Transpose() {
+  public Boolean getTranspose() {
     return transpose;
   }
 

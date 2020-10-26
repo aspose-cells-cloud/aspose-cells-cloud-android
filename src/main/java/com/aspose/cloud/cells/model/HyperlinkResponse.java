@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.Hyperlink;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * HyperlinkResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class HyperlinkResponse extends CellsCloudResponse {
-  @SerializedName("Hyperlink")
+  private String status = null;
+
+  private Integer code = null;
+
   private Hyperlink hyperlink = null;
+
+  public HyperlinkResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public HyperlinkResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public HyperlinkResponse hyperlink(Hyperlink hyperlink) {
     this.hyperlink = hyperlink;
@@ -72,13 +103,15 @@ public class HyperlinkResponse extends CellsCloudResponse {
       return false;
     }
     HyperlinkResponse hyperlinkResponse = (HyperlinkResponse) o;
-    return Objects.equals(this.hyperlink, hyperlinkResponse.hyperlink) &&
+    return Objects.equals(this.status, hyperlinkResponse.status) &&
+        Objects.equals(this.code, hyperlinkResponse.code) &&
+        Objects.equals(this.hyperlink, hyperlinkResponse.hyperlink) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(hyperlink, super.hashCode());
+    return Objects.hash(status, code, hyperlink, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class HyperlinkResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class HyperlinkResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    hyperlink: ").append(toIndentedString(hyperlink)).append("\n");
     sb.append("}");
     return sb.toString();

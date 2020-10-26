@@ -27,36 +27,22 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Color;
 import com.aspose.cloud.cells.model.FillFormat;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Area
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Area {
-  @SerializedName("ForegroundColor")
   private Color foregroundColor = null;
 
-  @SerializedName("BackgroundColor")
   private Color backgroundColor = null;
 
-  @SerializedName("Format")
   private String format = null;
 
-  @SerializedName("FillFormat")
   private FillFormat fillFormat = null;
 
-  @SerializedName("InvertIfNegative")
   private Boolean invertIfNegative = null;
 
-  @SerializedName("Transparency")
   private Double transparency = null;
 
   public Area foregroundColor(Color foregroundColor) {
@@ -141,7 +127,7 @@ public class Area {
    * @return invertIfNegative
   **/
   @ApiModelProperty(value = "")
-  public Boolean InvertIfNegative() {
+  public Boolean getInvertIfNegative() {
     return invertIfNegative;
   }
 

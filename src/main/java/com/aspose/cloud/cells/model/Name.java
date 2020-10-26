@@ -27,42 +27,26 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Name
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Name {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("Comment")
   private String comment = null;
 
-  @SerializedName("Text")
   private String text = null;
 
-  @SerializedName("WorksheetIndex")
   private Integer worksheetIndex = null;
 
-  @SerializedName("R1C1RefersTo")
   private String r1C1RefersTo = null;
 
-  @SerializedName("RefersTo")
   private String refersTo = null;
 
-  @SerializedName("IsReferred")
   private Boolean isReferred = null;
 
-  @SerializedName("IsVisible")
   private Boolean isVisible = null;
 
   public Name link(Link link) {
@@ -183,7 +167,7 @@ public class Name {
    * @return isReferred
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean IsReferred() {
+  public Boolean getIsReferred() {
     return isReferred;
   }
 
@@ -201,7 +185,7 @@ public class Name {
    * @return isVisible
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean IsVisible() {
+  public Boolean getIsVisible() {
     return isVisible;
   }
 

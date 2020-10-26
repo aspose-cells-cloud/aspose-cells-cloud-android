@@ -31,68 +31,43 @@ import com.aspose.cloud.cells.model.Font;
 import com.aspose.cloud.cells.model.Line;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Legend
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Legend {
-  @SerializedName("IsInnerMode")
   private Boolean isInnerMode = null;
 
-  @SerializedName("ShapeProperties")
   private List<LinkElement> shapeProperties = null;
 
-  @SerializedName("AutoScaleFont")
   private Boolean autoScaleFont = null;
 
-  @SerializedName("Area")
   private Area area = null;
 
-  @SerializedName("Height")
   private Integer height = null;
 
-  @SerializedName("Width")
   private Integer width = null;
 
-  @SerializedName("BackgroundMode")
   private String backgroundMode = null;
 
-  @SerializedName("IsAutomaticSize")
   private Boolean isAutomaticSize = null;
 
-  @SerializedName("Y")
   private Integer Y = null;
 
-  @SerializedName("X")
   private Integer X = null;
 
-  @SerializedName("Shadow")
   private Boolean shadow = null;
 
-  @SerializedName("Font")
   private Font font = null;
 
-  @SerializedName("Border")
   private Line border = null;
 
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("LegendEntries")
   private LinkElement legendEntries = null;
 
-  @SerializedName("Position")
   private String position = null;
 
   public Legend isInnerMode(Boolean isInnerMode) {
@@ -105,7 +80,7 @@ public class Legend {
    * @return isInnerMode
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsInnerMode() {
+  public Boolean getIsInnerMode() {
     return isInnerMode;
   }
 
@@ -120,7 +95,7 @@ public class Legend {
 
   public Legend addShapePropertiesItem(LinkElement shapePropertiesItem) {
     if (this.shapeProperties == null) {
-      this.shapeProperties = new ArrayList<LinkElement>();
+      this.shapeProperties = null;
     }
     this.shapeProperties.add(shapePropertiesItem);
     return this;
@@ -149,7 +124,7 @@ public class Legend {
    * @return autoScaleFont
   **/
   @ApiModelProperty(value = "")
-  public Boolean AutoScaleFont() {
+  public Boolean getAutoScaleFont() {
     return autoScaleFont;
   }
 
@@ -239,7 +214,7 @@ public class Legend {
    * @return isAutomaticSize
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAutomaticSize() {
+  public Boolean getIsAutomaticSize() {
     return isAutomaticSize;
   }
 
@@ -293,7 +268,7 @@ public class Legend {
    * @return shadow
   **/
   @ApiModelProperty(value = "")
-  public Boolean Shadow() {
+  public Boolean getShadow() {
     return shadow;
   }
 

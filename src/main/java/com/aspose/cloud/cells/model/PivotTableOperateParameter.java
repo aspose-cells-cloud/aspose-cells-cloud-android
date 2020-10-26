@@ -26,45 +26,48 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.OperateParameter;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * PivotTableOperateParameter
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class PivotTableOperateParameter extends OperateParameter {
-  @SerializedName("PivotFieldColumns")
+  private String operateType = null;
+
   private List<Integer> pivotFieldColumns = null;
 
-  @SerializedName("PivotTableIndex")
   private Integer pivotTableIndex = null;
 
-  @SerializedName("TableName")
   private String tableName = null;
 
-  @SerializedName("UseSameSource")
   private Boolean useSameSource = null;
 
-  @SerializedName("PivotFieldData")
   private List<Integer> pivotFieldData = null;
 
-  @SerializedName("PivotFieldRows")
   private List<Integer> pivotFieldRows = null;
 
-  @SerializedName("DestCellName")
   private String destCellName = null;
 
-  @SerializedName("SourceData")
   private String sourceData = null;
+
+  public PivotTableOperateParameter operateType(String operateType) {
+    this.operateType = operateType;
+    return this;
+  }
+
+   /**
+   * Get operateType
+   * @return operateType
+  **/
+  @ApiModelProperty(value = "")
+  public String getOperateType() {
+    return operateType;
+  }
+
+  public void setOperateType(String operateType) {
+    this.operateType = operateType;
+  }
 
   public PivotTableOperateParameter pivotFieldColumns(List<Integer> pivotFieldColumns) {
     this.pivotFieldColumns = pivotFieldColumns;
@@ -73,7 +76,7 @@ public class PivotTableOperateParameter extends OperateParameter {
 
   public PivotTableOperateParameter addPivotFieldColumnsItem(Integer pivotFieldColumnsItem) {
     if (this.pivotFieldColumns == null) {
-      this.pivotFieldColumns = new ArrayList<Integer>();
+      this.pivotFieldColumns = null;
     }
     this.pivotFieldColumns.add(pivotFieldColumnsItem);
     return this;
@@ -138,7 +141,7 @@ public class PivotTableOperateParameter extends OperateParameter {
    * @return useSameSource
   **/
   @ApiModelProperty(value = "")
-  public Boolean UseSameSource() {
+  public Boolean getUseSameSource() {
     return useSameSource;
   }
 
@@ -153,7 +156,7 @@ public class PivotTableOperateParameter extends OperateParameter {
 
   public PivotTableOperateParameter addPivotFieldDataItem(Integer pivotFieldDataItem) {
     if (this.pivotFieldData == null) {
-      this.pivotFieldData = new ArrayList<Integer>();
+      this.pivotFieldData = null;
     }
     this.pivotFieldData.add(pivotFieldDataItem);
     return this;
@@ -179,7 +182,7 @@ public class PivotTableOperateParameter extends OperateParameter {
 
   public PivotTableOperateParameter addPivotFieldRowsItem(Integer pivotFieldRowsItem) {
     if (this.pivotFieldRows == null) {
-      this.pivotFieldRows = new ArrayList<Integer>();
+      this.pivotFieldRows = null;
     }
     this.pivotFieldRows.add(pivotFieldRowsItem);
     return this;
@@ -244,7 +247,8 @@ public class PivotTableOperateParameter extends OperateParameter {
       return false;
     }
     PivotTableOperateParameter pivotTableOperateParameter = (PivotTableOperateParameter) o;
-    return Objects.equals(this.pivotFieldColumns, pivotTableOperateParameter.pivotFieldColumns) &&
+    return Objects.equals(this.operateType, pivotTableOperateParameter.operateType) &&
+        Objects.equals(this.pivotFieldColumns, pivotTableOperateParameter.pivotFieldColumns) &&
         Objects.equals(this.pivotTableIndex, pivotTableOperateParameter.pivotTableIndex) &&
         Objects.equals(this.tableName, pivotTableOperateParameter.tableName) &&
         Objects.equals(this.useSameSource, pivotTableOperateParameter.useSameSource) &&
@@ -257,7 +261,7 @@ public class PivotTableOperateParameter extends OperateParameter {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pivotFieldColumns, pivotTableIndex, tableName, useSameSource, pivotFieldData, pivotFieldRows, destCellName, sourceData, super.hashCode());
+    return Objects.hash(operateType, pivotFieldColumns, pivotTableIndex, tableName, useSameSource, pivotFieldData, pivotFieldRows, destCellName, sourceData, super.hashCode());
   }
 
 
@@ -266,6 +270,7 @@ public class PivotTableOperateParameter extends OperateParameter {
     StringBuilder sb = new StringBuilder();
     sb.append("class PivotTableOperateParameter {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    operateType: ").append(toIndentedString(operateType)).append("\n");
     sb.append("    pivotFieldColumns: ").append(toIndentedString(pivotFieldColumns)).append("\n");
     sb.append("    pivotTableIndex: ").append(toIndentedString(pivotTableIndex)).append("\n");
     sb.append("    tableName: ").append(toIndentedString(tableName)).append("\n");

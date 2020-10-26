@@ -27,37 +27,23 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Color;
 import com.aspose.cloud.cells.model.ConditionalFormattingValue;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Describe the ColorScale conditional formatting rule. This conditional formatting    rule creates a gradated color scale on the cells.             
  */
 @ApiModel(description = "Describe the ColorScale conditional formatting rule. This conditional formatting    rule creates a gradated color scale on the cells.             ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ColorScale {
-  @SerializedName("MaxCfvo")
   private ConditionalFormattingValue maxCfvo = null;
 
-  @SerializedName("MidColor")
   private Color midColor = null;
 
-  @SerializedName("MinColor")
   private Color minColor = null;
 
-  @SerializedName("MidCfvo")
   private ConditionalFormattingValue midCfvo = null;
 
-  @SerializedName("MinCfvo")
   private ConditionalFormattingValue minCfvo = null;
 
-  @SerializedName("MaxColor")
   private Color maxColor = null;
 
   public ColorScale maxCfvo(ConditionalFormattingValue maxCfvo) {

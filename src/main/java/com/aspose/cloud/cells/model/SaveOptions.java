@@ -25,43 +25,27 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * SaveOptions
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 
 public class SaveOptions {
-  @SerializedName("EnableHTTPCompression")
   private Boolean enableHTTPCompression = null;
 
-  @SerializedName("SaveFormat")
   private String saveFormat = null;
 
-  @SerializedName("ClearData")
   private Boolean clearData = null;
 
-  @SerializedName("CachedFileFolder")
   private String cachedFileFolder = null;
 
-  @SerializedName("ValidateMergedAreas")
   private Boolean validateMergedAreas = null;
 
-  @SerializedName("RefreshChartCache")
   private Boolean refreshChartCache = null;
 
-  @SerializedName("CreateDirectory")
   private Boolean createDirectory = null;
 
-  @SerializedName("SortNames")
   private Boolean sortNames = null;
 
   public SaveOptions enableHTTPCompression(Boolean enableHTTPCompression) {
@@ -74,7 +58,7 @@ public class SaveOptions {
    * @return enableHTTPCompression
   **/
   @ApiModelProperty(value = "")
-  public Boolean EnableHTTPCompression() {
+  public Boolean getEnableHTTPCompression() {
     return enableHTTPCompression;
   }
 
@@ -110,7 +94,7 @@ public class SaveOptions {
    * @return clearData
   **/
   @ApiModelProperty(value = "Make the workbook empty after saving the file.")
-  public Boolean ClearData() {
+  public Boolean getClearData() {
     return clearData;
   }
 
@@ -146,7 +130,7 @@ public class SaveOptions {
    * @return validateMergedAreas
   **/
   @ApiModelProperty(value = "Indicates whether validate merged areas before saving the file. The default value is false.             ")
-  public Boolean ValidateMergedAreas() {
+  public Boolean getValidateMergedAreas() {
     return validateMergedAreas;
   }
 
@@ -164,7 +148,7 @@ public class SaveOptions {
    * @return refreshChartCache
   **/
   @ApiModelProperty(value = "")
-  public Boolean RefreshChartCache() {
+  public Boolean getRefreshChartCache() {
     return refreshChartCache;
   }
 
@@ -182,7 +166,7 @@ public class SaveOptions {
    * @return createDirectory
   **/
   @ApiModelProperty(value = "If true and the directory does not exist, the directory will be automatically created before saving the file.             ")
-  public Boolean CreateDirectory() {
+  public Boolean getCreateDirectory() {
     return createDirectory;
   }
 
@@ -200,7 +184,7 @@ public class SaveOptions {
    * @return sortNames
   **/
   @ApiModelProperty(value = "")
-  public Boolean SortNames() {
+  public Boolean getSortNames() {
     return sortNames;
   }
 

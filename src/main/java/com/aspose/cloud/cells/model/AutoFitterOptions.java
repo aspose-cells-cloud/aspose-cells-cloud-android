@@ -25,27 +25,16 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * AutoFitterOptions
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class AutoFitterOptions {
-  @SerializedName("IgnoreHidden")
   private Boolean ignoreHidden = null;
 
-  @SerializedName("OnlyAuto")
   private Boolean onlyAuto = null;
 
-  @SerializedName("AutoFitMergedCells")
   private Boolean autoFitMergedCells = null;
 
   public AutoFitterOptions ignoreHidden(Boolean ignoreHidden) {
@@ -58,7 +47,7 @@ public class AutoFitterOptions {
    * @return ignoreHidden
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean IgnoreHidden() {
+  public Boolean getIgnoreHidden() {
     return ignoreHidden;
   }
 
@@ -76,7 +65,7 @@ public class AutoFitterOptions {
    * @return onlyAuto
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean OnlyAuto() {
+  public Boolean getOnlyAuto() {
     return onlyAuto;
   }
 
@@ -94,7 +83,7 @@ public class AutoFitterOptions {
    * @return autoFitMergedCells
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean AutoFitMergedCells() {
+  public Boolean getAutoFitMergedCells() {
     return autoFitMergedCells;
   }
 

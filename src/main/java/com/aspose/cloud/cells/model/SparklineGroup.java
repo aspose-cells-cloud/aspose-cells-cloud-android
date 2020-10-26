@@ -27,101 +27,65 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsColor;
 import com.aspose.cloud.cells.model.Sparkline;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * SparklineGroup
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class SparklineGroup {
-  @SerializedName("DisplayHidden")
   private Boolean displayHidden = null;
 
-  @SerializedName("FirstPointColor")
   private CellsColor firstPointColor = null;
 
-  @SerializedName("HighPointColor")
   private CellsColor highPointColor = null;
 
-  @SerializedName("HorizontalAxisColor")
   private CellsColor horizontalAxisColor = null;
 
-  @SerializedName("HorizontalAxisDateRange")
   private String horizontalAxisDateRange = null;
 
-  @SerializedName("LastPointColor")
   private CellsColor lastPointColor = null;
 
-  @SerializedName("LineWeight")
   private Double lineWeight = null;
 
-  @SerializedName("LowPointColor")
   private CellsColor lowPointColor = null;
 
-  @SerializedName("MarkersColor")
   private CellsColor markersColor = null;
 
-  @SerializedName("NegativePointsColor")
   private CellsColor negativePointsColor = null;
 
-  @SerializedName("PlotEmptyCellsType")
   private String plotEmptyCellsType = null;
 
-  @SerializedName("PlotRightToLeft")
   private Boolean plotRightToLeft = null;
 
-  @SerializedName("PresetStyle")
   private String presetStyle = null;
 
-  @SerializedName("SeriesColor")
   private CellsColor seriesColor = null;
 
-  @SerializedName("ShowFirstPoint")
   private Boolean showFirstPoint = null;
 
-  @SerializedName("ShowHighPoint")
   private Boolean showHighPoint = null;
 
-  @SerializedName("ShowHorizontalAxis")
   private Boolean showHorizontalAxis = null;
 
-  @SerializedName("ShowLastPoint")
   private Boolean showLastPoint = null;
 
-  @SerializedName("ShowLowPoint")
   private Boolean showLowPoint = null;
 
-  @SerializedName("ShowMarkers")
   private Boolean showMarkers = null;
 
-  @SerializedName("ShowNegativePoints")
   private Boolean showNegativePoints = null;
 
-  @SerializedName("SparklineCollection")
   private List<Sparkline> sparklineCollection = null;
 
-  @SerializedName("Type")
   private String type = null;
 
-  @SerializedName("VerticalAxisMaxValue")
   private Double verticalAxisMaxValue = null;
 
-  @SerializedName("VerticalAxisMaxValueType")
   private String verticalAxisMaxValueType = null;
 
-  @SerializedName("VerticalAxisMinValue")
   private Double verticalAxisMinValue = null;
 
-  @SerializedName("VerticalAxisMinValueType")
   private String verticalAxisMinValueType = null;
 
   public SparklineGroup displayHidden(Boolean displayHidden) {
@@ -134,7 +98,7 @@ public class SparklineGroup {
    * @return displayHidden
   **/
   @ApiModelProperty(value = "")
-  public Boolean DisplayHidden() {
+  public Boolean getDisplayHidden() {
     return displayHidden;
   }
 
@@ -332,7 +296,7 @@ public class SparklineGroup {
    * @return plotRightToLeft
   **/
   @ApiModelProperty(value = "")
-  public Boolean PlotRightToLeft() {
+  public Boolean getPlotRightToLeft() {
     return plotRightToLeft;
   }
 
@@ -386,7 +350,7 @@ public class SparklineGroup {
    * @return showFirstPoint
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowFirstPoint() {
+  public Boolean getShowFirstPoint() {
     return showFirstPoint;
   }
 
@@ -404,7 +368,7 @@ public class SparklineGroup {
    * @return showHighPoint
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowHighPoint() {
+  public Boolean getShowHighPoint() {
     return showHighPoint;
   }
 
@@ -422,7 +386,7 @@ public class SparklineGroup {
    * @return showHorizontalAxis
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowHorizontalAxis() {
+  public Boolean getShowHorizontalAxis() {
     return showHorizontalAxis;
   }
 
@@ -440,7 +404,7 @@ public class SparklineGroup {
    * @return showLastPoint
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowLastPoint() {
+  public Boolean getShowLastPoint() {
     return showLastPoint;
   }
 
@@ -458,7 +422,7 @@ public class SparklineGroup {
    * @return showLowPoint
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowLowPoint() {
+  public Boolean getShowLowPoint() {
     return showLowPoint;
   }
 
@@ -476,7 +440,7 @@ public class SparklineGroup {
    * @return showMarkers
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowMarkers() {
+  public Boolean getShowMarkers() {
     return showMarkers;
   }
 
@@ -494,7 +458,7 @@ public class SparklineGroup {
    * @return showNegativePoints
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowNegativePoints() {
+  public Boolean getShowNegativePoints() {
     return showNegativePoints;
   }
 
@@ -509,7 +473,7 @@ public class SparklineGroup {
 
   public SparklineGroup addSparklineCollectionItem(Sparkline sparklineCollectionItem) {
     if (this.sparklineCollection == null) {
-      this.sparklineCollection = new ArrayList<Sparkline>();
+      this.sparklineCollection = null;
     }
     this.sparklineCollection.add(sparklineCollectionItem);
     return this;

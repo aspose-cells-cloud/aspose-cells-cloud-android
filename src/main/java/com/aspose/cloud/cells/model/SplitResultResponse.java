@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.SplitResult;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * SplitResultResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class SplitResultResponse extends CellsCloudResponse {
-  @SerializedName("Result")
+  private String status = null;
+
+  private Integer code = null;
+
   private SplitResult result = null;
+
+  public SplitResultResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public SplitResultResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public SplitResultResponse result(SplitResult result) {
     this.result = result;
@@ -72,13 +103,15 @@ public class SplitResultResponse extends CellsCloudResponse {
       return false;
     }
     SplitResultResponse splitResultResponse = (SplitResultResponse) o;
-    return Objects.equals(this.result, splitResultResponse.result) &&
+    return Objects.equals(this.status, splitResultResponse.status) &&
+        Objects.equals(this.code, splitResultResponse.code) &&
+        Objects.equals(this.result, splitResultResponse.result) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(result, super.hashCode());
+    return Objects.hash(status, code, result, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class SplitResultResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class SplitResultResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("}");
     return sb.toString();

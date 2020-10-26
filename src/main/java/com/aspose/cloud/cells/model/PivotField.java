@@ -26,137 +26,89 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.PivotItem;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * PivotField
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class PivotField {
-  @SerializedName("PivotItems")
   private List<PivotItem> pivotItems = null;
 
-  @SerializedName("DisplayName")
   private String displayName = null;
 
-  @SerializedName("NumberFormat")
   private String numberFormat = null;
 
-  @SerializedName("DragToColumn")
   private Boolean dragToColumn = null;
 
-  @SerializedName("IsAutoShow")
   private Boolean isAutoShow = null;
 
-  @SerializedName("IsRepeatItemLabels")
   private Boolean isRepeatItemLabels = null;
 
-  @SerializedName("DragToRow")
   private Boolean dragToRow = null;
 
-  @SerializedName("IsAutoSort")
   private Boolean isAutoSort = null;
 
-  @SerializedName("InsertBlankRow")
   private Boolean insertBlankRow = null;
 
-  @SerializedName("ShowSubtotalAtTop")
   private Boolean showSubtotalAtTop = null;
 
-  @SerializedName("ShowCompact")
   private Boolean showCompact = null;
 
-  @SerializedName("Function")
   private String function = null;
 
-  @SerializedName("IsMultipleItemSelectionAllowed")
   private Boolean isMultipleItemSelectionAllowed = null;
 
-  @SerializedName("DataDisplayFormat")
   private String dataDisplayFormat = null;
 
-  @SerializedName("BaseItemPosition")
   private String baseItemPosition = null;
 
-  @SerializedName("IsInsertPageBreaksBetweenItems")
   private Boolean isInsertPageBreaksBetweenItems = null;
 
-  @SerializedName("ShowAllItems")
   private Boolean showAllItems = null;
 
-  @SerializedName("BaseItem")
   private Integer baseItem = null;
 
-  @SerializedName("ItemCount")
   private Integer itemCount = null;
 
-  @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("ShowInOutlineForm")
   private Boolean showInOutlineForm = null;
 
-  @SerializedName("Items")
   private List<String> items = null;
 
-  @SerializedName("AutoShowField")
   private Integer autoShowField = null;
 
-  @SerializedName("IsAutoSubtotals")
   private Boolean isAutoSubtotals = null;
 
-  @SerializedName("IsIncludeNewItemsInFilter")
   private Boolean isIncludeNewItemsInFilter = null;
 
-  @SerializedName("CurrentPageItem")
   private Integer currentPageItem = null;
 
-  @SerializedName("Position")
   private Integer position = null;
 
-  @SerializedName("IsAscendSort")
   private Boolean isAscendSort = null;
 
-  @SerializedName("IsAscendShow")
   private Boolean isAscendShow = null;
 
-  @SerializedName("BaseField")
   private Integer baseField = null;
 
-  @SerializedName("AutoSortField")
   private Integer autoSortField = null;
 
-  @SerializedName("AutoShowCount")
   private Integer autoShowCount = null;
 
-  @SerializedName("Number")
   private Integer number = null;
 
-  @SerializedName("DragToPage")
   private Boolean dragToPage = null;
 
-  @SerializedName("DragToData")
   private Boolean dragToData = null;
 
-  @SerializedName("BaseIndex")
   private Integer baseIndex = null;
 
-  @SerializedName("OriginalItems")
   private List<String> originalItems = null;
 
-  @SerializedName("DragToHide")
   private Boolean dragToHide = null;
 
-  @SerializedName("IsCalculatedField")
   private Boolean isCalculatedField = null;
 
   public PivotField pivotItems(List<PivotItem> pivotItems) {
@@ -166,7 +118,7 @@ public class PivotField {
 
   public PivotField addPivotItemsItem(PivotItem pivotItemsItem) {
     if (this.pivotItems == null) {
-      this.pivotItems = new ArrayList<PivotItem>();
+      this.pivotItems = null;
     }
     this.pivotItems.add(pivotItemsItem);
     return this;
@@ -231,7 +183,7 @@ public class PivotField {
    * @return dragToColumn
   **/
   @ApiModelProperty(value = "")
-  public Boolean DragToColumn() {
+  public Boolean getDragToColumn() {
     return dragToColumn;
   }
 
@@ -249,7 +201,7 @@ public class PivotField {
    * @return isAutoShow
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAutoShow() {
+  public Boolean getIsAutoShow() {
     return isAutoShow;
   }
 
@@ -267,7 +219,7 @@ public class PivotField {
    * @return isRepeatItemLabels
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsRepeatItemLabels() {
+  public Boolean getIsRepeatItemLabels() {
     return isRepeatItemLabels;
   }
 
@@ -285,7 +237,7 @@ public class PivotField {
    * @return dragToRow
   **/
   @ApiModelProperty(value = "")
-  public Boolean DragToRow() {
+  public Boolean getDragToRow() {
     return dragToRow;
   }
 
@@ -303,7 +255,7 @@ public class PivotField {
    * @return isAutoSort
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAutoSort() {
+  public Boolean getIsAutoSort() {
     return isAutoSort;
   }
 
@@ -321,7 +273,7 @@ public class PivotField {
    * @return insertBlankRow
   **/
   @ApiModelProperty(value = "")
-  public Boolean InsertBlankRow() {
+  public Boolean getInsertBlankRow() {
     return insertBlankRow;
   }
 
@@ -339,7 +291,7 @@ public class PivotField {
    * @return showSubtotalAtTop
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowSubtotalAtTop() {
+  public Boolean getShowSubtotalAtTop() {
     return showSubtotalAtTop;
   }
 
@@ -357,7 +309,7 @@ public class PivotField {
    * @return showCompact
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowCompact() {
+  public Boolean getShowCompact() {
     return showCompact;
   }
 
@@ -393,7 +345,7 @@ public class PivotField {
    * @return isMultipleItemSelectionAllowed
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsMultipleItemSelectionAllowed() {
+  public Boolean getIsMultipleItemSelectionAllowed() {
     return isMultipleItemSelectionAllowed;
   }
 
@@ -447,7 +399,7 @@ public class PivotField {
    * @return isInsertPageBreaksBetweenItems
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsInsertPageBreaksBetweenItems() {
+  public Boolean getIsInsertPageBreaksBetweenItems() {
     return isInsertPageBreaksBetweenItems;
   }
 
@@ -465,7 +417,7 @@ public class PivotField {
    * @return showAllItems
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowAllItems() {
+  public Boolean getShowAllItems() {
     return showAllItems;
   }
 
@@ -537,7 +489,7 @@ public class PivotField {
    * @return showInOutlineForm
   **/
   @ApiModelProperty(value = "")
-  public Boolean ShowInOutlineForm() {
+  public Boolean getShowInOutlineForm() {
     return showInOutlineForm;
   }
 
@@ -552,7 +504,7 @@ public class PivotField {
 
   public PivotField addItemsItem(String itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<String>();
+      this.items = null;
     }
     this.items.add(itemsItem);
     return this;
@@ -599,7 +551,7 @@ public class PivotField {
    * @return isAutoSubtotals
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAutoSubtotals() {
+  public Boolean getIsAutoSubtotals() {
     return isAutoSubtotals;
   }
 
@@ -617,7 +569,7 @@ public class PivotField {
    * @return isIncludeNewItemsInFilter
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsIncludeNewItemsInFilter() {
+  public Boolean getIsIncludeNewItemsInFilter() {
     return isIncludeNewItemsInFilter;
   }
 
@@ -671,7 +623,7 @@ public class PivotField {
    * @return isAscendSort
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAscendSort() {
+  public Boolean getIsAscendSort() {
     return isAscendSort;
   }
 
@@ -689,7 +641,7 @@ public class PivotField {
    * @return isAscendShow
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAscendShow() {
+  public Boolean getIsAscendShow() {
     return isAscendShow;
   }
 
@@ -779,7 +731,7 @@ public class PivotField {
    * @return dragToPage
   **/
   @ApiModelProperty(value = "")
-  public Boolean DragToPage() {
+  public Boolean getDragToPage() {
     return dragToPage;
   }
 
@@ -797,7 +749,7 @@ public class PivotField {
    * @return dragToData
   **/
   @ApiModelProperty(value = "")
-  public Boolean DragToData() {
+  public Boolean getDragToData() {
     return dragToData;
   }
 
@@ -830,7 +782,7 @@ public class PivotField {
 
   public PivotField addOriginalItemsItem(String originalItemsItem) {
     if (this.originalItems == null) {
-      this.originalItems = new ArrayList<String>();
+      this.originalItems = null;
     }
     this.originalItems.add(originalItemsItem);
     return this;
@@ -859,7 +811,7 @@ public class PivotField {
    * @return dragToHide
   **/
   @ApiModelProperty(value = "")
-  public Boolean DragToHide() {
+  public Boolean getDragToHide() {
     return dragToHide;
   }
 
@@ -877,7 +829,7 @@ public class PivotField {
    * @return isCalculatedField
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsCalculatedField() {
+  public Boolean getIsCalculatedField() {
     return isCalculatedField;
   }
 

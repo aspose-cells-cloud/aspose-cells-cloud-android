@@ -27,144 +27,94 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.Shape;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * OleObject
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class OleObject {
-  @SerializedName("AlternativeText")
   private String alternativeText = null;
 
-  @SerializedName("Bottom")
   private Integer bottom = null;
 
-  @SerializedName("Top")
   private Integer top = null;
 
-  @SerializedName("Width")
   private Integer width = null;
 
-  @SerializedName("HtmlText")
   private String htmlText = null;
 
-  @SerializedName("TextVerticalAlignment")
   private String textVerticalAlignment = null;
 
-  @SerializedName("AutoShapeType")
   private String autoShapeType = null;
 
-  @SerializedName("IsPrintable")
   private Boolean isPrintable = null;
 
-  @SerializedName("UpperLeftColumn")
   private Integer upperLeftColumn = null;
 
-  @SerializedName("IsLockAspectRatio")
   private Boolean isLockAspectRatio = null;
 
-  @SerializedName("IsGroup")
   private Boolean isGroup = null;
 
-  @SerializedName("RotationAngle")
   private Double rotationAngle = null;
 
-  @SerializedName("ZOrderPosition")
-  private Integer zorderPosition = null;
+  private Integer zOrderPosition = null;
 
-  @SerializedName("TextHorizontalOverflow")
   private String textHorizontalOverflow = null;
 
-  @SerializedName("MsoDrawingType")
   private String msoDrawingType = null;
 
-  @SerializedName("TextOrientationType")
   private String textOrientationType = null;
 
-  @SerializedName("Placement")
   private String placement = null;
 
-  @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("IsWordArt")
   private Boolean isWordArt = null;
 
-  @SerializedName("LinkedCell")
   private String linkedCell = null;
 
-  @SerializedName("UpperLeftRow")
   private Integer upperLeftRow = null;
 
-  @SerializedName("IsLocked")
   private Boolean isLocked = null;
 
-  @SerializedName("LowerRightRow")
   private Integer lowerRightRow = null;
 
-  @SerializedName("IsTextWrapped")
   private Boolean isTextWrapped = null;
 
-  @SerializedName("Y")
   private Integer Y = null;
 
-  @SerializedName("X")
   private Integer X = null;
 
-  @SerializedName("IsHidden")
   private Boolean isHidden = null;
 
-  @SerializedName("Left")
   private Integer left = null;
 
-  @SerializedName("Right")
   private Integer right = null;
 
-  @SerializedName("Text")
   private String text = null;
 
-  @SerializedName("LowerRightColumn")
   private Integer lowerRightColumn = null;
 
-  @SerializedName("Height")
   private Integer height = null;
 
-  @SerializedName("TextHorizontalAlignment")
   private String textHorizontalAlignment = null;
 
-  @SerializedName("TextVerticalOverflow")
   private String textVerticalOverflow = null;
 
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("DisplayAsIcon")
   private Boolean displayAsIcon = null;
 
-  @SerializedName("FileFormatType")
   private String fileFormatType = null;
 
-  @SerializedName("SourceFullName")
   private String sourceFullName = null;
 
-  @SerializedName("IsAutoSize")
   private Boolean isAutoSize = null;
 
-  @SerializedName("ImageSourceFullName")
   private String imageSourceFullName = null;
 
-  @SerializedName("ProgID")
   private String progID = null;
 
-  @SerializedName("IsLink")
   private Boolean isLink = null;
 
   public OleObject alternativeText(String alternativeText) {
@@ -303,7 +253,7 @@ public class OleObject {
    * @return isPrintable
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsPrintable() {
+  public Boolean getIsPrintable() {
     return isPrintable;
   }
 
@@ -339,7 +289,7 @@ public class OleObject {
    * @return isLockAspectRatio
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsLockAspectRatio() {
+  public Boolean getIsLockAspectRatio() {
     return isLockAspectRatio;
   }
 
@@ -357,7 +307,7 @@ public class OleObject {
    * @return isGroup
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsGroup() {
+  public Boolean getIsGroup() {
     return isGroup;
   }
 
@@ -383,22 +333,22 @@ public class OleObject {
     this.rotationAngle = rotationAngle;
   }
 
-  public OleObject zorderPosition(Integer zorderPosition) {
-    this.zorderPosition = zorderPosition;
+  public OleObject zOrderPosition(Integer zOrderPosition) {
+    this.zOrderPosition = zOrderPosition;
     return this;
   }
 
    /**
-   * Get zorderPosition
-   * @return zorderPosition
+   * Get zOrderPosition
+   * @return zOrderPosition
   **/
   @ApiModelProperty(value = "")
-  public Integer getZorderPosition() {
-    return zorderPosition;
+  public Integer getZOrderPosition() {
+    return zOrderPosition;
   }
 
-  public void setZorderPosition(Integer zorderPosition) {
-    this.zorderPosition = zorderPosition;
+  public void setZOrderPosition(Integer zOrderPosition) {
+    this.zOrderPosition = zOrderPosition;
   }
 
   public OleObject textHorizontalOverflow(String textHorizontalOverflow) {
@@ -501,7 +451,7 @@ public class OleObject {
    * @return isWordArt
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsWordArt() {
+  public Boolean getIsWordArt() {
     return isWordArt;
   }
 
@@ -555,7 +505,7 @@ public class OleObject {
    * @return isLocked
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsLocked() {
+  public Boolean getIsLocked() {
     return isLocked;
   }
 
@@ -591,7 +541,7 @@ public class OleObject {
    * @return isTextWrapped
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsTextWrapped() {
+  public Boolean getIsTextWrapped() {
     return isTextWrapped;
   }
 
@@ -645,7 +595,7 @@ public class OleObject {
    * @return isHidden
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsHidden() {
+  public Boolean getIsHidden() {
     return isHidden;
   }
 
@@ -807,7 +757,7 @@ public class OleObject {
    * @return displayAsIcon
   **/
   @ApiModelProperty(value = "")
-  public Boolean DisplayAsIcon() {
+  public Boolean getDisplayAsIcon() {
     return displayAsIcon;
   }
 
@@ -861,7 +811,7 @@ public class OleObject {
    * @return isAutoSize
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsAutoSize() {
+  public Boolean getIsAutoSize() {
     return isAutoSize;
   }
 
@@ -915,7 +865,7 @@ public class OleObject {
    * @return isLink
   **/
   @ApiModelProperty(value = "")
-  public Boolean IsLink() {
+  public Boolean getIsLink() {
     return isLink;
   }
 
@@ -945,7 +895,7 @@ public class OleObject {
         Objects.equals(this.isLockAspectRatio, oleObject.isLockAspectRatio) &&
         Objects.equals(this.isGroup, oleObject.isGroup) &&
         Objects.equals(this.rotationAngle, oleObject.rotationAngle) &&
-        Objects.equals(this.zorderPosition, oleObject.zorderPosition) &&
+        Objects.equals(this.zOrderPosition, oleObject.zOrderPosition) &&
         Objects.equals(this.textHorizontalOverflow, oleObject.textHorizontalOverflow) &&
         Objects.equals(this.msoDrawingType, oleObject.msoDrawingType) &&
         Objects.equals(this.textOrientationType, oleObject.textOrientationType) &&
@@ -979,7 +929,7 @@ public class OleObject {
 
   @Override
   public int hashCode() {
-    return Objects.hash(alternativeText, bottom, top, width, htmlText, textVerticalAlignment, autoShapeType, isPrintable, upperLeftColumn, isLockAspectRatio, isGroup, rotationAngle, zorderPosition, textHorizontalOverflow, msoDrawingType, textOrientationType, placement, name, isWordArt, linkedCell, upperLeftRow, isLocked, lowerRightRow, isTextWrapped, Y, X, isHidden, left, right, text, lowerRightColumn, height, textHorizontalAlignment, textVerticalOverflow, link, displayAsIcon, fileFormatType, sourceFullName, isAutoSize, imageSourceFullName, progID, isLink);
+    return Objects.hash(alternativeText, bottom, top, width, htmlText, textVerticalAlignment, autoShapeType, isPrintable, upperLeftColumn, isLockAspectRatio, isGroup, rotationAngle, zOrderPosition, textHorizontalOverflow, msoDrawingType, textOrientationType, placement, name, isWordArt, linkedCell, upperLeftRow, isLocked, lowerRightRow, isTextWrapped, Y, X, isHidden, left, right, text, lowerRightColumn, height, textHorizontalAlignment, textVerticalOverflow, link, displayAsIcon, fileFormatType, sourceFullName, isAutoSize, imageSourceFullName, progID, isLink);
   }
 
 
@@ -1000,7 +950,7 @@ public class OleObject {
     sb.append("    isLockAspectRatio: ").append(toIndentedString(isLockAspectRatio)).append("\n");
     sb.append("    isGroup: ").append(toIndentedString(isGroup)).append("\n");
     sb.append("    rotationAngle: ").append(toIndentedString(rotationAngle)).append("\n");
-    sb.append("    zorderPosition: ").append(toIndentedString(zorderPosition)).append("\n");
+    sb.append("    zOrderPosition: ").append(toIndentedString(zOrderPosition)).append("\n");
     sb.append("    textHorizontalOverflow: ").append(toIndentedString(textHorizontalOverflow)).append("\n");
     sb.append("    msoDrawingType: ").append(toIndentedString(msoDrawingType)).append("\n");
     sb.append("    textOrientationType: ").append(toIndentedString(textOrientationType)).append("\n");

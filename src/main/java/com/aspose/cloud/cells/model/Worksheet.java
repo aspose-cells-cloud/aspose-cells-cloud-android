@@ -28,116 +28,75 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.Color;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Worksheet
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Worksheet {
-  @SerializedName("Index")
   private Integer index = null;
 
-  @SerializedName("Pictures")
   private LinkElement pictures = null;
 
-  @SerializedName("Charts")
   private LinkElement charts = null;
 
-  @SerializedName("Comments")
   private LinkElement comments = null;
 
-  @SerializedName("Hyperlinks")
   private LinkElement hyperlinks = null;
 
-  @SerializedName("IsVisible")
   private Boolean isVisible = null;
 
-  @SerializedName("ViewType")
   private String viewType = null;
 
-  @SerializedName("Type")
   private String type = null;
 
-  @SerializedName("IsGridlinesVisible")
   private Boolean isGridlinesVisible = null;
 
-  @SerializedName("IsRowColumnHeadersVisible")
   private Boolean isRowColumnHeadersVisible = null;
 
-  @SerializedName("IsPageBreakPreview")
   private Boolean isPageBreakPreview = null;
 
-  @SerializedName("DisplayZeros")
   private Boolean displayZeros = null;
 
-  @SerializedName("TransitionEvaluation")
   private Boolean transitionEvaluation = null;
 
-  @SerializedName("DisplayRightToLeft")
   private Boolean displayRightToLeft = null;
 
-  @SerializedName("FirstVisibleColumn")
   private Integer firstVisibleColumn = null;
 
-  @SerializedName("OleObjects")
   private LinkElement oleObjects = null;
 
-  @SerializedName("IsOutlineShown")
   private Boolean isOutlineShown = null;
 
-  @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("AutoShapes")
   private LinkElement autoShapes = null;
 
-  @SerializedName("Cells")
   private LinkElement cells = null;
 
-  @SerializedName("Validations")
   private LinkElement validations = null;
 
-  @SerializedName("Zoom")
   private Integer zoom = null;
 
-  @SerializedName("ConditionalFormattings")
   private LinkElement conditionalFormattings = null;
 
-  @SerializedName("IsSelected")
   private Boolean isSelected = null;
 
-  @SerializedName("TabColor")
   private Color tabColor = null;
 
-  @SerializedName("FirstVisibleRow")
   private Integer firstVisibleRow = null;
 
-  @SerializedName("TransitionEntry")
   private Boolean transitionEntry = null;
 
-  @SerializedName("VisibilityType")
   private String visibilityType = null;
 
-  @SerializedName("IsRulerVisible")
   private Boolean isRulerVisible = null;
 
-  @SerializedName("Links")
   private List<Link> links = null;
 
-  @SerializedName("IsProtected")
   private Boolean isProtected = null;
 
-  @SerializedName("MergedCells")
   private LinkElement mergedCells = null;
 
   public Worksheet index(Integer index) {
@@ -240,7 +199,7 @@ public class Worksheet {
    * @return isVisible
   **/
   @ApiModelProperty(value = "Represents if the worksheet is visible.             ")
-  public Boolean IsVisible() {
+  public Boolean getIsVisible() {
     return isVisible;
   }
 
@@ -294,7 +253,7 @@ public class Worksheet {
    * @return isGridlinesVisible
   **/
   @ApiModelProperty(value = "Gets or sets a value indicating whether the gridelines are visible.Default     is true.")
-  public Boolean IsGridlinesVisible() {
+  public Boolean getIsGridlinesVisible() {
     return isGridlinesVisible;
   }
 
@@ -312,7 +271,7 @@ public class Worksheet {
    * @return isRowColumnHeadersVisible
   **/
   @ApiModelProperty(value = "Gets or sets a value indicating whether the worksheet will display row and column headers.Default is true.             ")
-  public Boolean IsRowColumnHeadersVisible() {
+  public Boolean getIsRowColumnHeadersVisible() {
     return isRowColumnHeadersVisible;
   }
 
@@ -330,7 +289,7 @@ public class Worksheet {
    * @return isPageBreakPreview
   **/
   @ApiModelProperty(value = "Indications the specified worksheet is shown in normal view or page break preview.")
-  public Boolean IsPageBreakPreview() {
+  public Boolean getIsPageBreakPreview() {
     return isPageBreakPreview;
   }
 
@@ -348,7 +307,7 @@ public class Worksheet {
    * @return displayZeros
   **/
   @ApiModelProperty(value = "True if zero values are displayed.")
-  public Boolean DisplayZeros() {
+  public Boolean getDisplayZeros() {
     return displayZeros;
   }
 
@@ -366,7 +325,7 @@ public class Worksheet {
    * @return transitionEvaluation
   **/
   @ApiModelProperty(value = "Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.             ")
-  public Boolean TransitionEvaluation() {
+  public Boolean getTransitionEvaluation() {
     return transitionEvaluation;
   }
 
@@ -384,7 +343,7 @@ public class Worksheet {
    * @return displayRightToLeft
   **/
   @ApiModelProperty(value = "Indicates if the specified worksheet is displayed from right to left instead    of from left to right.  Default is false.             ")
-  public Boolean DisplayRightToLeft() {
+  public Boolean getDisplayRightToLeft() {
     return displayRightToLeft;
   }
 
@@ -438,7 +397,7 @@ public class Worksheet {
    * @return isOutlineShown
   **/
   @ApiModelProperty(value = "Indicates whether show outline.             ")
-  public Boolean IsOutlineShown() {
+  public Boolean getIsOutlineShown() {
     return isOutlineShown;
   }
 
@@ -564,7 +523,7 @@ public class Worksheet {
    * @return isSelected
   **/
   @ApiModelProperty(value = "Indicates whether this worksheet is selected when the workbook is opened.")
-  public Boolean IsSelected() {
+  public Boolean getIsSelected() {
     return isSelected;
   }
 
@@ -618,7 +577,7 @@ public class Worksheet {
    * @return transitionEntry
   **/
   @ApiModelProperty(value = "Flag indicating whether the Transition Formula Entry (Lotus compatibility) option is enabled.")
-  public Boolean TransitionEntry() {
+  public Boolean getTransitionEntry() {
     return transitionEntry;
   }
 
@@ -654,7 +613,7 @@ public class Worksheet {
    * @return isRulerVisible
   **/
   @ApiModelProperty(value = "Indicates whether the ruler is visible. Only apply for page break preview.")
-  public Boolean IsRulerVisible() {
+  public Boolean getIsRulerVisible() {
     return isRulerVisible;
   }
 
@@ -669,7 +628,7 @@ public class Worksheet {
 
   public Worksheet addLinksItem(Link linksItem) {
     if (this.links == null) {
-      this.links = new ArrayList<Link>();
+      this.links = null;
     }
     this.links.add(linksItem);
     return this;
@@ -698,7 +657,7 @@ public class Worksheet {
    * @return isProtected
   **/
   @ApiModelProperty(required = true, value = "Indicates if the worksheet is protected.")
-  public Boolean IsProtected() {
+  public Boolean getIsProtected() {
     return isProtected;
   }
 

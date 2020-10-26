@@ -27,22 +27,33 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.OperateParameter;
 import com.aspose.cloud.cells.model.Shape;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * ShapeOperateParameter
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ShapeOperateParameter extends OperateParameter {
-  @SerializedName("Shape")
+  private String operateType = null;
+
   private Shape shape = null;
+
+  public ShapeOperateParameter operateType(String operateType) {
+    this.operateType = operateType;
+    return this;
+  }
+
+   /**
+   * Get operateType
+   * @return operateType
+  **/
+  @ApiModelProperty(value = "")
+  public String getOperateType() {
+    return operateType;
+  }
+
+  public void setOperateType(String operateType) {
+    this.operateType = operateType;
+  }
 
   public ShapeOperateParameter shape(Shape shape) {
     this.shape = shape;
@@ -72,13 +83,14 @@ public class ShapeOperateParameter extends OperateParameter {
       return false;
     }
     ShapeOperateParameter shapeOperateParameter = (ShapeOperateParameter) o;
-    return Objects.equals(this.shape, shapeOperateParameter.shape) &&
+    return Objects.equals(this.operateType, shapeOperateParameter.operateType) &&
+        Objects.equals(this.shape, shapeOperateParameter.shape) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(shape, super.hashCode());
+    return Objects.hash(operateType, shape, super.hashCode());
   }
 
 
@@ -87,6 +99,7 @@ public class ShapeOperateParameter extends OperateParameter {
     StringBuilder sb = new StringBuilder();
     sb.append("class ShapeOperateParameter {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    operateType: ").append(toIndentedString(operateType)).append("\n");
     sb.append("    shape: ").append(toIndentedString(shape)).append("\n");
     sb.append("}");
     return sb.toString();

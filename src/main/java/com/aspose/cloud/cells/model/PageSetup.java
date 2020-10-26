@@ -28,126 +28,82 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
 import com.aspose.cloud.cells.model.PageSection;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * excel print page setting
  */
 @ApiModel(description = "excel print page setting")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class PageSetup {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("IsHFDiffFirst")
   private Boolean isHFDiffFirst = null;
 
-  @SerializedName("FitToPagesWide")
   private Integer fitToPagesWide = null;
 
-  @SerializedName("PrintQuality")
   private Integer printQuality = null;
 
-  @SerializedName("PrintDraft")
   private Boolean printDraft = null;
 
-  @SerializedName("FirstPageNumber")
   private Integer firstPageNumber = null;
 
-  @SerializedName("PaperSize")
   private String paperSize = null;
 
-  @SerializedName("PrintComments")
   private String printComments = null;
 
-  @SerializedName("PrintErrors")
   private String printErrors = null;
 
-  @SerializedName("CenterVertically")
   private Boolean centerVertically = null;
 
-  @SerializedName("IsPercentScale")
   private Boolean isPercentScale = null;
 
-  @SerializedName("BlackAndWhite")
   private Boolean blackAndWhite = null;
 
-  @SerializedName("PrintTitleColumns")
   private String printTitleColumns = null;
 
-  @SerializedName("IsHFAlignMargins")
   private Boolean isHFAlignMargins = null;
 
-  @SerializedName("PrintArea")
   private String printArea = null;
 
-  @SerializedName("FooterMargin")
   private Double footerMargin = null;
 
-  @SerializedName("LeftMargin")
   private Double leftMargin = null;
 
-  @SerializedName("CenterHorizontally")
   private Boolean centerHorizontally = null;
 
-  @SerializedName("HeaderMargin")
   private Double headerMargin = null;
 
-  @SerializedName("TopMargin")
   private Double topMargin = null;
 
-  @SerializedName("Footer")
   private List<PageSection> footer = null;
 
-  @SerializedName("FitToPagesTall")
   private Integer fitToPagesTall = null;
 
-  @SerializedName("IsHFScaleWithDoc")
   private Boolean isHFScaleWithDoc = null;
 
-  @SerializedName("PrintHeadings")
   private Boolean printHeadings = null;
 
-  @SerializedName("Zoom")
   private Integer zoom = null;
 
-  @SerializedName("PrintTitleRows")
   private String printTitleRows = null;
 
-  @SerializedName("Order")
   private String order = null;
 
-  @SerializedName("PrintCopies")
   private Integer printCopies = null;
 
-  @SerializedName("Orientation")
   private String orientation = null;
 
-  @SerializedName("RightMargin")
   private Double rightMargin = null;
 
-  @SerializedName("PrintGridlines")
   private Boolean printGridlines = null;
 
-  @SerializedName("IsAutoFirstPageNumber")
   private Boolean isAutoFirstPageNumber = null;
 
-  @SerializedName("Header")
   private List<PageSection> header = null;
 
-  @SerializedName("IsHFDiffOddEven")
   private Boolean isHFDiffOddEven = null;
 
-  @SerializedName("BottomMargin")
   private Double bottomMargin = null;
 
   public PageSetup link(Link link) {
@@ -178,7 +134,7 @@ public class PageSetup {
    * @return isHFDiffFirst
   **/
   @ApiModelProperty(value = "True means that the header/footer of the first page is different with other pages.")
-  public Boolean IsHFDiffFirst() {
+  public Boolean getIsHFDiffFirst() {
     return isHFDiffFirst;
   }
 
@@ -232,7 +188,7 @@ public class PageSetup {
    * @return printDraft
   **/
   @ApiModelProperty(value = "Represents if the sheet will be printed without graphics.")
-  public Boolean PrintDraft() {
+  public Boolean getPrintDraft() {
     return printDraft;
   }
 
@@ -322,7 +278,7 @@ public class PageSetup {
    * @return centerVertically
   **/
   @ApiModelProperty(value = "Represent if the sheet is printed centered vertically.")
-  public Boolean CenterVertically() {
+  public Boolean getCenterVertically() {
     return centerVertically;
   }
 
@@ -340,7 +296,7 @@ public class PageSetup {
    * @return isPercentScale
   **/
   @ApiModelProperty(value = "If this property is False, the FitToPagesWide and FitToPagesTall properties control how the worksheet is scaled.")
-  public Boolean IsPercentScale() {
+  public Boolean getIsPercentScale() {
     return isPercentScale;
   }
 
@@ -358,7 +314,7 @@ public class PageSetup {
    * @return blackAndWhite
   **/
   @ApiModelProperty(value = "Represents if elements of the document will be printed in black and white. True/False")
-  public Boolean BlackAndWhite() {
+  public Boolean getBlackAndWhite() {
     return blackAndWhite;
   }
 
@@ -394,7 +350,7 @@ public class PageSetup {
    * @return isHFAlignMargins
   **/
   @ApiModelProperty(value = "Indicates whether header and footer margins are aligned with the page margins.Only applies for Excel 2007.")
-  public Boolean IsHFAlignMargins() {
+  public Boolean getIsHFAlignMargins() {
     return isHFAlignMargins;
   }
 
@@ -466,7 +422,7 @@ public class PageSetup {
    * @return centerHorizontally
   **/
   @ApiModelProperty(value = "Represent if the sheet is printed centered horizontally.")
-  public Boolean CenterHorizontally() {
+  public Boolean getCenterHorizontally() {
     return centerHorizontally;
   }
 
@@ -517,7 +473,7 @@ public class PageSetup {
 
   public PageSetup addFooterItem(PageSection footerItem) {
     if (this.footer == null) {
-      this.footer = new ArrayList<PageSection>();
+      this.footer = null;
     }
     this.footer.add(footerItem);
     return this;
@@ -564,7 +520,7 @@ public class PageSetup {
    * @return isHFScaleWithDoc
   **/
   @ApiModelProperty(value = "Indicates whether header and footer are scaled with document scaling.Only applies for Excel 2007. ")
-  public Boolean IsHFScaleWithDoc() {
+  public Boolean getIsHFScaleWithDoc() {
     return isHFScaleWithDoc;
   }
 
@@ -582,7 +538,7 @@ public class PageSetup {
    * @return printHeadings
   **/
   @ApiModelProperty(value = "Represents if row and column headings are printed with this page.")
-  public Boolean PrintHeadings() {
+  public Boolean getPrintHeadings() {
     return printHeadings;
   }
 
@@ -708,7 +664,7 @@ public class PageSetup {
    * @return printGridlines
   **/
   @ApiModelProperty(value = "Represents if cell gridlines are printed on the page.")
-  public Boolean PrintGridlines() {
+  public Boolean getPrintGridlines() {
     return printGridlines;
   }
 
@@ -726,7 +682,7 @@ public class PageSetup {
    * @return isAutoFirstPageNumber
   **/
   @ApiModelProperty(value = "Indicates whether the first the page number is automatically assigned.")
-  public Boolean IsAutoFirstPageNumber() {
+  public Boolean getIsAutoFirstPageNumber() {
     return isAutoFirstPageNumber;
   }
 
@@ -741,7 +697,7 @@ public class PageSetup {
 
   public PageSetup addHeaderItem(PageSection headerItem) {
     if (this.header == null) {
-      this.header = new ArrayList<PageSection>();
+      this.header = null;
     }
     this.header.add(headerItem);
     return this;
@@ -770,7 +726,7 @@ public class PageSetup {
    * @return isHFDiffOddEven
   **/
   @ApiModelProperty(value = "True means that the header/footer of the odd pages is different with odd pages.")
-  public Boolean IsHFDiffOddEven() {
+  public Boolean getIsHFDiffOddEven() {
     return isHFDiffOddEven;
   }
 

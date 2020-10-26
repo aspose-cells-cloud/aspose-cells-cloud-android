@@ -25,27 +25,16 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * ConditionalFormattingValue
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ConditionalFormattingValue {
-  @SerializedName("IsGTE")
   private Boolean isGTE = null;
 
-  @SerializedName("Type")
   private String type = null;
 
-  @SerializedName("Value")
   private Object value = null;
 
   public ConditionalFormattingValue isGTE(Boolean isGTE) {
@@ -58,7 +47,7 @@ public class ConditionalFormattingValue {
    * @return isGTE
   **/
   @ApiModelProperty(value = "Get or set the Greater Than Or Equal flag. Use only for icon sets, determines    whether this threshold value uses the greater than or equal to operator.    'false' indicates 'greater than' is used instead of 'greater than or equal    to'.  Default value is true.             ")
-  public Boolean IsGTE() {
+  public Boolean getIsGTE() {
     return isGTE;
   }
 

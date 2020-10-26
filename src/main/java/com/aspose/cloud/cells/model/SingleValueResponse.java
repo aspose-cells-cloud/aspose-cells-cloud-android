@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.SingleValue;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * SingleValueResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class SingleValueResponse extends CellsCloudResponse {
-  @SerializedName("Value")
+  private String status = null;
+
+  private Integer code = null;
+
   private SingleValue value = null;
+
+  public SingleValueResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public SingleValueResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public SingleValueResponse value(SingleValue value) {
     this.value = value;
@@ -72,13 +103,15 @@ public class SingleValueResponse extends CellsCloudResponse {
       return false;
     }
     SingleValueResponse singleValueResponse = (SingleValueResponse) o;
-    return Objects.equals(this.value, singleValueResponse.value) &&
+    return Objects.equals(this.status, singleValueResponse.status) &&
+        Objects.equals(this.code, singleValueResponse.code) &&
+        Objects.equals(this.value, singleValueResponse.value) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, super.hashCode());
+    return Objects.hash(status, code, value, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class SingleValueResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class SingleValueResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

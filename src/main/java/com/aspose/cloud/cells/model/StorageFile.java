@@ -25,36 +25,23 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
+import java.util.Date;
 
 /**
  * File or folder information
  */
 @ApiModel(description = "File or folder information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 
 public class StorageFile {
-  @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("IsFolder")
   private Boolean isFolder = null;
 
-  @SerializedName("ModifiedDate")
-  private OffsetDateTime modifiedDate = null;
+  private Date modifiedDate = null;
 
-  @SerializedName("Size")
   private Long size = null;
 
-  @SerializedName("Path")
   private String path = null;
 
   public StorageFile name(String name) {
@@ -85,7 +72,7 @@ public class StorageFile {
    * @return isFolder
   **/
   @ApiModelProperty(required = true, value = "True if it is a folder.")
-  public Boolean IsFolder() {
+  public Boolean getIsFolder() {
     return isFolder;
   }
 
@@ -93,7 +80,7 @@ public class StorageFile {
     this.isFolder = isFolder;
   }
 
-  public StorageFile modifiedDate(OffsetDateTime modifiedDate) {
+  public StorageFile modifiedDate(Date modifiedDate) {
     this.modifiedDate = modifiedDate;
     return this;
   }
@@ -103,11 +90,11 @@ public class StorageFile {
    * @return modifiedDate
   **/
   @ApiModelProperty(value = "File or folder last modified DateTime.")
-  public OffsetDateTime getModifiedDate() {
+  public Date getModifiedDate() {
     return modifiedDate;
   }
 
-  public void setModifiedDate(OffsetDateTime modifiedDate) {
+  public void setModifiedDate(Date modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
 

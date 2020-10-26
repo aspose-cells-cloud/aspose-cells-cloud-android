@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.SparklineGroup;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * SparklineGroupResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class SparklineGroupResponse extends CellsCloudResponse {
-  @SerializedName("SparklineGroup")
+  private String status = null;
+
+  private Integer code = null;
+
   private SparklineGroup sparklineGroup = null;
+
+  public SparklineGroupResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public SparklineGroupResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public SparklineGroupResponse sparklineGroup(SparklineGroup sparklineGroup) {
     this.sparklineGroup = sparklineGroup;
@@ -72,13 +103,15 @@ public class SparklineGroupResponse extends CellsCloudResponse {
       return false;
     }
     SparklineGroupResponse sparklineGroupResponse = (SparklineGroupResponse) o;
-    return Objects.equals(this.sparklineGroup, sparklineGroupResponse.sparklineGroup) &&
+    return Objects.equals(this.status, sparklineGroupResponse.status) &&
+        Objects.equals(this.code, sparklineGroupResponse.code) &&
+        Objects.equals(this.sparklineGroup, sparklineGroupResponse.sparklineGroup) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sparklineGroup, super.hashCode());
+    return Objects.hash(status, code, sparklineGroup, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class SparklineGroupResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class SparklineGroupResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    sparklineGroup: ").append(toIndentedString(sparklineGroup)).append("\n");
     sb.append("}");
     return sb.toString();

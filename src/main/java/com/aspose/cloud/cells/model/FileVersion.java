@@ -26,27 +26,117 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.StorageFile;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
+import java.util.Date;
 
 /**
  * File Version
  */
 @ApiModel(description = "File Version")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class FileVersion extends StorageFile {
-  @SerializedName("VersionId")
+  private String name = null;
+
+  private Boolean isFolder = null;
+
+  private Date modifiedDate = null;
+
+  private Long size = null;
+
+  private String path = null;
+
   private String versionId = null;
 
-  @SerializedName("IsLatest")
   private Boolean isLatest = null;
+
+  public FileVersion name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * File or folder name.
+   * @return name
+  **/
+  @ApiModelProperty(value = "File or folder name.")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public FileVersion isFolder(Boolean isFolder) {
+    this.isFolder = isFolder;
+    return this;
+  }
+
+   /**
+   * True if it is a folder.
+   * @return isFolder
+  **/
+  @ApiModelProperty(required = true, value = "True if it is a folder.")
+  public Boolean getIsFolder() {
+    return isFolder;
+  }
+
+  public void setIsFolder(Boolean isFolder) {
+    this.isFolder = isFolder;
+  }
+
+  public FileVersion modifiedDate(Date modifiedDate) {
+    this.modifiedDate = modifiedDate;
+    return this;
+  }
+
+   /**
+   * File or folder last modified DateTime.
+   * @return modifiedDate
+  **/
+  @ApiModelProperty(value = "File or folder last modified DateTime.")
+  public Date getModifiedDate() {
+    return modifiedDate;
+  }
+
+  public void setModifiedDate(Date modifiedDate) {
+    this.modifiedDate = modifiedDate;
+  }
+
+  public FileVersion size(Long size) {
+    this.size = size;
+    return this;
+  }
+
+   /**
+   * File or folder size.
+   * @return size
+  **/
+  @ApiModelProperty(required = true, value = "File or folder size.")
+  public Long getSize() {
+    return size;
+  }
+
+  public void setSize(Long size) {
+    this.size = size;
+  }
+
+  public FileVersion path(String path) {
+    this.path = path;
+    return this;
+  }
+
+   /**
+   * File or folder path.
+   * @return path
+  **/
+  @ApiModelProperty(value = "File or folder path.")
+  public String getPath() {
+    return path;
+  }
+
+  public void setPath(String path) {
+    this.path = path;
+  }
 
   public FileVersion versionId(String versionId) {
     this.versionId = versionId;
@@ -76,7 +166,7 @@ public class FileVersion extends StorageFile {
    * @return isLatest
   **/
   @ApiModelProperty(required = true, value = "Specifies whether the file is (true) or is not (false) the latest version of an file.")
-  public Boolean IsLatest() {
+  public Boolean getIsLatest() {
     return isLatest;
   }
 
@@ -94,14 +184,19 @@ public class FileVersion extends StorageFile {
       return false;
     }
     FileVersion fileVersion = (FileVersion) o;
-    return Objects.equals(this.versionId, fileVersion.versionId) &&
+    return Objects.equals(this.name, fileVersion.name) &&
+        Objects.equals(this.isFolder, fileVersion.isFolder) &&
+        Objects.equals(this.modifiedDate, fileVersion.modifiedDate) &&
+        Objects.equals(this.size, fileVersion.size) &&
+        Objects.equals(this.path, fileVersion.path) &&
+        Objects.equals(this.versionId, fileVersion.versionId) &&
         Objects.equals(this.isLatest, fileVersion.isLatest) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(versionId, isLatest, super.hashCode());
+    return Objects.hash(name, isFolder, modifiedDate, size, path, versionId, isLatest, super.hashCode());
   }
 
 
@@ -110,6 +205,11 @@ public class FileVersion extends StorageFile {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileVersion {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    isFolder: ").append(toIndentedString(isFolder)).append("\n");
+    sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    versionId: ").append(toIndentedString(versionId)).append("\n");
     sb.append("    isLatest: ").append(toIndentedString(isLatest)).append("\n");
     sb.append("}");

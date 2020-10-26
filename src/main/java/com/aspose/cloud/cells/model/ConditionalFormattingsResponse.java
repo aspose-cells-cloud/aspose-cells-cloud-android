@@ -27,22 +27,53 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.ConditionalFormattings;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * ConditionalFormattingsResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class ConditionalFormattingsResponse extends CellsCloudResponse {
-  @SerializedName("ConditionalFormattings")
+  private String status = null;
+
+  private Integer code = null;
+
   private ConditionalFormattings conditionalFormattings = null;
+
+  public ConditionalFormattingsResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public ConditionalFormattingsResponse code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
 
   public ConditionalFormattingsResponse conditionalFormattings(ConditionalFormattings conditionalFormattings) {
     this.conditionalFormattings = conditionalFormattings;
@@ -72,13 +103,15 @@ public class ConditionalFormattingsResponse extends CellsCloudResponse {
       return false;
     }
     ConditionalFormattingsResponse conditionalFormattingsResponse = (ConditionalFormattingsResponse) o;
-    return Objects.equals(this.conditionalFormattings, conditionalFormattingsResponse.conditionalFormattings) &&
+    return Objects.equals(this.status, conditionalFormattingsResponse.status) &&
+        Objects.equals(this.code, conditionalFormattingsResponse.code) &&
+        Objects.equals(this.conditionalFormattings, conditionalFormattingsResponse.conditionalFormattings) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(conditionalFormattings, super.hashCode());
+    return Objects.hash(status, code, conditionalFormattings, super.hashCode());
   }
 
 
@@ -87,6 +120,8 @@ public class ConditionalFormattingsResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConditionalFormattingsResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    conditionalFormattings: ").append(toIndentedString(conditionalFormattings)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -25,37 +25,23 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Represents the copy options.
  */
 @ApiModel(description = "Represents the copy options.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class CopyOptions {
-  @SerializedName("ReferToDestinationSheet")
   private Boolean referToDestinationSheet = null;
 
-  @SerializedName("CopyNames")
   private Boolean copyNames = null;
 
-  @SerializedName("ReferToSheetWithSameName")
   private Boolean referToSheetWithSameName = null;
 
-  @SerializedName("ColumnCharacterWidth")
   private Boolean columnCharacterWidth = null;
 
-  @SerializedName("CopyInvalidFormulasAsValues")
   private Boolean copyInvalidFormulasAsValues = null;
 
-  @SerializedName("ExtendToAdjacentRange")
   private Boolean extendToAdjacentRange = null;
 
   public CopyOptions referToDestinationSheet(Boolean referToDestinationSheet) {
@@ -68,7 +54,7 @@ public class CopyOptions {
    * @return referToDestinationSheet
   **/
   @ApiModelProperty(value = "When copying the range in the same file and the chart refers to the source sheet,   False means the copied chart's data source will not be changed. True means the   copied chart's data source refers to the destination sheet.             ")
-  public Boolean ReferToDestinationSheet() {
+  public Boolean getReferToDestinationSheet() {
     return referToDestinationSheet;
   }
 
@@ -86,7 +72,7 @@ public class CopyOptions {
    * @return copyNames
   **/
   @ApiModelProperty(value = "Indicates whether copying the names.")
-  public Boolean CopyNames() {
+  public Boolean getCopyNames() {
     return copyNames;
   }
 
@@ -104,7 +90,7 @@ public class CopyOptions {
    * @return referToSheetWithSameName
   **/
   @ApiModelProperty(value = "")
-  public Boolean ReferToSheetWithSameName() {
+  public Boolean getReferToSheetWithSameName() {
     return referToSheetWithSameName;
   }
 
@@ -122,7 +108,7 @@ public class CopyOptions {
    * @return columnCharacterWidth
   **/
   @ApiModelProperty(value = "Indicates whether copying column width in unit of characters.")
-  public Boolean ColumnCharacterWidth() {
+  public Boolean getColumnCharacterWidth() {
     return columnCharacterWidth;
   }
 
@@ -140,7 +126,7 @@ public class CopyOptions {
    * @return copyInvalidFormulasAsValues
   **/
   @ApiModelProperty(value = "If the formula is not valid for the dest destination, only copy values.")
-  public Boolean CopyInvalidFormulasAsValues() {
+  public Boolean getCopyInvalidFormulasAsValues() {
     return copyInvalidFormulasAsValues;
   }
 
@@ -158,7 +144,7 @@ public class CopyOptions {
    * @return extendToAdjacentRange
   **/
   @ApiModelProperty(value = "Indicates whether extend ranges when copying the range to adjacent range.")
-  public Boolean ExtendToAdjacentRange() {
+  public Boolean getExtendToAdjacentRange() {
     return extendToAdjacentRange;
   }
 

@@ -27,53 +27,33 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Workbook
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class Workbook {
-  @SerializedName("Links")
   private List<Link> links = null;
 
-  @SerializedName("Settings")
   private LinkElement settings = null;
 
-  @SerializedName("IsProtected")
   private String isProtected = null;
 
-  @SerializedName("IsWriteProtected")
   private String isWriteProtected = null;
 
-  @SerializedName("FileName")
   private String fileName = null;
 
-  @SerializedName("DocumentProperties")
   private LinkElement documentProperties = null;
 
-  @SerializedName("Names")
   private LinkElement names = null;
 
-  @SerializedName("DefaultStyle")
   private LinkElement defaultStyle = null;
 
-  @SerializedName("IsEncryption")
   private String isEncryption = null;
 
-  @SerializedName("Worksheets")
   private LinkElement worksheets = null;
 
-  @SerializedName("Password")
   private String password = null;
 
   public Workbook links(List<Link> links) {
@@ -83,7 +63,7 @@ public class Workbook {
 
   public Workbook addLinksItem(Link linksItem) {
     if (this.links == null) {
-      this.links = new ArrayList<Link>();
+      this.links = null;
     }
     this.links.add(linksItem);
     return this;

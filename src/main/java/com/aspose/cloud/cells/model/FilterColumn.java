@@ -31,47 +31,29 @@ import com.aspose.cloud.cells.model.DynamicFilter;
 import com.aspose.cloud.cells.model.IconFilter;
 import com.aspose.cloud.cells.model.MultipleFilters;
 import com.aspose.cloud.cells.model.Top10Filter;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * FilterColumn
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class FilterColumn {
-  @SerializedName("FilterType")
   private String filterType = null;
 
-  @SerializedName("MultipleFilters")
   private MultipleFilters multipleFilters = null;
 
-  @SerializedName("CustomFilters")
   private List<CustomFilter> customFilters = null;
 
-  @SerializedName("DynamicFilter")
   private DynamicFilter dynamicFilter = null;
 
-  @SerializedName("ColorFilter")
   private ColorFilter colorFilter = null;
 
-  @SerializedName("FieldIndex")
   private Integer fieldIndex = null;
 
-  @SerializedName("Top10Filter")
   private Top10Filter top10Filter = null;
 
-  @SerializedName("IconFilter")
   private IconFilter iconFilter = null;
 
-  @SerializedName("Visibledropdown")
   private String visibledropdown = null;
 
   public FilterColumn filterType(String filterType) {
@@ -117,7 +99,7 @@ public class FilterColumn {
 
   public FilterColumn addCustomFiltersItem(CustomFilter customFiltersItem) {
     if (this.customFilters == null) {
-      this.customFilters = new ArrayList<CustomFilter>();
+      this.customFilters = null;
     }
     this.customFilters.add(customFiltersItem);
     return this;

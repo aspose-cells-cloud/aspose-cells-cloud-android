@@ -30,69 +30,44 @@ import com.aspose.cloud.cells.model.GradientFill;
 import com.aspose.cloud.cells.model.PatternFill;
 import com.aspose.cloud.cells.model.SolidFill;
 import com.aspose.cloud.cells.model.TextureFill;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * LineFormat
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class LineFormat {
-  @SerializedName("TextureFill")
   private TextureFill textureFill = null;
 
-  @SerializedName("ImageData")
   private byte[] imageData = null;
 
-  @SerializedName("PatternFill")
   private PatternFill patternFill = null;
 
-  @SerializedName("SolidFill")
   private SolidFill solidFill = null;
 
-  @SerializedName("GradientFill")
   private GradientFill gradientFill = null;
 
-  @SerializedName("Type")
   private String type = null;
 
-  @SerializedName("BeginArrowheadLength")
   private String beginArrowheadLength = null;
 
-  @SerializedName("DashStyle")
   private String dashStyle = null;
 
-  @SerializedName("EndArrowheadWidth")
   private String endArrowheadWidth = null;
 
-  @SerializedName("EndArrowheadLength")
   private String endArrowheadLength = null;
 
-  @SerializedName("BeginArrowheadWidth")
   private String beginArrowheadWidth = null;
 
-  @SerializedName("CompoundType")
   private String compoundType = null;
 
-  @SerializedName("JoinType")
   private String joinType = null;
 
-  @SerializedName("Weight")
   private Double weight = null;
 
-  @SerializedName("BeginArrowheadStyle")
   private String beginArrowheadStyle = null;
 
-  @SerializedName("EndArrowheadStyle")
   private String endArrowheadStyle = null;
 
-  @SerializedName("CapType")
   private String capType = null;
 
   public LineFormat textureFill(TextureFill textureFill) {

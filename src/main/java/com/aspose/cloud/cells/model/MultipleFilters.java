@@ -26,26 +26,15 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.MultipleFilter;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * MultipleFilters
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class MultipleFilters {
-  @SerializedName("MultipleFilterList")
   private List<MultipleFilter> multipleFilterList = null;
 
-  @SerializedName("MatchBlank")
   private Boolean matchBlank = null;
 
   public MultipleFilters multipleFilterList(List<MultipleFilter> multipleFilterList) {
@@ -55,7 +44,7 @@ public class MultipleFilters {
 
   public MultipleFilters addMultipleFilterListItem(MultipleFilter multipleFilterListItem) {
     if (this.multipleFilterList == null) {
-      this.multipleFilterList = new ArrayList<MultipleFilter>();
+      this.multipleFilterList = null;
     }
     this.multipleFilterList.add(multipleFilterListItem);
     return this;
@@ -84,7 +73,7 @@ public class MultipleFilters {
    * @return matchBlank
   **/
   @ApiModelProperty(value = "")
-  public Boolean MatchBlank() {
+  public Boolean getMatchBlank() {
     return matchBlank;
   }
 

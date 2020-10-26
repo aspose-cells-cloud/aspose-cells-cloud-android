@@ -33,63 +33,40 @@ import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
 import com.aspose.cloud.cells.model.Style;
 import com.aspose.cloud.cells.model.Top10;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * FormatCondition
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class FormatCondition {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("AboveAverage")
   private AboveAverage aboveAverage = null;
 
-  @SerializedName("Formula2")
   private String formula2 = null;
 
-  @SerializedName("Style")
   private Style style = null;
 
-  @SerializedName("Formula1")
   private String formula1 = null;
 
-  @SerializedName("ColorScale")
   private ColorScale colorScale = null;
 
-  @SerializedName("DataBar")
   private DataBar dataBar = null;
 
-  @SerializedName("Text")
   private String text = null;
 
-  @SerializedName("StopIfTrue")
   private Boolean stopIfTrue = null;
 
-  @SerializedName("Priority")
   private Integer priority = null;
 
-  @SerializedName("Top10")
   private Top10 top10 = null;
 
-  @SerializedName("Operator")
   private String operator = null;
 
-  @SerializedName("IconSet")
   private IconSet iconSet = null;
 
-  @SerializedName("Type")
   private String type = null;
 
-  @SerializedName("TimePeriod")
   private String timePeriod = null;
 
   public FormatCondition link(Link link) {
@@ -246,7 +223,7 @@ public class FormatCondition {
    * @return stopIfTrue
   **/
   @ApiModelProperty(value = "True, no rules with lower priority may be applied over this rule, when this     rule evaluates to true.  Only applies for Excel 2007;")
-  public Boolean StopIfTrue() {
+  public Boolean getStopIfTrue() {
     return stopIfTrue;
   }
 

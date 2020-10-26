@@ -20,6 +20,11 @@ Android Cloud SDK wraps Aspose.Cells Cloud API. The SDK enhances your Android ap
 - Fetch the required shape from worksheet.
 - Leverage the power of named ranges.
 
+## Enhancements in Version 20.10
+
+- Support to upload large file.
+- Enhancement for post sparkline group API.
+
 ## Read & Write Spreadsheet Formats
 
 **Microsoft Excel:** XLS, XLSX, XLSB, XLSM, XLT, XLTX, XLTM
@@ -70,7 +75,7 @@ First, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/
     <dependency>
         <groupId>com.aspose</groupId>
         <artifactId>aspose-cells-cloud-android</artifactId>
-        <version>20.9</version>
+        <version>20.10</version>
     </dependency>
 </dependencies>
 ```

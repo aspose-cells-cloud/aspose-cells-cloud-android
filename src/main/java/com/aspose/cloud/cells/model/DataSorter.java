@@ -26,32 +26,19 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.SortKey;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * DataSorter
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class DataSorter {
-  @SerializedName("CaseSensitive")
   private Boolean caseSensitive = null;
 
-  @SerializedName("KeyList")
   private List<SortKey> keyList = null;
 
-  @SerializedName("HasHeaders")
   private Boolean hasHeaders = null;
 
-  @SerializedName("SortLeftToRight")
   private Boolean sortLeftToRight = null;
 
   public DataSorter caseSensitive(Boolean caseSensitive) {
@@ -64,7 +51,7 @@ public class DataSorter {
    * @return caseSensitive
   **/
   @ApiModelProperty(value = "")
-  public Boolean CaseSensitive() {
+  public Boolean getCaseSensitive() {
     return caseSensitive;
   }
 
@@ -79,7 +66,7 @@ public class DataSorter {
 
   public DataSorter addKeyListItem(SortKey keyListItem) {
     if (this.keyList == null) {
-      this.keyList = new ArrayList<SortKey>();
+      this.keyList = null;
     }
     this.keyList.add(keyListItem);
     return this;
@@ -108,7 +95,7 @@ public class DataSorter {
    * @return hasHeaders
   **/
   @ApiModelProperty(value = "")
-  public Boolean HasHeaders() {
+  public Boolean getHasHeaders() {
     return hasHeaders;
   }
 
@@ -126,7 +113,7 @@ public class DataSorter {
    * @return sortLeftToRight
   **/
   @ApiModelProperty(value = "")
-  public Boolean SortLeftToRight() {
+  public Boolean getSortLeftToRight() {
     return sortLeftToRight;
   }
 

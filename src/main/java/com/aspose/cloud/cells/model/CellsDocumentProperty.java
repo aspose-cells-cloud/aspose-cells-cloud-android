@@ -27,30 +27,18 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * CellsDocumentProperty
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class CellsDocumentProperty {
-  @SerializedName("link")
   private Link link = null;
 
-  @SerializedName("BuiltIn")
   private String builtIn = null;
 
-  @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("Value")
   private String value = null;
 
   public CellsDocumentProperty link(Link link) {

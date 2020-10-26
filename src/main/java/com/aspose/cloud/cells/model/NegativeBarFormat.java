@@ -26,31 +26,19 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Color;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Represents the color settings of the data bars for negative values that are    defined by a data bar conditional formating rule.             
  */
 @ApiModel(description = "Represents the color settings of the data bars for negative values that are    defined by a data bar conditional formating rule.             ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-18T17:25:54.624+08:00")
+
 public class NegativeBarFormat {
-  @SerializedName("BorderColor")
   private Color borderColor = null;
 
-  @SerializedName("Color")
   private Color color = null;
 
-  @SerializedName("BorderColorType")
   private String borderColorType = null;
 
-  @SerializedName("ColorType")
   private String colorType = null;
 
   public NegativeBarFormat borderColor(Color borderColor) {
