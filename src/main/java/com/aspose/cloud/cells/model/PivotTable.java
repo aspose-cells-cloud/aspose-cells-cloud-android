@@ -30,149 +30,227 @@ import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
 import com.aspose.cloud.cells.model.PivotField;
 import com.aspose.cloud.cells.model.PivotFilter;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * PivotTable
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class PivotTable {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("ShowPivotStyleLastColumn")
   private Boolean showPivotStyleLastColumn = null;
 
+  @SerializedName("RowHeaderCaption")
   private String rowHeaderCaption = null;
 
+  @SerializedName("ColumnRange")
   private CellArea columnRange = null;
 
+  @SerializedName("RefreshDataOnOpeningFile")
   private Boolean refreshDataOnOpeningFile = null;
 
+  @SerializedName("PageFields")
   private List<PivotField> pageFields = null;
 
+  @SerializedName("DataFields")
   private List<PivotField> dataFields = null;
 
+  @SerializedName("DataBodyRange")
   private CellArea dataBodyRange = null;
 
+  @SerializedName("ShowDrill")
   private Boolean showDrill = null;
 
+  @SerializedName("RefreshDataFlag")
   private Boolean refreshDataFlag = null;
 
+  @SerializedName("ColumnGrand")
   private Boolean columnGrand = null;
 
+  @SerializedName("PivotTableStyleName")
   private String pivotTableStyleName = null;
 
+  @SerializedName("PivotFilters")
   private List<PivotFilter> pivotFilters = null;
 
+  @SerializedName("NullString")
   private String nullString = null;
 
+  @SerializedName("ItemPrintTitles")
   private Boolean itemPrintTitles = null;
 
+  @SerializedName("DisplayNullString")
   private Boolean displayNullString = null;
 
+  @SerializedName("EnableFieldList")
   private Boolean enableFieldList = null;
 
+  @SerializedName("TableRange2")
   private CellArea tableRange2 = null;
 
+  @SerializedName("RowFields")
   private List<PivotField> rowFields = null;
 
+  @SerializedName("PageFieldOrder")
   private String pageFieldOrder = null;
 
+  @SerializedName("AutoFormatType")
   private String autoFormatType = null;
 
+  @SerializedName("EnableDataValueEditing")
   private Boolean enableDataValueEditing = null;
 
+  @SerializedName("ShowPivotStyleRowHeader")
   private Boolean showPivotStyleRowHeader = null;
 
+  @SerializedName("IsGridDropZones")
   private Boolean isGridDropZones = null;
 
+  @SerializedName("EnableWizard")
   private Boolean enableWizard = null;
 
+  @SerializedName("ShowMemberPropertyTips")
   private Boolean showMemberPropertyTips = null;
 
+  @SerializedName("AltTextDescription")
   private String altTextDescription = null;
 
+  @SerializedName("ShowDataTips")
   private Boolean showDataTips = null;
 
+  @SerializedName("PrintTitles")
   private Boolean printTitles = null;
 
+  @SerializedName("TableRange1")
   private CellArea tableRange1 = null;
 
+  @SerializedName("ShowEmptyRow")
   private Boolean showEmptyRow = null;
 
+  @SerializedName("IsMultipleFieldFilters")
   private Boolean isMultipleFieldFilters = null;
 
+  @SerializedName("ShowEmptyCol")
   private Boolean showEmptyCol = null;
 
+  @SerializedName("ShowRowHeaderCaption")
   private Boolean showRowHeaderCaption = null;
 
+  @SerializedName("HasBlankRows")
   private Boolean hasBlankRows = null;
 
+  @SerializedName("DataSource")
   private List<String> dataSource = null;
 
+  @SerializedName("Tag")
   private String tag = null;
 
+  @SerializedName("EnableDrilldown")
   private Boolean enableDrilldown = null;
 
+  @SerializedName("Indent")
   private Integer indent = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("RowGrand")
   private Boolean rowGrand = null;
 
+  @SerializedName("GrandTotalName")
   private String grandTotalName = null;
 
+  @SerializedName("DisplayErrorString")
   private Boolean displayErrorString = null;
 
+  @SerializedName("RowRange")
   private CellArea rowRange = null;
 
+  @SerializedName("IsSelected")
   private Boolean isSelected = null;
 
+  @SerializedName("ColumnFields")
   private List<PivotField> columnFields = null;
 
+  @SerializedName("ColumnHeaderCaption")
   private String columnHeaderCaption = null;
 
+  @SerializedName("ShowValuesRow")
   private Boolean showValuesRow = null;
 
+  @SerializedName("EnableFieldDialog")
   private Boolean enableFieldDialog = null;
 
+  @SerializedName("MissingItemsLimit")
   private String missingItemsLimit = null;
 
+  @SerializedName("ShowPivotStyleRowStripes")
   private Boolean showPivotStyleRowStripes = null;
 
+  @SerializedName("ManualUpdate")
   private Boolean manualUpdate = null;
 
+  @SerializedName("IsAutoFormat")
   private Boolean isAutoFormat = null;
 
+  @SerializedName("DisplayImmediateItems")
   private Boolean displayImmediateItems = null;
 
+  @SerializedName("ErrorString")
   private String errorString = null;
 
+  @SerializedName("CustomListSort")
   private Boolean customListSort = null;
 
+  @SerializedName("MergeLabels")
   private Boolean mergeLabels = null;
 
+  @SerializedName("PageFieldWrapCount")
   private Integer pageFieldWrapCount = null;
 
+  @SerializedName("ShowPivotStyleColumnStripes")
   private Boolean showPivotStyleColumnStripes = null;
 
+  @SerializedName("FieldListSortAscending")
   private Boolean fieldListSortAscending = null;
 
+  @SerializedName("AltTextTitle")
   private String altTextTitle = null;
 
+  @SerializedName("PreserveFormatting")
   private Boolean preserveFormatting = null;
 
+  @SerializedName("PivotTableStyleType")
   private String pivotTableStyleType = null;
 
+  @SerializedName("DataField")
   private PivotField dataField = null;
 
+  @SerializedName("SaveData")
   private Boolean saveData = null;
 
+  @SerializedName("SubtotalHiddenPageItems")
   private Boolean subtotalHiddenPageItems = null;
 
+  @SerializedName("PrintDrill")
   private Boolean printDrill = null;
 
+  @SerializedName("ShowPivotStyleColumnHeader")
   private Boolean showPivotStyleColumnHeader = null;
 
+  @SerializedName("BaseFields")
   private List<PivotField> baseFields = null;
 
   public PivotTable link(Link link) {
@@ -203,7 +281,7 @@ public class PivotTable {
    * @return showPivotStyleLastColumn
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowPivotStyleLastColumn() {
+  public Boolean ShowPivotStyleLastColumn() {
     return showPivotStyleLastColumn;
   }
 
@@ -257,7 +335,7 @@ public class PivotTable {
    * @return refreshDataOnOpeningFile
   **/
   @ApiModelProperty(value = "")
-  public Boolean getRefreshDataOnOpeningFile() {
+  public Boolean RefreshDataOnOpeningFile() {
     return refreshDataOnOpeningFile;
   }
 
@@ -272,7 +350,7 @@ public class PivotTable {
 
   public PivotTable addPageFieldsItem(PivotField pageFieldsItem) {
     if (this.pageFields == null) {
-      this.pageFields = null;
+      this.pageFields = new ArrayList<PivotField>();
     }
     this.pageFields.add(pageFieldsItem);
     return this;
@@ -298,7 +376,7 @@ public class PivotTable {
 
   public PivotTable addDataFieldsItem(PivotField dataFieldsItem) {
     if (this.dataFields == null) {
-      this.dataFields = null;
+      this.dataFields = new ArrayList<PivotField>();
     }
     this.dataFields.add(dataFieldsItem);
     return this;
@@ -345,7 +423,7 @@ public class PivotTable {
    * @return showDrill
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowDrill() {
+  public Boolean ShowDrill() {
     return showDrill;
   }
 
@@ -363,7 +441,7 @@ public class PivotTable {
    * @return refreshDataFlag
   **/
   @ApiModelProperty(value = "")
-  public Boolean getRefreshDataFlag() {
+  public Boolean RefreshDataFlag() {
     return refreshDataFlag;
   }
 
@@ -381,7 +459,7 @@ public class PivotTable {
    * @return columnGrand
   **/
   @ApiModelProperty(value = "")
-  public Boolean getColumnGrand() {
+  public Boolean ColumnGrand() {
     return columnGrand;
   }
 
@@ -414,7 +492,7 @@ public class PivotTable {
 
   public PivotTable addPivotFiltersItem(PivotFilter pivotFiltersItem) {
     if (this.pivotFilters == null) {
-      this.pivotFilters = null;
+      this.pivotFilters = new ArrayList<PivotFilter>();
     }
     this.pivotFilters.add(pivotFiltersItem);
     return this;
@@ -461,7 +539,7 @@ public class PivotTable {
    * @return itemPrintTitles
   **/
   @ApiModelProperty(value = "")
-  public Boolean getItemPrintTitles() {
+  public Boolean ItemPrintTitles() {
     return itemPrintTitles;
   }
 
@@ -479,7 +557,7 @@ public class PivotTable {
    * @return displayNullString
   **/
   @ApiModelProperty(value = "")
-  public Boolean getDisplayNullString() {
+  public Boolean DisplayNullString() {
     return displayNullString;
   }
 
@@ -497,7 +575,7 @@ public class PivotTable {
    * @return enableFieldList
   **/
   @ApiModelProperty(value = "")
-  public Boolean getEnableFieldList() {
+  public Boolean EnableFieldList() {
     return enableFieldList;
   }
 
@@ -530,7 +608,7 @@ public class PivotTable {
 
   public PivotTable addRowFieldsItem(PivotField rowFieldsItem) {
     if (this.rowFields == null) {
-      this.rowFields = null;
+      this.rowFields = new ArrayList<PivotField>();
     }
     this.rowFields.add(rowFieldsItem);
     return this;
@@ -595,7 +673,7 @@ public class PivotTable {
    * @return enableDataValueEditing
   **/
   @ApiModelProperty(value = "")
-  public Boolean getEnableDataValueEditing() {
+  public Boolean EnableDataValueEditing() {
     return enableDataValueEditing;
   }
 
@@ -613,7 +691,7 @@ public class PivotTable {
    * @return showPivotStyleRowHeader
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowPivotStyleRowHeader() {
+  public Boolean ShowPivotStyleRowHeader() {
     return showPivotStyleRowHeader;
   }
 
@@ -631,7 +709,7 @@ public class PivotTable {
    * @return isGridDropZones
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsGridDropZones() {
+  public Boolean IsGridDropZones() {
     return isGridDropZones;
   }
 
@@ -649,7 +727,7 @@ public class PivotTable {
    * @return enableWizard
   **/
   @ApiModelProperty(value = "")
-  public Boolean getEnableWizard() {
+  public Boolean EnableWizard() {
     return enableWizard;
   }
 
@@ -667,7 +745,7 @@ public class PivotTable {
    * @return showMemberPropertyTips
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowMemberPropertyTips() {
+  public Boolean ShowMemberPropertyTips() {
     return showMemberPropertyTips;
   }
 
@@ -703,7 +781,7 @@ public class PivotTable {
    * @return showDataTips
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowDataTips() {
+  public Boolean ShowDataTips() {
     return showDataTips;
   }
 
@@ -721,7 +799,7 @@ public class PivotTable {
    * @return printTitles
   **/
   @ApiModelProperty(value = "")
-  public Boolean getPrintTitles() {
+  public Boolean PrintTitles() {
     return printTitles;
   }
 
@@ -757,7 +835,7 @@ public class PivotTable {
    * @return showEmptyRow
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowEmptyRow() {
+  public Boolean ShowEmptyRow() {
     return showEmptyRow;
   }
 
@@ -775,7 +853,7 @@ public class PivotTable {
    * @return isMultipleFieldFilters
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsMultipleFieldFilters() {
+  public Boolean IsMultipleFieldFilters() {
     return isMultipleFieldFilters;
   }
 
@@ -793,7 +871,7 @@ public class PivotTable {
    * @return showEmptyCol
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowEmptyCol() {
+  public Boolean ShowEmptyCol() {
     return showEmptyCol;
   }
 
@@ -811,7 +889,7 @@ public class PivotTable {
    * @return showRowHeaderCaption
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowRowHeaderCaption() {
+  public Boolean ShowRowHeaderCaption() {
     return showRowHeaderCaption;
   }
 
@@ -829,7 +907,7 @@ public class PivotTable {
    * @return hasBlankRows
   **/
   @ApiModelProperty(value = "")
-  public Boolean getHasBlankRows() {
+  public Boolean HasBlankRows() {
     return hasBlankRows;
   }
 
@@ -844,7 +922,7 @@ public class PivotTable {
 
   public PivotTable addDataSourceItem(String dataSourceItem) {
     if (this.dataSource == null) {
-      this.dataSource = null;
+      this.dataSource = new ArrayList<String>();
     }
     this.dataSource.add(dataSourceItem);
     return this;
@@ -891,7 +969,7 @@ public class PivotTable {
    * @return enableDrilldown
   **/
   @ApiModelProperty(value = "")
-  public Boolean getEnableDrilldown() {
+  public Boolean EnableDrilldown() {
     return enableDrilldown;
   }
 
@@ -945,7 +1023,7 @@ public class PivotTable {
    * @return rowGrand
   **/
   @ApiModelProperty(value = "")
-  public Boolean getRowGrand() {
+  public Boolean RowGrand() {
     return rowGrand;
   }
 
@@ -981,7 +1059,7 @@ public class PivotTable {
    * @return displayErrorString
   **/
   @ApiModelProperty(value = "")
-  public Boolean getDisplayErrorString() {
+  public Boolean DisplayErrorString() {
     return displayErrorString;
   }
 
@@ -1017,7 +1095,7 @@ public class PivotTable {
    * @return isSelected
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsSelected() {
+  public Boolean IsSelected() {
     return isSelected;
   }
 
@@ -1032,7 +1110,7 @@ public class PivotTable {
 
   public PivotTable addColumnFieldsItem(PivotField columnFieldsItem) {
     if (this.columnFields == null) {
-      this.columnFields = null;
+      this.columnFields = new ArrayList<PivotField>();
     }
     this.columnFields.add(columnFieldsItem);
     return this;
@@ -1079,7 +1157,7 @@ public class PivotTable {
    * @return showValuesRow
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowValuesRow() {
+  public Boolean ShowValuesRow() {
     return showValuesRow;
   }
 
@@ -1097,7 +1175,7 @@ public class PivotTable {
    * @return enableFieldDialog
   **/
   @ApiModelProperty(value = "")
-  public Boolean getEnableFieldDialog() {
+  public Boolean EnableFieldDialog() {
     return enableFieldDialog;
   }
 
@@ -1133,7 +1211,7 @@ public class PivotTable {
    * @return showPivotStyleRowStripes
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowPivotStyleRowStripes() {
+  public Boolean ShowPivotStyleRowStripes() {
     return showPivotStyleRowStripes;
   }
 
@@ -1151,7 +1229,7 @@ public class PivotTable {
    * @return manualUpdate
   **/
   @ApiModelProperty(value = "")
-  public Boolean getManualUpdate() {
+  public Boolean ManualUpdate() {
     return manualUpdate;
   }
 
@@ -1169,7 +1247,7 @@ public class PivotTable {
    * @return isAutoFormat
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsAutoFormat() {
+  public Boolean IsAutoFormat() {
     return isAutoFormat;
   }
 
@@ -1187,7 +1265,7 @@ public class PivotTable {
    * @return displayImmediateItems
   **/
   @ApiModelProperty(value = "")
-  public Boolean getDisplayImmediateItems() {
+  public Boolean DisplayImmediateItems() {
     return displayImmediateItems;
   }
 
@@ -1223,7 +1301,7 @@ public class PivotTable {
    * @return customListSort
   **/
   @ApiModelProperty(value = "")
-  public Boolean getCustomListSort() {
+  public Boolean CustomListSort() {
     return customListSort;
   }
 
@@ -1241,7 +1319,7 @@ public class PivotTable {
    * @return mergeLabels
   **/
   @ApiModelProperty(value = "")
-  public Boolean getMergeLabels() {
+  public Boolean MergeLabels() {
     return mergeLabels;
   }
 
@@ -1277,7 +1355,7 @@ public class PivotTable {
    * @return showPivotStyleColumnStripes
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowPivotStyleColumnStripes() {
+  public Boolean ShowPivotStyleColumnStripes() {
     return showPivotStyleColumnStripes;
   }
 
@@ -1295,7 +1373,7 @@ public class PivotTable {
    * @return fieldListSortAscending
   **/
   @ApiModelProperty(value = "")
-  public Boolean getFieldListSortAscending() {
+  public Boolean FieldListSortAscending() {
     return fieldListSortAscending;
   }
 
@@ -1331,7 +1409,7 @@ public class PivotTable {
    * @return preserveFormatting
   **/
   @ApiModelProperty(value = "")
-  public Boolean getPreserveFormatting() {
+  public Boolean PreserveFormatting() {
     return preserveFormatting;
   }
 
@@ -1385,7 +1463,7 @@ public class PivotTable {
    * @return saveData
   **/
   @ApiModelProperty(value = "")
-  public Boolean getSaveData() {
+  public Boolean SaveData() {
     return saveData;
   }
 
@@ -1403,7 +1481,7 @@ public class PivotTable {
    * @return subtotalHiddenPageItems
   **/
   @ApiModelProperty(value = "")
-  public Boolean getSubtotalHiddenPageItems() {
+  public Boolean SubtotalHiddenPageItems() {
     return subtotalHiddenPageItems;
   }
 
@@ -1421,7 +1499,7 @@ public class PivotTable {
    * @return printDrill
   **/
   @ApiModelProperty(value = "")
-  public Boolean getPrintDrill() {
+  public Boolean PrintDrill() {
     return printDrill;
   }
 
@@ -1439,7 +1517,7 @@ public class PivotTable {
    * @return showPivotStyleColumnHeader
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShowPivotStyleColumnHeader() {
+  public Boolean ShowPivotStyleColumnHeader() {
     return showPivotStyleColumnHeader;
   }
 
@@ -1454,7 +1532,7 @@ public class PivotTable {
 
   public PivotTable addBaseFieldsItem(PivotField baseFieldsItem) {
     if (this.baseFields == null) {
-      this.baseFields = null;
+      this.baseFields = new ArrayList<PivotField>();
     }
     this.baseFields.add(baseFieldsItem);
     return this;

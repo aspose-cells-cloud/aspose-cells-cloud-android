@@ -27,53 +27,22 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.Comment;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * CommentResponse
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class CommentResponse extends CellsCloudResponse {
-  private String status = null;
-
-  private Integer code = null;
-
+  @SerializedName("Comment")
   private Comment comment = null;
-
-  public CommentResponse status(String status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public CommentResponse code(Integer code) {
-    this.code = code;
-    return this;
-  }
-
-   /**
-   * Get code
-   * @return code
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
-  }
 
   public CommentResponse comment(Comment comment) {
     this.comment = comment;
@@ -103,15 +72,13 @@ public class CommentResponse extends CellsCloudResponse {
       return false;
     }
     CommentResponse commentResponse = (CommentResponse) o;
-    return Objects.equals(this.status, commentResponse.status) &&
-        Objects.equals(this.code, commentResponse.code) &&
-        Objects.equals(this.comment, commentResponse.comment) &&
+    return Objects.equals(this.comment, commentResponse.comment) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, code, comment, super.hashCode());
+    return Objects.hash(comment, super.hashCode());
   }
 
 
@@ -120,8 +87,6 @@ public class CommentResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("}");
     return sb.toString();

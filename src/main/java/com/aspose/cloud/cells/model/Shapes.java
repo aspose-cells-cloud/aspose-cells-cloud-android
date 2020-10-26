@@ -27,15 +27,26 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Shapes
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Shapes {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("ShapeList")
   private List<LinkElement> shapeList = null;
 
   public Shapes link(Link link) {
@@ -63,7 +74,7 @@ public class Shapes {
 
   public Shapes addShapeListItem(LinkElement shapeListItem) {
     if (this.shapeList == null) {
-      this.shapeList = null;
+      this.shapeList = new ArrayList<LinkElement>();
     }
     this.shapeList.add(shapeListItem);
     return this;

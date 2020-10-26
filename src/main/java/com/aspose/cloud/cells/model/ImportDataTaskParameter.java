@@ -28,16 +28,27 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.FileSource;
 import com.aspose.cloud.cells.model.ImportOption;
 import com.aspose.cloud.cells.model.TaskParameter;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * ImportDataTaskParameter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ImportDataTaskParameter extends TaskParameter {
+  @SerializedName("Workbook")
   private FileSource workbook = null;
 
+  @SerializedName("ImportOption")
   private ImportOption importOption = null;
 
+  @SerializedName("DestinationWorkbook")
   private FileSource destinationWorkbook = null;
 
   public ImportDataTaskParameter workbook(FileSource workbook) {

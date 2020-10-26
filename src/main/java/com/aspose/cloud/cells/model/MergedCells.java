@@ -27,17 +27,29 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * MergedCells
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class MergedCells {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("Count")
   private Integer count = null;
 
+  @SerializedName("MergedCellList")
   private List<LinkElement> mergedCellList = null;
 
   public MergedCells link(Link link) {
@@ -83,7 +95,7 @@ public class MergedCells {
 
   public MergedCells addMergedCellListItem(LinkElement mergedCellListItem) {
     if (this.mergedCellList == null) {
-      this.mergedCellList = null;
+      this.mergedCellList = new ArrayList<LinkElement>();
     }
     this.mergedCellList.add(mergedCellListItem);
     return this;

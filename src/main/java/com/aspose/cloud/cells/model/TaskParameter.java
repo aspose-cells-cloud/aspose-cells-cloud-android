@@ -29,7 +29,7 @@ import java.util.Objects;
 /**
  * TaskParameter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 
 public class TaskParameter {
 

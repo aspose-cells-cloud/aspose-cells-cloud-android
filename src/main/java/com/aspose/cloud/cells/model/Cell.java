@@ -27,45 +27,70 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Encapsulates the object that represents a single Workbook cell.
  */
 @ApiModel(description = "Encapsulates the object that represents a single Workbook cell.")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Cell {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("Style")
   private LinkElement style = null;
 
+  @SerializedName("HtmlString")
   private String htmlString = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("Column")
   private Integer column = null;
 
+  @SerializedName("Worksheet")
   private String worksheet = null;
 
+  @SerializedName("IsInTable")
   private Boolean isInTable = null;
 
+  @SerializedName("IsArrayHeader")
   private Boolean isArrayHeader = null;
 
+  @SerializedName("Value")
   private String value = null;
 
+  @SerializedName("IsFormula")
   private Boolean isFormula = null;
 
+  @SerializedName("IsStyleSet")
   private Boolean isStyleSet = null;
 
+  @SerializedName("IsInArray")
   private Boolean isInArray = null;
 
+  @SerializedName("IsErrorValue")
   private Boolean isErrorValue = null;
 
+  @SerializedName("IsMerged")
   private Boolean isMerged = null;
 
+  @SerializedName("Formula")
   private String formula = null;
 
+  @SerializedName("Type")
   private String type = null;
 
+  @SerializedName("Row")
   private Integer row = null;
 
   public Cell link(Link link) {
@@ -186,7 +211,7 @@ public class Cell {
    * @return isInTable
   **/
   @ApiModelProperty(required = true, value = "Indicates whethe this cell is part of table formula.             ")
-  public Boolean getIsInTable() {
+  public Boolean IsInTable() {
     return isInTable;
   }
 
@@ -204,7 +229,7 @@ public class Cell {
    * @return isArrayHeader
   **/
   @ApiModelProperty(required = true, value = "Inidicates the cell's formula is and array formula and it is the first cell of the array.")
-  public Boolean getIsArrayHeader() {
+  public Boolean IsArrayHeader() {
     return isArrayHeader;
   }
 
@@ -240,7 +265,7 @@ public class Cell {
    * @return isFormula
   **/
   @ApiModelProperty(required = true, value = "Represents if the specified cell contains formula.             ")
-  public Boolean getIsFormula() {
+  public Boolean IsFormula() {
     return isFormula;
   }
 
@@ -258,7 +283,7 @@ public class Cell {
    * @return isStyleSet
   **/
   @ApiModelProperty(required = true, value = "Indicates if the cell's style is set. If return false, it means this cell has a default cell format.             ")
-  public Boolean getIsStyleSet() {
+  public Boolean IsStyleSet() {
     return isStyleSet;
   }
 
@@ -276,7 +301,7 @@ public class Cell {
    * @return isInArray
   **/
   @ApiModelProperty(required = true, value = "Indicates whether the cell formula is an array formula.")
-  public Boolean getIsInArray() {
+  public Boolean IsInArray() {
     return isInArray;
   }
 
@@ -294,7 +319,7 @@ public class Cell {
    * @return isErrorValue
   **/
   @ApiModelProperty(required = true, value = "Checks if a formula can properly evaluate a result.             ")
-  public Boolean getIsErrorValue() {
+  public Boolean IsErrorValue() {
     return isErrorValue;
   }
 
@@ -312,7 +337,7 @@ public class Cell {
    * @return isMerged
   **/
   @ApiModelProperty(required = true, value = "Checks if a cell is part of a merged range or not.             ")
-  public Boolean getIsMerged() {
+  public Boolean IsMerged() {
     return isMerged;
   }
 

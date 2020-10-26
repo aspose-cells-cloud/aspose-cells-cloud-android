@@ -28,92 +28,141 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.Color;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.Shape;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Picture
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Picture {
+  @SerializedName("AlternativeText")
   private String alternativeText = null;
 
+  @SerializedName("Bottom")
   private Integer bottom = null;
 
+  @SerializedName("Top")
   private Integer top = null;
 
+  @SerializedName("Width")
   private Integer width = null;
 
+  @SerializedName("HtmlText")
   private String htmlText = null;
 
+  @SerializedName("TextVerticalAlignment")
   private String textVerticalAlignment = null;
 
+  @SerializedName("AutoShapeType")
   private String autoShapeType = null;
 
+  @SerializedName("IsPrintable")
   private Boolean isPrintable = null;
 
+  @SerializedName("UpperLeftColumn")
   private Integer upperLeftColumn = null;
 
+  @SerializedName("IsLockAspectRatio")
   private Boolean isLockAspectRatio = null;
 
+  @SerializedName("IsGroup")
   private Boolean isGroup = null;
 
+  @SerializedName("RotationAngle")
   private Double rotationAngle = null;
 
-  private Integer zOrderPosition = null;
+  @SerializedName("ZOrderPosition")
+  private Integer zorderPosition = null;
 
+  @SerializedName("TextHorizontalOverflow")
   private String textHorizontalOverflow = null;
 
+  @SerializedName("MsoDrawingType")
   private String msoDrawingType = null;
 
+  @SerializedName("TextOrientationType")
   private String textOrientationType = null;
 
+  @SerializedName("Placement")
   private String placement = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("IsWordArt")
   private Boolean isWordArt = null;
 
+  @SerializedName("LinkedCell")
   private String linkedCell = null;
 
+  @SerializedName("UpperLeftRow")
   private Integer upperLeftRow = null;
 
+  @SerializedName("IsLocked")
   private Boolean isLocked = null;
 
+  @SerializedName("LowerRightRow")
   private Integer lowerRightRow = null;
 
+  @SerializedName("IsTextWrapped")
   private Boolean isTextWrapped = null;
 
+  @SerializedName("Y")
   private Integer Y = null;
 
+  @SerializedName("X")
   private Integer X = null;
 
+  @SerializedName("IsHidden")
   private Boolean isHidden = null;
 
+  @SerializedName("Left")
   private Integer left = null;
 
+  @SerializedName("Right")
   private Integer right = null;
 
+  @SerializedName("Text")
   private String text = null;
 
+  @SerializedName("LowerRightColumn")
   private Integer lowerRightColumn = null;
 
+  @SerializedName("Height")
   private Integer height = null;
 
+  @SerializedName("TextHorizontalAlignment")
   private String textHorizontalAlignment = null;
 
+  @SerializedName("TextVerticalOverflow")
   private String textVerticalOverflow = null;
 
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("SourceFullName")
   private String sourceFullName = null;
 
+  @SerializedName("BorderLineColor")
   private Color borderLineColor = null;
 
+  @SerializedName("OriginalHeight")
   private Integer originalHeight = null;
 
+  @SerializedName("ImageFormat")
   private String imageFormat = null;
 
+  @SerializedName("OriginalWidth")
   private Integer originalWidth = null;
 
+  @SerializedName("BorderWeight")
   private Double borderWeight = null;
 
   public Picture alternativeText(String alternativeText) {
@@ -252,7 +301,7 @@ public class Picture {
    * @return isPrintable
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsPrintable() {
+  public Boolean IsPrintable() {
     return isPrintable;
   }
 
@@ -288,7 +337,7 @@ public class Picture {
    * @return isLockAspectRatio
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsLockAspectRatio() {
+  public Boolean IsLockAspectRatio() {
     return isLockAspectRatio;
   }
 
@@ -306,7 +355,7 @@ public class Picture {
    * @return isGroup
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsGroup() {
+  public Boolean IsGroup() {
     return isGroup;
   }
 
@@ -332,22 +381,22 @@ public class Picture {
     this.rotationAngle = rotationAngle;
   }
 
-  public Picture zOrderPosition(Integer zOrderPosition) {
-    this.zOrderPosition = zOrderPosition;
+  public Picture zorderPosition(Integer zorderPosition) {
+    this.zorderPosition = zorderPosition;
     return this;
   }
 
    /**
-   * Get zOrderPosition
-   * @return zOrderPosition
+   * Get zorderPosition
+   * @return zorderPosition
   **/
   @ApiModelProperty(value = "")
-  public Integer getZOrderPosition() {
-    return zOrderPosition;
+  public Integer getZorderPosition() {
+    return zorderPosition;
   }
 
-  public void setZOrderPosition(Integer zOrderPosition) {
-    this.zOrderPosition = zOrderPosition;
+  public void setZorderPosition(Integer zorderPosition) {
+    this.zorderPosition = zorderPosition;
   }
 
   public Picture textHorizontalOverflow(String textHorizontalOverflow) {
@@ -450,7 +499,7 @@ public class Picture {
    * @return isWordArt
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsWordArt() {
+  public Boolean IsWordArt() {
     return isWordArt;
   }
 
@@ -504,7 +553,7 @@ public class Picture {
    * @return isLocked
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsLocked() {
+  public Boolean IsLocked() {
     return isLocked;
   }
 
@@ -540,7 +589,7 @@ public class Picture {
    * @return isTextWrapped
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsTextWrapped() {
+  public Boolean IsTextWrapped() {
     return isTextWrapped;
   }
 
@@ -594,7 +643,7 @@ public class Picture {
    * @return isHidden
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsHidden() {
+  public Boolean IsHidden() {
     return isHidden;
   }
 
@@ -876,7 +925,7 @@ public class Picture {
         Objects.equals(this.isLockAspectRatio, picture.isLockAspectRatio) &&
         Objects.equals(this.isGroup, picture.isGroup) &&
         Objects.equals(this.rotationAngle, picture.rotationAngle) &&
-        Objects.equals(this.zOrderPosition, picture.zOrderPosition) &&
+        Objects.equals(this.zorderPosition, picture.zorderPosition) &&
         Objects.equals(this.textHorizontalOverflow, picture.textHorizontalOverflow) &&
         Objects.equals(this.msoDrawingType, picture.msoDrawingType) &&
         Objects.equals(this.textOrientationType, picture.textOrientationType) &&
@@ -909,7 +958,7 @@ public class Picture {
 
   @Override
   public int hashCode() {
-    return Objects.hash(alternativeText, bottom, top, width, htmlText, textVerticalAlignment, autoShapeType, isPrintable, upperLeftColumn, isLockAspectRatio, isGroup, rotationAngle, zOrderPosition, textHorizontalOverflow, msoDrawingType, textOrientationType, placement, name, isWordArt, linkedCell, upperLeftRow, isLocked, lowerRightRow, isTextWrapped, Y, X, isHidden, left, right, text, lowerRightColumn, height, textHorizontalAlignment, textVerticalOverflow, link, sourceFullName, borderLineColor, originalHeight, imageFormat, originalWidth, borderWeight);
+    return Objects.hash(alternativeText, bottom, top, width, htmlText, textVerticalAlignment, autoShapeType, isPrintable, upperLeftColumn, isLockAspectRatio, isGroup, rotationAngle, zorderPosition, textHorizontalOverflow, msoDrawingType, textOrientationType, placement, name, isWordArt, linkedCell, upperLeftRow, isLocked, lowerRightRow, isTextWrapped, Y, X, isHidden, left, right, text, lowerRightColumn, height, textHorizontalAlignment, textVerticalOverflow, link, sourceFullName, borderLineColor, originalHeight, imageFormat, originalWidth, borderWeight);
   }
 
 
@@ -930,7 +979,7 @@ public class Picture {
     sb.append("    isLockAspectRatio: ").append(toIndentedString(isLockAspectRatio)).append("\n");
     sb.append("    isGroup: ").append(toIndentedString(isGroup)).append("\n");
     sb.append("    rotationAngle: ").append(toIndentedString(rotationAngle)).append("\n");
-    sb.append("    zOrderPosition: ").append(toIndentedString(zOrderPosition)).append("\n");
+    sb.append("    zorderPosition: ").append(toIndentedString(zorderPosition)).append("\n");
     sb.append("    textHorizontalOverflow: ").append(toIndentedString(textHorizontalOverflow)).append("\n");
     sb.append("    msoDrawingType: ").append(toIndentedString(msoDrawingType)).append("\n");
     sb.append("    textOrientationType: ").append(toIndentedString(textOrientationType)).append("\n");

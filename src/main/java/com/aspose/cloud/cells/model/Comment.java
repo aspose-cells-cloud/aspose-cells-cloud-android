@@ -27,34 +27,54 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Comment
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Comment {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("AutoSize")
   private Boolean autoSize = null;
 
+  @SerializedName("Author")
   private String author = null;
 
+  @SerializedName("IsVisible")
   private Boolean isVisible = null;
 
+  @SerializedName("TextOrientationType")
   private String textOrientationType = null;
 
+  @SerializedName("Height")
   private Integer height = null;
 
+  @SerializedName("Note")
   private String note = null;
 
+  @SerializedName("Width")
   private Integer width = null;
 
+  @SerializedName("TextVerticalAlignment")
   private String textVerticalAlignment = null;
 
+  @SerializedName("CellName")
   private String cellName = null;
 
+  @SerializedName("HtmlNote")
   private String htmlNote = null;
 
+  @SerializedName("TextHorizontalAlignment")
   private String textHorizontalAlignment = null;
 
   public Comment link(Link link) {
@@ -85,7 +105,7 @@ public class Comment {
    * @return autoSize
   **/
   @ApiModelProperty(value = "")
-  public Boolean getAutoSize() {
+  public Boolean AutoSize() {
     return autoSize;
   }
 
@@ -121,7 +141,7 @@ public class Comment {
    * @return isVisible
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsVisible() {
+  public Boolean IsVisible() {
     return isVisible;
   }
 

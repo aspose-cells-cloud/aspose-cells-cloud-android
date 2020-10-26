@@ -29,22 +29,36 @@ import com.aspose.cloud.cells.model.GradientFill;
 import com.aspose.cloud.cells.model.PatternFill;
 import com.aspose.cloud.cells.model.SolidFill;
 import com.aspose.cloud.cells.model.TextureFill;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * FillFormat
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class FillFormat {
+  @SerializedName("TextureFill")
   private TextureFill textureFill = null;
 
+  @SerializedName("ImageData")
   private byte[] imageData = null;
 
+  @SerializedName("PatternFill")
   private PatternFill patternFill = null;
 
+  @SerializedName("SolidFill")
   private SolidFill solidFill = null;
 
+  @SerializedName("GradientFill")
   private GradientFill gradientFill = null;
 
+  @SerializedName("Type")
   private String type = null;
 
   public FillFormat textureFill(TextureFill textureFill) {

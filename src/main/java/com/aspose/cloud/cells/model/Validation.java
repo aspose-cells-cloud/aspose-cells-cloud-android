@@ -28,45 +28,71 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.CellArea;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Validation
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Validation {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("Formula2")
   private String formula2 = null;
 
+  @SerializedName("Formula1")
   private String formula1 = null;
 
+  @SerializedName("ShowError")
   private Boolean showError = null;
 
+  @SerializedName("ErrorMessage")
   private String errorMessage = null;
 
+  @SerializedName("InCellDropDown")
   private Boolean inCellDropDown = null;
 
+  @SerializedName("ShowInput")
   private Boolean showInput = null;
 
+  @SerializedName("AlertStyle")
   private String alertStyle = null;
 
+  @SerializedName("InputTitle")
   private String inputTitle = null;
 
+  @SerializedName("IgnoreBlank")
   private Boolean ignoreBlank = null;
 
+  @SerializedName("Value2")
   private String value2 = null;
 
+  @SerializedName("Value1")
   private String value1 = null;
 
+  @SerializedName("Operator")
   private String operator = null;
 
+  @SerializedName("ErrorTitle")
   private String errorTitle = null;
 
+  @SerializedName("Type")
   private String type = null;
 
+  @SerializedName("InputMessage")
   private String inputMessage = null;
 
+  @SerializedName("AreaList")
   private List<CellArea> areaList = null;
 
   public Validation link(Link link) {
@@ -133,7 +159,7 @@ public class Validation {
    * @return showError
   **/
   @ApiModelProperty(value = "Indicates whether the data validation error message will be displayed whenever    the user enters invalid data.")
-  public Boolean getShowError() {
+  public Boolean ShowError() {
     return showError;
   }
 
@@ -169,7 +195,7 @@ public class Validation {
    * @return inCellDropDown
   **/
   @ApiModelProperty(value = "Indicates whether data validation displays a drop-down list that contains    acceptable values.")
-  public Boolean getInCellDropDown() {
+  public Boolean InCellDropDown() {
     return inCellDropDown;
   }
 
@@ -187,7 +213,7 @@ public class Validation {
    * @return showInput
   **/
   @ApiModelProperty(value = "Indicates whether the data validation input message will be displayed whenever    the user selects a cell in the data validation range.")
-  public Boolean getShowInput() {
+  public Boolean ShowInput() {
     return showInput;
   }
 
@@ -241,7 +267,7 @@ public class Validation {
    * @return ignoreBlank
   **/
   @ApiModelProperty(value = "Indicates whether blank values are permitted by the range data validation.")
-  public Boolean getIgnoreBlank() {
+  public Boolean IgnoreBlank() {
     return ignoreBlank;
   }
 
@@ -364,7 +390,7 @@ public class Validation {
 
   public Validation addAreaListItem(CellArea areaListItem) {
     if (this.areaList == null) {
-      this.areaList = null;
+      this.areaList = new ArrayList<CellArea>();
     }
     this.areaList.add(areaListItem);
     return this;

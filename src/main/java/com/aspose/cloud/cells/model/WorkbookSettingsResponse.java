@@ -27,53 +27,22 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.WorkbookSettings;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * WorkbookSettingsResponse
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class WorkbookSettingsResponse extends CellsCloudResponse {
-  private String status = null;
-
-  private Integer code = null;
-
+  @SerializedName("settings")
   private WorkbookSettings settings = null;
-
-  public WorkbookSettingsResponse status(String status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public WorkbookSettingsResponse code(Integer code) {
-    this.code = code;
-    return this;
-  }
-
-   /**
-   * Get code
-   * @return code
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
-  }
 
   public WorkbookSettingsResponse settings(WorkbookSettings settings) {
     this.settings = settings;
@@ -103,15 +72,13 @@ public class WorkbookSettingsResponse extends CellsCloudResponse {
       return false;
     }
     WorkbookSettingsResponse workbookSettingsResponse = (WorkbookSettingsResponse) o;
-    return Objects.equals(this.status, workbookSettingsResponse.status) &&
-        Objects.equals(this.code, workbookSettingsResponse.code) &&
-        Objects.equals(this.settings, workbookSettingsResponse.settings) &&
+    return Objects.equals(this.settings, workbookSettingsResponse.settings) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, code, settings, super.hashCode());
+    return Objects.hash(settings, super.hashCode());
   }
 
 
@@ -120,8 +87,6 @@ public class WorkbookSettingsResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkbookSettingsResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("}");
     return sb.toString();

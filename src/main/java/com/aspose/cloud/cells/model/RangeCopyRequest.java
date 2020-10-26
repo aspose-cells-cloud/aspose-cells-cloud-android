@@ -27,18 +27,30 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.PasteOptions;
 import com.aspose.cloud.cells.model.Range;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * RangeCopyRequest
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class RangeCopyRequest {
+  @SerializedName("Source")
   private Range source = null;
 
+  @SerializedName("Operate")
   private String operate = null;
 
+  @SerializedName("Target")
   private Range target = null;
 
+  @SerializedName("PasteOptions")
   private PasteOptions pasteOptions = null;
 
   public RangeCopyRequest source(Range source) {

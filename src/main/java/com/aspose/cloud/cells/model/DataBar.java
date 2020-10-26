@@ -29,35 +29,55 @@ import com.aspose.cloud.cells.model.Color;
 import com.aspose.cloud.cells.model.ConditionalFormattingValue;
 import com.aspose.cloud.cells.model.DataBarBorder;
 import com.aspose.cloud.cells.model.NegativeBarFormat;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Describe the DataBar conditional formatting rule. This conditional formatting    rule displays a gradated data bar in the range of cells.
  */
 @ApiModel(description = "Describe the DataBar conditional formatting rule. This conditional formatting    rule displays a gradated data bar in the range of cells.")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class DataBar {
+  @SerializedName("Direction")
   private String direction = null;
 
+  @SerializedName("MaxCfvo")
   private ConditionalFormattingValue maxCfvo = null;
 
+  @SerializedName("Color")
   private Color color = null;
 
+  @SerializedName("MinLength")
   private Integer minLength = null;
 
+  @SerializedName("BarFillType")
   private String barFillType = null;
 
+  @SerializedName("MinCfvo")
   private ConditionalFormattingValue minCfvo = null;
 
+  @SerializedName("AxisPosition")
   private String axisPosition = null;
 
+  @SerializedName("NegativeBarFormat")
   private NegativeBarFormat negativeBarFormat = null;
 
+  @SerializedName("BarBorder")
   private DataBarBorder barBorder = null;
 
+  @SerializedName("AxisColor")
   private Color axisColor = null;
 
+  @SerializedName("MaxLength")
   private Integer maxLength = null;
 
+  @SerializedName("ShowValue")
   private Boolean showValue = null;
 
   public DataBar direction(String direction) {
@@ -268,7 +288,7 @@ public class DataBar {
    * @return showValue
   **/
   @ApiModelProperty(value = "Get or set the flag indicating whether to show the values of the cells on   which this data bar is applied.  Default value is true.             ")
-  public Boolean getShowValue() {
+  public Boolean ShowValue() {
     return showValue;
   }
 

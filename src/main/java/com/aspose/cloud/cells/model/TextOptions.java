@@ -31,42 +31,66 @@ import com.aspose.cloud.cells.model.FillFormat;
 import com.aspose.cloud.cells.model.Font;
 import com.aspose.cloud.cells.model.LineFormat;
 import com.aspose.cloud.cells.model.ShadowEffect;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * TextOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class TextOptions {
+  @SerializedName("IsItalic")
   private Boolean isItalic = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("DoubleSize")
   private Double doubleSize = null;
 
+  @SerializedName("Color")
   private Color color = null;
 
+  @SerializedName("IsBold")
   private Boolean isBold = null;
 
+  @SerializedName("IsSubscript")
   private Boolean isSubscript = null;
 
+  @SerializedName("IsSuperscript")
   private Boolean isSuperscript = null;
 
+  @SerializedName("IsStrikeout")
   private Boolean isStrikeout = null;
 
+  @SerializedName("Underline")
   private String underline = null;
 
+  @SerializedName("Size")
   private Integer size = null;
 
+  @SerializedName("Outline")
   private LineFormat outline = null;
 
+  @SerializedName("Spacing")
   private Double spacing = null;
 
+  @SerializedName("Kerning")
   private Double kerning = null;
 
+  @SerializedName("Shadow")
   private ShadowEffect shadow = null;
 
+  @SerializedName("Fill")
   private FillFormat fill = null;
 
+  @SerializedName("UnderlineColor")
   private CellsColor underlineColor = null;
 
   public TextOptions isItalic(Boolean isItalic) {
@@ -79,7 +103,7 @@ public class TextOptions {
    * @return isItalic
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsItalic() {
+  public Boolean IsItalic() {
     return isItalic;
   }
 
@@ -151,7 +175,7 @@ public class TextOptions {
    * @return isBold
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsBold() {
+  public Boolean IsBold() {
     return isBold;
   }
 
@@ -169,7 +193,7 @@ public class TextOptions {
    * @return isSubscript
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsSubscript() {
+  public Boolean IsSubscript() {
     return isSubscript;
   }
 
@@ -187,7 +211,7 @@ public class TextOptions {
    * @return isSuperscript
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsSuperscript() {
+  public Boolean IsSuperscript() {
     return isSuperscript;
   }
 
@@ -205,7 +229,7 @@ public class TextOptions {
    * @return isStrikeout
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsStrikeout() {
+  public Boolean IsStrikeout() {
     return isStrikeout;
   }
 

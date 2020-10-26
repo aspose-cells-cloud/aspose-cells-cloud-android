@@ -27,53 +27,22 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.HorizontalPageBreak;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * HorizontalPageBreakResponse
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class HorizontalPageBreakResponse extends CellsCloudResponse {
-  private String status = null;
-
-  private Integer code = null;
-
+  @SerializedName("HorizontalPageBreak")
   private HorizontalPageBreak horizontalPageBreak = null;
-
-  public HorizontalPageBreakResponse status(String status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public HorizontalPageBreakResponse code(Integer code) {
-    this.code = code;
-    return this;
-  }
-
-   /**
-   * Get code
-   * @return code
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
-  }
 
   public HorizontalPageBreakResponse horizontalPageBreak(HorizontalPageBreak horizontalPageBreak) {
     this.horizontalPageBreak = horizontalPageBreak;
@@ -103,15 +72,13 @@ public class HorizontalPageBreakResponse extends CellsCloudResponse {
       return false;
     }
     HorizontalPageBreakResponse horizontalPageBreakResponse = (HorizontalPageBreakResponse) o;
-    return Objects.equals(this.status, horizontalPageBreakResponse.status) &&
-        Objects.equals(this.code, horizontalPageBreakResponse.code) &&
-        Objects.equals(this.horizontalPageBreak, horizontalPageBreakResponse.horizontalPageBreak) &&
+    return Objects.equals(this.horizontalPageBreak, horizontalPageBreakResponse.horizontalPageBreak) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, code, horizontalPageBreak, super.hashCode());
+    return Objects.hash(horizontalPageBreak, super.hashCode());
   }
 
 
@@ -120,8 +87,6 @@ public class HorizontalPageBreakResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class HorizontalPageBreakResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    horizontalPageBreak: ").append(toIndentedString(horizontalPageBreak)).append("\n");
     sb.append("}");
     return sb.toString();

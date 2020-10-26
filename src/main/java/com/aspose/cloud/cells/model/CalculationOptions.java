@@ -25,18 +25,30 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * CalculationOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class CalculationOptions {
+  @SerializedName("PrecisionStrategy")
   private String precisionStrategy = null;
 
+  @SerializedName("IgnoreError")
   private Boolean ignoreError = null;
 
+  @SerializedName("Recursive")
   private Boolean recursive = null;
 
+  @SerializedName("CalcStackSize")
   private Integer calcStackSize = null;
 
   public CalculationOptions precisionStrategy(String precisionStrategy) {
@@ -67,7 +79,7 @@ public class CalculationOptions {
    * @return ignoreError
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIgnoreError() {
+  public Boolean IgnoreError() {
     return ignoreError;
   }
 
@@ -85,7 +97,7 @@ public class CalculationOptions {
    * @return recursive
   **/
   @ApiModelProperty(value = "")
-  public Boolean getRecursive() {
+  public Boolean Recursive() {
     return recursive;
   }
 

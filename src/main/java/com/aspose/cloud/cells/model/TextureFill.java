@@ -28,22 +28,36 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.LinkElement;
 import com.aspose.cloud.cells.model.PicFormatOption;
 import com.aspose.cloud.cells.model.TilePicOption;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * TextureFill
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class TextureFill {
+  @SerializedName("Scale")
   private Double scale = null;
 
+  @SerializedName("Image")
   private LinkElement image = null;
 
+  @SerializedName("PicFormatOption")
   private PicFormatOption picFormatOption = null;
 
+  @SerializedName("TilePicOption")
   private TilePicOption tilePicOption = null;
 
+  @SerializedName("Transparency")
   private Double transparency = null;
 
+  @SerializedName("Type")
   private String type = null;
 
   public TextureFill scale(Double scale) {

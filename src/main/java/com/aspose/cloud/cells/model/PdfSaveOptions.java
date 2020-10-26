@@ -27,191 +27,49 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.PdfSecurityOptions;
 import com.aspose.cloud.cells.model.SaveOptions;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * PdfSaveOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class PdfSaveOptions extends SaveOptions {
-  private Boolean enableHTTPCompression = null;
-
-  private String saveFormat = null;
-
-  private Boolean clearData = null;
-
-  private String cachedFileFolder = null;
-
-  private Boolean validateMergedAreas = null;
-
-  private Boolean refreshChartCache = null;
-
-  private Boolean createDirectory = null;
-
-  private Boolean sortNames = null;
-
+  @SerializedName("CalculateFormula")
   private Boolean calculateFormula = null;
 
+  @SerializedName("CheckFontCompatibility")
   private Boolean checkFontCompatibility = null;
 
+  @SerializedName("OnePagePerSheet")
   private Boolean onePagePerSheet = null;
 
+  @SerializedName("Compliance")
   private String compliance = null;
 
+  @SerializedName("DefaultFont")
   private String defaultFont = null;
 
+  @SerializedName("PrintingPageType")
   private String printingPageType = null;
 
+  @SerializedName("ImageType")
   private String imageType = null;
 
+  @SerializedName("desiredPPI")
   private Integer desiredPPI = null;
 
+  @SerializedName("jpegQuality")
   private Integer jpegQuality = null;
 
+  @SerializedName("SecurityOptions")
   private PdfSecurityOptions securityOptions = null;
-
-  public PdfSaveOptions enableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-    return this;
-  }
-
-   /**
-   * Get enableHTTPCompression
-   * @return enableHTTPCompression
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getEnableHTTPCompression() {
-    return enableHTTPCompression;
-  }
-
-  public void setEnableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-  }
-
-  public PdfSaveOptions saveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-    return this;
-  }
-
-   /**
-   * Get saveFormat
-   * @return saveFormat
-  **/
-  @ApiModelProperty(value = "")
-  public String getSaveFormat() {
-    return saveFormat;
-  }
-
-  public void setSaveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-  }
-
-  public PdfSaveOptions clearData(Boolean clearData) {
-    this.clearData = clearData;
-    return this;
-  }
-
-   /**
-   * Make the workbook empty after saving the file.
-   * @return clearData
-  **/
-  @ApiModelProperty(value = "Make the workbook empty after saving the file.")
-  public Boolean getClearData() {
-    return clearData;
-  }
-
-  public void setClearData(Boolean clearData) {
-    this.clearData = clearData;
-  }
-
-  public PdfSaveOptions cachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-    return this;
-  }
-
-   /**
-   * The cached file folder is used to store some large data.
-   * @return cachedFileFolder
-  **/
-  @ApiModelProperty(value = "The cached file folder is used to store some large data.")
-  public String getCachedFileFolder() {
-    return cachedFileFolder;
-  }
-
-  public void setCachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-  }
-
-  public PdfSaveOptions validateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-    return this;
-  }
-
-   /**
-   * Indicates whether validate merged areas before saving the file. The default value is false.             
-   * @return validateMergedAreas
-  **/
-  @ApiModelProperty(value = "Indicates whether validate merged areas before saving the file. The default value is false.             ")
-  public Boolean getValidateMergedAreas() {
-    return validateMergedAreas;
-  }
-
-  public void setValidateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-  }
-
-  public PdfSaveOptions refreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-    return this;
-  }
-
-   /**
-   * Get refreshChartCache
-   * @return refreshChartCache
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getRefreshChartCache() {
-    return refreshChartCache;
-  }
-
-  public void setRefreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-  }
-
-  public PdfSaveOptions createDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-    return this;
-  }
-
-   /**
-   * If true and the directory does not exist, the directory will be automatically created before saving the file.             
-   * @return createDirectory
-  **/
-  @ApiModelProperty(value = "If true and the directory does not exist, the directory will be automatically created before saving the file.             ")
-  public Boolean getCreateDirectory() {
-    return createDirectory;
-  }
-
-  public void setCreateDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-  }
-
-  public PdfSaveOptions sortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-    return this;
-  }
-
-   /**
-   * Get sortNames
-   * @return sortNames
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getSortNames() {
-    return sortNames;
-  }
-
-  public void setSortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-  }
 
   public PdfSaveOptions calculateFormula(Boolean calculateFormula) {
     this.calculateFormula = calculateFormula;
@@ -223,7 +81,7 @@ public class PdfSaveOptions extends SaveOptions {
    * @return calculateFormula
   **/
   @ApiModelProperty(value = "")
-  public Boolean getCalculateFormula() {
+  public Boolean CalculateFormula() {
     return calculateFormula;
   }
 
@@ -241,7 +99,7 @@ public class PdfSaveOptions extends SaveOptions {
    * @return checkFontCompatibility
   **/
   @ApiModelProperty(value = "")
-  public Boolean getCheckFontCompatibility() {
+  public Boolean CheckFontCompatibility() {
     return checkFontCompatibility;
   }
 
@@ -259,7 +117,7 @@ public class PdfSaveOptions extends SaveOptions {
    * @return onePagePerSheet
   **/
   @ApiModelProperty(value = "")
-  public Boolean getOnePagePerSheet() {
+  public Boolean OnePagePerSheet() {
     return onePagePerSheet;
   }
 
@@ -403,15 +261,7 @@ public class PdfSaveOptions extends SaveOptions {
       return false;
     }
     PdfSaveOptions pdfSaveOptions = (PdfSaveOptions) o;
-    return Objects.equals(this.enableHTTPCompression, pdfSaveOptions.enableHTTPCompression) &&
-        Objects.equals(this.saveFormat, pdfSaveOptions.saveFormat) &&
-        Objects.equals(this.clearData, pdfSaveOptions.clearData) &&
-        Objects.equals(this.cachedFileFolder, pdfSaveOptions.cachedFileFolder) &&
-        Objects.equals(this.validateMergedAreas, pdfSaveOptions.validateMergedAreas) &&
-        Objects.equals(this.refreshChartCache, pdfSaveOptions.refreshChartCache) &&
-        Objects.equals(this.createDirectory, pdfSaveOptions.createDirectory) &&
-        Objects.equals(this.sortNames, pdfSaveOptions.sortNames) &&
-        Objects.equals(this.calculateFormula, pdfSaveOptions.calculateFormula) &&
+    return Objects.equals(this.calculateFormula, pdfSaveOptions.calculateFormula) &&
         Objects.equals(this.checkFontCompatibility, pdfSaveOptions.checkFontCompatibility) &&
         Objects.equals(this.onePagePerSheet, pdfSaveOptions.onePagePerSheet) &&
         Objects.equals(this.compliance, pdfSaveOptions.compliance) &&
@@ -426,7 +276,7 @@ public class PdfSaveOptions extends SaveOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableHTTPCompression, saveFormat, clearData, cachedFileFolder, validateMergedAreas, refreshChartCache, createDirectory, sortNames, calculateFormula, checkFontCompatibility, onePagePerSheet, compliance, defaultFont, printingPageType, imageType, desiredPPI, jpegQuality, securityOptions, super.hashCode());
+    return Objects.hash(calculateFormula, checkFontCompatibility, onePagePerSheet, compliance, defaultFont, printingPageType, imageType, desiredPPI, jpegQuality, securityOptions, super.hashCode());
   }
 
 
@@ -435,14 +285,6 @@ public class PdfSaveOptions extends SaveOptions {
     StringBuilder sb = new StringBuilder();
     sb.append("class PdfSaveOptions {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    enableHTTPCompression: ").append(toIndentedString(enableHTTPCompression)).append("\n");
-    sb.append("    saveFormat: ").append(toIndentedString(saveFormat)).append("\n");
-    sb.append("    clearData: ").append(toIndentedString(clearData)).append("\n");
-    sb.append("    cachedFileFolder: ").append(toIndentedString(cachedFileFolder)).append("\n");
-    sb.append("    validateMergedAreas: ").append(toIndentedString(validateMergedAreas)).append("\n");
-    sb.append("    refreshChartCache: ").append(toIndentedString(refreshChartCache)).append("\n");
-    sb.append("    createDirectory: ").append(toIndentedString(createDirectory)).append("\n");
-    sb.append("    sortNames: ").append(toIndentedString(sortNames)).append("\n");
     sb.append("    calculateFormula: ").append(toIndentedString(calculateFormula)).append("\n");
     sb.append("    checkFontCompatibility: ").append(toIndentedString(checkFontCompatibility)).append("\n");
     sb.append("    onePagePerSheet: ").append(toIndentedString(onePagePerSheet)).append("\n");

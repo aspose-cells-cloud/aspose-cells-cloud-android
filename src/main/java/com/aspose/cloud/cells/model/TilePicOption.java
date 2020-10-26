@@ -25,22 +25,36 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * TilePicOption
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class TilePicOption {
+  @SerializedName("AlignmentType")
   private String alignmentType = null;
 
+  @SerializedName("OffsetX")
   private Double offsetX = null;
 
+  @SerializedName("ScaleX")
   private Double scaleX = null;
 
+  @SerializedName("OffsetY")
   private Double offsetY = null;
 
+  @SerializedName("ScaleY")
   private Double scaleY = null;
 
+  @SerializedName("MirrorType")
   private String mirrorType = null;
 
   public TilePicOption alignmentType(String alignmentType) {

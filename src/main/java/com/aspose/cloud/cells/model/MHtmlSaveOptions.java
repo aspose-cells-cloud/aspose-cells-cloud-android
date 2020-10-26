@@ -26,195 +26,55 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.SaveOptions;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * MHtmlSaveOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class MHtmlSaveOptions extends SaveOptions {
-  private Boolean enableHTTPCompression = null;
-
-  private String saveFormat = null;
-
-  private Boolean clearData = null;
-
-  private String cachedFileFolder = null;
-
-  private Boolean validateMergedAreas = null;
-
-  private Boolean refreshChartCache = null;
-
-  private Boolean createDirectory = null;
-
-  private Boolean sortNames = null;
-
+  @SerializedName("AttachedFilesDirectory")
   private String attachedFilesDirectory = null;
 
+  @SerializedName("AttachedFilesUrlPrefix")
   private String attachedFilesUrlPrefix = null;
 
+  @SerializedName("Encoding")
   private String encoding = null;
 
+  @SerializedName("ExportActiveWorksheetOnly")
   private Boolean exportActiveWorksheetOnly = null;
 
+  @SerializedName("ExportChartImageFormat")
   private String exportChartImageFormat = null;
 
+  @SerializedName("ExportImagesAsBase64")
   private Boolean exportImagesAsBase64 = null;
 
+  @SerializedName("HiddenColDisplayType")
   private String hiddenColDisplayType = null;
 
+  @SerializedName("HiddenRowDisplayType")
   private String hiddenRowDisplayType = null;
 
+  @SerializedName("HtmlCrossStringType")
   private String htmlCrossStringType = null;
 
+  @SerializedName("IsExpImageToTempDir")
   private Boolean isExpImageToTempDir = null;
 
+  @SerializedName("PageTitle")
   private String pageTitle = null;
 
+  @SerializedName("ParseHtmlTagInCell")
   private Boolean parseHtmlTagInCell = null;
-
-  public MHtmlSaveOptions enableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-    return this;
-  }
-
-   /**
-   * Get enableHTTPCompression
-   * @return enableHTTPCompression
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getEnableHTTPCompression() {
-    return enableHTTPCompression;
-  }
-
-  public void setEnableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-  }
-
-  public MHtmlSaveOptions saveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-    return this;
-  }
-
-   /**
-   * Get saveFormat
-   * @return saveFormat
-  **/
-  @ApiModelProperty(value = "")
-  public String getSaveFormat() {
-    return saveFormat;
-  }
-
-  public void setSaveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-  }
-
-  public MHtmlSaveOptions clearData(Boolean clearData) {
-    this.clearData = clearData;
-    return this;
-  }
-
-   /**
-   * Make the workbook empty after saving the file.
-   * @return clearData
-  **/
-  @ApiModelProperty(value = "Make the workbook empty after saving the file.")
-  public Boolean getClearData() {
-    return clearData;
-  }
-
-  public void setClearData(Boolean clearData) {
-    this.clearData = clearData;
-  }
-
-  public MHtmlSaveOptions cachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-    return this;
-  }
-
-   /**
-   * The cached file folder is used to store some large data.
-   * @return cachedFileFolder
-  **/
-  @ApiModelProperty(value = "The cached file folder is used to store some large data.")
-  public String getCachedFileFolder() {
-    return cachedFileFolder;
-  }
-
-  public void setCachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-  }
-
-  public MHtmlSaveOptions validateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-    return this;
-  }
-
-   /**
-   * Indicates whether validate merged areas before saving the file. The default value is false.             
-   * @return validateMergedAreas
-  **/
-  @ApiModelProperty(value = "Indicates whether validate merged areas before saving the file. The default value is false.             ")
-  public Boolean getValidateMergedAreas() {
-    return validateMergedAreas;
-  }
-
-  public void setValidateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-  }
-
-  public MHtmlSaveOptions refreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-    return this;
-  }
-
-   /**
-   * Get refreshChartCache
-   * @return refreshChartCache
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getRefreshChartCache() {
-    return refreshChartCache;
-  }
-
-  public void setRefreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-  }
-
-  public MHtmlSaveOptions createDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-    return this;
-  }
-
-   /**
-   * If true and the directory does not exist, the directory will be automatically created before saving the file.             
-   * @return createDirectory
-  **/
-  @ApiModelProperty(value = "If true and the directory does not exist, the directory will be automatically created before saving the file.             ")
-  public Boolean getCreateDirectory() {
-    return createDirectory;
-  }
-
-  public void setCreateDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-  }
-
-  public MHtmlSaveOptions sortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-    return this;
-  }
-
-   /**
-   * Get sortNames
-   * @return sortNames
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getSortNames() {
-    return sortNames;
-  }
-
-  public void setSortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-  }
 
   public MHtmlSaveOptions attachedFilesDirectory(String attachedFilesDirectory) {
     this.attachedFilesDirectory = attachedFilesDirectory;
@@ -280,7 +140,7 @@ public class MHtmlSaveOptions extends SaveOptions {
    * @return exportActiveWorksheetOnly
   **/
   @ApiModelProperty(value = "")
-  public Boolean getExportActiveWorksheetOnly() {
+  public Boolean ExportActiveWorksheetOnly() {
     return exportActiveWorksheetOnly;
   }
 
@@ -316,7 +176,7 @@ public class MHtmlSaveOptions extends SaveOptions {
    * @return exportImagesAsBase64
   **/
   @ApiModelProperty(value = "")
-  public Boolean getExportImagesAsBase64() {
+  public Boolean ExportImagesAsBase64() {
     return exportImagesAsBase64;
   }
 
@@ -388,7 +248,7 @@ public class MHtmlSaveOptions extends SaveOptions {
    * @return isExpImageToTempDir
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsExpImageToTempDir() {
+  public Boolean IsExpImageToTempDir() {
     return isExpImageToTempDir;
   }
 
@@ -424,7 +284,7 @@ public class MHtmlSaveOptions extends SaveOptions {
    * @return parseHtmlTagInCell
   **/
   @ApiModelProperty(value = "")
-  public Boolean getParseHtmlTagInCell() {
+  public Boolean ParseHtmlTagInCell() {
     return parseHtmlTagInCell;
   }
 
@@ -441,33 +301,25 @@ public class MHtmlSaveOptions extends SaveOptions {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MHtmlSaveOptions mHtmlSaveOptions = (MHtmlSaveOptions) o;
-    return Objects.equals(this.enableHTTPCompression, mHtmlSaveOptions.enableHTTPCompression) &&
-        Objects.equals(this.saveFormat, mHtmlSaveOptions.saveFormat) &&
-        Objects.equals(this.clearData, mHtmlSaveOptions.clearData) &&
-        Objects.equals(this.cachedFileFolder, mHtmlSaveOptions.cachedFileFolder) &&
-        Objects.equals(this.validateMergedAreas, mHtmlSaveOptions.validateMergedAreas) &&
-        Objects.equals(this.refreshChartCache, mHtmlSaveOptions.refreshChartCache) &&
-        Objects.equals(this.createDirectory, mHtmlSaveOptions.createDirectory) &&
-        Objects.equals(this.sortNames, mHtmlSaveOptions.sortNames) &&
-        Objects.equals(this.attachedFilesDirectory, mHtmlSaveOptions.attachedFilesDirectory) &&
-        Objects.equals(this.attachedFilesUrlPrefix, mHtmlSaveOptions.attachedFilesUrlPrefix) &&
-        Objects.equals(this.encoding, mHtmlSaveOptions.encoding) &&
-        Objects.equals(this.exportActiveWorksheetOnly, mHtmlSaveOptions.exportActiveWorksheetOnly) &&
-        Objects.equals(this.exportChartImageFormat, mHtmlSaveOptions.exportChartImageFormat) &&
-        Objects.equals(this.exportImagesAsBase64, mHtmlSaveOptions.exportImagesAsBase64) &&
-        Objects.equals(this.hiddenColDisplayType, mHtmlSaveOptions.hiddenColDisplayType) &&
-        Objects.equals(this.hiddenRowDisplayType, mHtmlSaveOptions.hiddenRowDisplayType) &&
-        Objects.equals(this.htmlCrossStringType, mHtmlSaveOptions.htmlCrossStringType) &&
-        Objects.equals(this.isExpImageToTempDir, mHtmlSaveOptions.isExpImageToTempDir) &&
-        Objects.equals(this.pageTitle, mHtmlSaveOptions.pageTitle) &&
-        Objects.equals(this.parseHtmlTagInCell, mHtmlSaveOptions.parseHtmlTagInCell) &&
+    MHtmlSaveOptions mhtmlSaveOptions = (MHtmlSaveOptions) o;
+    return Objects.equals(this.attachedFilesDirectory, mhtmlSaveOptions.attachedFilesDirectory) &&
+        Objects.equals(this.attachedFilesUrlPrefix, mhtmlSaveOptions.attachedFilesUrlPrefix) &&
+        Objects.equals(this.encoding, mhtmlSaveOptions.encoding) &&
+        Objects.equals(this.exportActiveWorksheetOnly, mhtmlSaveOptions.exportActiveWorksheetOnly) &&
+        Objects.equals(this.exportChartImageFormat, mhtmlSaveOptions.exportChartImageFormat) &&
+        Objects.equals(this.exportImagesAsBase64, mhtmlSaveOptions.exportImagesAsBase64) &&
+        Objects.equals(this.hiddenColDisplayType, mhtmlSaveOptions.hiddenColDisplayType) &&
+        Objects.equals(this.hiddenRowDisplayType, mhtmlSaveOptions.hiddenRowDisplayType) &&
+        Objects.equals(this.htmlCrossStringType, mhtmlSaveOptions.htmlCrossStringType) &&
+        Objects.equals(this.isExpImageToTempDir, mhtmlSaveOptions.isExpImageToTempDir) &&
+        Objects.equals(this.pageTitle, mhtmlSaveOptions.pageTitle) &&
+        Objects.equals(this.parseHtmlTagInCell, mhtmlSaveOptions.parseHtmlTagInCell) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableHTTPCompression, saveFormat, clearData, cachedFileFolder, validateMergedAreas, refreshChartCache, createDirectory, sortNames, attachedFilesDirectory, attachedFilesUrlPrefix, encoding, exportActiveWorksheetOnly, exportChartImageFormat, exportImagesAsBase64, hiddenColDisplayType, hiddenRowDisplayType, htmlCrossStringType, isExpImageToTempDir, pageTitle, parseHtmlTagInCell, super.hashCode());
+    return Objects.hash(attachedFilesDirectory, attachedFilesUrlPrefix, encoding, exportActiveWorksheetOnly, exportChartImageFormat, exportImagesAsBase64, hiddenColDisplayType, hiddenRowDisplayType, htmlCrossStringType, isExpImageToTempDir, pageTitle, parseHtmlTagInCell, super.hashCode());
   }
 
 
@@ -476,14 +328,6 @@ public class MHtmlSaveOptions extends SaveOptions {
     StringBuilder sb = new StringBuilder();
     sb.append("class MHtmlSaveOptions {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    enableHTTPCompression: ").append(toIndentedString(enableHTTPCompression)).append("\n");
-    sb.append("    saveFormat: ").append(toIndentedString(saveFormat)).append("\n");
-    sb.append("    clearData: ").append(toIndentedString(clearData)).append("\n");
-    sb.append("    cachedFileFolder: ").append(toIndentedString(cachedFileFolder)).append("\n");
-    sb.append("    validateMergedAreas: ").append(toIndentedString(validateMergedAreas)).append("\n");
-    sb.append("    refreshChartCache: ").append(toIndentedString(refreshChartCache)).append("\n");
-    sb.append("    createDirectory: ").append(toIndentedString(createDirectory)).append("\n");
-    sb.append("    sortNames: ").append(toIndentedString(sortNames)).append("\n");
     sb.append("    attachedFilesDirectory: ").append(toIndentedString(attachedFilesDirectory)).append("\n");
     sb.append("    attachedFilesUrlPrefix: ").append(toIndentedString(attachedFilesUrlPrefix)).append("\n");
     sb.append("    encoding: ").append(toIndentedString(encoding)).append("\n");

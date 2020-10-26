@@ -25,100 +25,153 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * WorkbookSettings
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class WorkbookSettings {
+  @SerializedName("NumberGroupSeparator")
   private String numberGroupSeparator = null;
 
+  @SerializedName("HidePivotFieldList")
   private Boolean hidePivotFieldList = null;
 
+  @SerializedName("IsMinimized")
   private Boolean isMinimized = null;
 
+  @SerializedName("CalculationId")
   private String calculationId = null;
 
+  @SerializedName("ReCalculateOnOpen")
   private Boolean reCalculateOnOpen = null;
 
+  @SerializedName("CheckExcelRestriction")
   private Boolean checkExcelRestriction = null;
 
+  @SerializedName("IsHScrollBarVisible")
   private Boolean isHScrollBarVisible = null;
 
+  @SerializedName("WindowHeight")
   private Double windowHeight = null;
 
+  @SerializedName("WindowLeft")
   private Double windowLeft = null;
 
+  @SerializedName("CalcStackSize")
   private Integer calcStackSize = null;
 
+  @SerializedName("Shared")
   private Boolean shared = null;
 
+  @SerializedName("RemovePersonalInformation")
   private Boolean removePersonalInformation = null;
 
+  @SerializedName("LanguageCode")
   private String languageCode = null;
 
+  @SerializedName("EnableMacros")
   private Boolean enableMacros = null;
 
+  @SerializedName("IsDefaultEncrypted")
   private Boolean isDefaultEncrypted = null;
 
+  @SerializedName("RecalculateBeforeSave")
   private Boolean recalculateBeforeSave = null;
 
+  @SerializedName("ParsingFormulaOnOpen")
   private Boolean parsingFormulaOnOpen = null;
 
+  @SerializedName("WindowTop")
   private Double windowTop = null;
 
+  @SerializedName("Region")
   private String region = null;
 
+  @SerializedName("MemorySetting")
   private String memorySetting = null;
 
+  @SerializedName("UpdateAdjacentCellsBorder")
   private Boolean updateAdjacentCellsBorder = null;
 
+  @SerializedName("CrashSave")
   private Boolean crashSave = null;
 
+  @SerializedName("ShowTabs")
   private Boolean showTabs = null;
 
+  @SerializedName("PrecisionAsDisplayed")
   private Boolean precisionAsDisplayed = null;
 
+  @SerializedName("CalcMode")
   private String calcMode = null;
 
+  @SerializedName("AutoCompressPictures")
   private Boolean autoCompressPictures = null;
 
+  @SerializedName("Date1904")
   private Boolean date1904 = null;
 
+  @SerializedName("NumberDecimalSeparator")
   private String numberDecimalSeparator = null;
 
+  @SerializedName("Iteration")
   private Boolean iteration = null;
 
+  @SerializedName("CheckComptiliblity")
   private Boolean checkComptiliblity = null;
 
+  @SerializedName("AutoRecover")
   private Boolean autoRecover = null;
 
+  @SerializedName("MaxChange")
   private Double maxChange = null;
 
+  @SerializedName("DataExtractLoad")
   private Boolean dataExtractLoad = null;
 
+  @SerializedName("FirstVisibleTab")
   private Integer firstVisibleTab = null;
 
+  @SerializedName("IsHidden")
   private Boolean isHidden = null;
 
+  @SerializedName("RecommendReadOnly")
   private Boolean recommendReadOnly = null;
 
+  @SerializedName("DisplayDrawingObjects")
   private String displayDrawingObjects = null;
 
+  @SerializedName("BuildVersion")
   private String buildVersion = null;
 
+  @SerializedName("IsVScrollBarVisible")
   private Boolean isVScrollBarVisible = null;
 
+  @SerializedName("WindowWidth")
   private Double windowWidth = null;
 
+  @SerializedName("CreateCalcChain")
   private Boolean createCalcChain = null;
 
+  @SerializedName("MaxIteration")
   private Integer maxIteration = null;
 
+  @SerializedName("RepairLoad")
   private Boolean repairLoad = null;
 
+  @SerializedName("UpdateLinksType")
   private String updateLinksType = null;
 
+  @SerializedName("SheetTabBarWidth")
   private Integer sheetTabBarWidth = null;
 
   public WorkbookSettings numberGroupSeparator(String numberGroupSeparator) {
@@ -149,7 +202,7 @@ public class WorkbookSettings {
    * @return hidePivotFieldList
   **/
   @ApiModelProperty(value = "")
-  public Boolean getHidePivotFieldList() {
+  public Boolean HidePivotFieldList() {
     return hidePivotFieldList;
   }
 
@@ -167,7 +220,7 @@ public class WorkbookSettings {
    * @return isMinimized
   **/
   @ApiModelProperty(value = "Represents whether the generated spreadsheet will be opened Minimized.             ")
-  public Boolean getIsMinimized() {
+  public Boolean IsMinimized() {
     return isMinimized;
   }
 
@@ -203,7 +256,7 @@ public class WorkbookSettings {
    * @return reCalculateOnOpen
   **/
   @ApiModelProperty(value = "Indicates whether re-calculate all formulas on opening file.             ")
-  public Boolean getReCalculateOnOpen() {
+  public Boolean ReCalculateOnOpen() {
     return reCalculateOnOpen;
   }
 
@@ -221,7 +274,7 @@ public class WorkbookSettings {
    * @return checkExcelRestriction
   **/
   @ApiModelProperty(value = "Whether check restriction of excel file when user modify cells related objects.  For example, excel does not allow inputting string value longer than 32K.  When you input a value longer than 32K such as by Cell.PutValue(string), if this property is true, you will get an Exception.  If this property is false, we will accept your input string value as the cell's value so that later you can output the complete string value for other file formats such as CSV.  However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             ")
-  public Boolean getCheckExcelRestriction() {
+  public Boolean CheckExcelRestriction() {
     return checkExcelRestriction;
   }
 
@@ -239,7 +292,7 @@ public class WorkbookSettings {
    * @return isHScrollBarVisible
   **/
   @ApiModelProperty(value = "Gets or sets a value indicating whether the generated spreadsheet will contain a horizontal scroll bar.                           Remarks: The default value is true.              ")
-  public Boolean getIsHScrollBarVisible() {
+  public Boolean IsHScrollBarVisible() {
     return isHScrollBarVisible;
   }
 
@@ -311,7 +364,7 @@ public class WorkbookSettings {
    * @return shared
   **/
   @ApiModelProperty(value = "Gets or sets a value that indicates whether the Workbook is shared.                           Remarks: The default value is false.              ")
-  public Boolean getShared() {
+  public Boolean Shared() {
     return shared;
   }
 
@@ -329,7 +382,7 @@ public class WorkbookSettings {
    * @return removePersonalInformation
   **/
   @ApiModelProperty(value = "")
-  public Boolean getRemovePersonalInformation() {
+  public Boolean RemovePersonalInformation() {
     return removePersonalInformation;
   }
 
@@ -365,7 +418,7 @@ public class WorkbookSettings {
    * @return enableMacros
   **/
   @ApiModelProperty(value = "")
-  public Boolean getEnableMacros() {
+  public Boolean EnableMacros() {
     return enableMacros;
   }
 
@@ -383,7 +436,7 @@ public class WorkbookSettings {
    * @return isDefaultEncrypted
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsDefaultEncrypted() {
+  public Boolean IsDefaultEncrypted() {
     return isDefaultEncrypted;
   }
 
@@ -401,7 +454,7 @@ public class WorkbookSettings {
    * @return recalculateBeforeSave
   **/
   @ApiModelProperty(value = "Indicates whether to recalculate before saving the document.             ")
-  public Boolean getRecalculateBeforeSave() {
+  public Boolean RecalculateBeforeSave() {
     return recalculateBeforeSave;
   }
 
@@ -419,7 +472,7 @@ public class WorkbookSettings {
    * @return parsingFormulaOnOpen
   **/
   @ApiModelProperty(value = "Indicates whether parsing the formula when reading the file.                           Remarks: Only applies for Excel Xlsx,Xltx, Xltm,Xlsm file because the formulas in the files are stored with a string formula.              ")
-  public Boolean getParsingFormulaOnOpen() {
+  public Boolean ParsingFormulaOnOpen() {
     return parsingFormulaOnOpen;
   }
 
@@ -491,7 +544,7 @@ public class WorkbookSettings {
    * @return updateAdjacentCellsBorder
   **/
   @ApiModelProperty(value = "Indicates whether update adjacent cells' border.                           Remarks: The default value is true.  For example: the bottom border of the cell A1 is update, the top border of the cell A2 should be changed too.              ")
-  public Boolean getUpdateAdjacentCellsBorder() {
+  public Boolean UpdateAdjacentCellsBorder() {
     return updateAdjacentCellsBorder;
   }
 
@@ -509,7 +562,7 @@ public class WorkbookSettings {
    * @return crashSave
   **/
   @ApiModelProperty(value = "")
-  public Boolean getCrashSave() {
+  public Boolean CrashSave() {
     return crashSave;
   }
 
@@ -527,7 +580,7 @@ public class WorkbookSettings {
    * @return showTabs
   **/
   @ApiModelProperty(value = "Get or sets a value whether the Workbook tabs are displayed.                           Remarks: The default value is true.              ")
-  public Boolean getShowTabs() {
+  public Boolean ShowTabs() {
     return showTabs;
   }
 
@@ -545,7 +598,7 @@ public class WorkbookSettings {
    * @return precisionAsDisplayed
   **/
   @ApiModelProperty(value = "True if calculations in this workbook will be done using only the precision of the numbers as they're displayed             ")
-  public Boolean getPrecisionAsDisplayed() {
+  public Boolean PrecisionAsDisplayed() {
     return precisionAsDisplayed;
   }
 
@@ -581,7 +634,7 @@ public class WorkbookSettings {
    * @return autoCompressPictures
   **/
   @ApiModelProperty(value = "")
-  public Boolean getAutoCompressPictures() {
+  public Boolean AutoCompressPictures() {
     return autoCompressPictures;
   }
 
@@ -599,7 +652,7 @@ public class WorkbookSettings {
    * @return date1904
   **/
   @ApiModelProperty(value = "Gets or sets a value which represents if the workbook uses the 1904 date system.             ")
-  public Boolean getDate1904() {
+  public Boolean Date1904() {
     return date1904;
   }
 
@@ -635,7 +688,7 @@ public class WorkbookSettings {
    * @return iteration
   **/
   @ApiModelProperty(value = "Indicates if Aspose.Cells will use iteration to resolve circular references.             ")
-  public Boolean getIteration() {
+  public Boolean Iteration() {
     return iteration;
   }
 
@@ -653,7 +706,7 @@ public class WorkbookSettings {
    * @return checkComptiliblity
   **/
   @ApiModelProperty(value = "Indicates whether check comptiliblity when saving workbook.                           Remarks:  The default value is true.              ")
-  public Boolean getCheckComptiliblity() {
+  public Boolean CheckComptiliblity() {
     return checkComptiliblity;
   }
 
@@ -671,7 +724,7 @@ public class WorkbookSettings {
    * @return autoRecover
   **/
   @ApiModelProperty(value = "")
-  public Boolean getAutoRecover() {
+  public Boolean AutoRecover() {
     return autoRecover;
   }
 
@@ -707,7 +760,7 @@ public class WorkbookSettings {
    * @return dataExtractLoad
   **/
   @ApiModelProperty(value = "")
-  public Boolean getDataExtractLoad() {
+  public Boolean DataExtractLoad() {
     return dataExtractLoad;
   }
 
@@ -743,7 +796,7 @@ public class WorkbookSettings {
    * @return isHidden
   **/
   @ApiModelProperty(value = "Indicates whether this workbook is hidden.             ")
-  public Boolean getIsHidden() {
+  public Boolean IsHidden() {
     return isHidden;
   }
 
@@ -761,7 +814,7 @@ public class WorkbookSettings {
    * @return recommendReadOnly
   **/
   @ApiModelProperty(value = "Indicates if the Read Only Recommended option is selected.             ")
-  public Boolean getRecommendReadOnly() {
+  public Boolean RecommendReadOnly() {
     return recommendReadOnly;
   }
 
@@ -815,7 +868,7 @@ public class WorkbookSettings {
    * @return isVScrollBarVisible
   **/
   @ApiModelProperty(value = "Gets or sets a value indicating whether the generated spreadsheet will contain a vertical scroll bar.                           Remarks: The default value is true.              ")
-  public Boolean getIsVScrollBarVisible() {
+  public Boolean IsVScrollBarVisible() {
     return isVScrollBarVisible;
   }
 
@@ -851,7 +904,7 @@ public class WorkbookSettings {
    * @return createCalcChain
   **/
   @ApiModelProperty(value = "Indicates whether create calculated formulas chain.             ")
-  public Boolean getCreateCalcChain() {
+  public Boolean CreateCalcChain() {
     return createCalcChain;
   }
 
@@ -887,7 +940,7 @@ public class WorkbookSettings {
    * @return repairLoad
   **/
   @ApiModelProperty(value = "")
-  public Boolean getRepairLoad() {
+  public Boolean RepairLoad() {
     return repairLoad;
   }
 

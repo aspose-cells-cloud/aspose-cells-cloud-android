@@ -30,168 +30,8 @@ import com.aspose.cloud.cells.model.SaveOptions;
 /**
  * DifSaveOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class DifSaveOptions extends SaveOptions {
-  private Boolean enableHTTPCompression = null;
-
-  private String saveFormat = null;
-
-  private Boolean clearData = null;
-
-  private String cachedFileFolder = null;
-
-  private Boolean validateMergedAreas = null;
-
-  private Boolean refreshChartCache = null;
-
-  private Boolean createDirectory = null;
-
-  private Boolean sortNames = null;
-
-  public DifSaveOptions enableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-    return this;
-  }
-
-   /**
-   * Get enableHTTPCompression
-   * @return enableHTTPCompression
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getEnableHTTPCompression() {
-    return enableHTTPCompression;
-  }
-
-  public void setEnableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-  }
-
-  public DifSaveOptions saveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-    return this;
-  }
-
-   /**
-   * Get saveFormat
-   * @return saveFormat
-  **/
-  @ApiModelProperty(value = "")
-  public String getSaveFormat() {
-    return saveFormat;
-  }
-
-  public void setSaveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-  }
-
-  public DifSaveOptions clearData(Boolean clearData) {
-    this.clearData = clearData;
-    return this;
-  }
-
-   /**
-   * Make the workbook empty after saving the file.
-   * @return clearData
-  **/
-  @ApiModelProperty(value = "Make the workbook empty after saving the file.")
-  public Boolean getClearData() {
-    return clearData;
-  }
-
-  public void setClearData(Boolean clearData) {
-    this.clearData = clearData;
-  }
-
-  public DifSaveOptions cachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-    return this;
-  }
-
-   /**
-   * The cached file folder is used to store some large data.
-   * @return cachedFileFolder
-  **/
-  @ApiModelProperty(value = "The cached file folder is used to store some large data.")
-  public String getCachedFileFolder() {
-    return cachedFileFolder;
-  }
-
-  public void setCachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-  }
-
-  public DifSaveOptions validateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-    return this;
-  }
-
-   /**
-   * Indicates whether validate merged areas before saving the file. The default value is false.             
-   * @return validateMergedAreas
-  **/
-  @ApiModelProperty(value = "Indicates whether validate merged areas before saving the file. The default value is false.             ")
-  public Boolean getValidateMergedAreas() {
-    return validateMergedAreas;
-  }
-
-  public void setValidateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-  }
-
-  public DifSaveOptions refreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-    return this;
-  }
-
-   /**
-   * Get refreshChartCache
-   * @return refreshChartCache
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getRefreshChartCache() {
-    return refreshChartCache;
-  }
-
-  public void setRefreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-  }
-
-  public DifSaveOptions createDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-    return this;
-  }
-
-   /**
-   * If true and the directory does not exist, the directory will be automatically created before saving the file.             
-   * @return createDirectory
-  **/
-  @ApiModelProperty(value = "If true and the directory does not exist, the directory will be automatically created before saving the file.             ")
-  public Boolean getCreateDirectory() {
-    return createDirectory;
-  }
-
-  public void setCreateDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-  }
-
-  public DifSaveOptions sortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-    return this;
-  }
-
-   /**
-   * Get sortNames
-   * @return sortNames
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getSortNames() {
-    return sortNames;
-  }
-
-  public void setSortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -201,21 +41,12 @@ public class DifSaveOptions extends SaveOptions {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DifSaveOptions difSaveOptions = (DifSaveOptions) o;
-    return Objects.equals(this.enableHTTPCompression, difSaveOptions.enableHTTPCompression) &&
-        Objects.equals(this.saveFormat, difSaveOptions.saveFormat) &&
-        Objects.equals(this.clearData, difSaveOptions.clearData) &&
-        Objects.equals(this.cachedFileFolder, difSaveOptions.cachedFileFolder) &&
-        Objects.equals(this.validateMergedAreas, difSaveOptions.validateMergedAreas) &&
-        Objects.equals(this.refreshChartCache, difSaveOptions.refreshChartCache) &&
-        Objects.equals(this.createDirectory, difSaveOptions.createDirectory) &&
-        Objects.equals(this.sortNames, difSaveOptions.sortNames) &&
-        super.equals(o);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableHTTPCompression, saveFormat, clearData, cachedFileFolder, validateMergedAreas, refreshChartCache, createDirectory, sortNames, super.hashCode());
+    return Objects.hash(super.hashCode());
   }
 
 
@@ -224,14 +55,6 @@ public class DifSaveOptions extends SaveOptions {
     StringBuilder sb = new StringBuilder();
     sb.append("class DifSaveOptions {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    enableHTTPCompression: ").append(toIndentedString(enableHTTPCompression)).append("\n");
-    sb.append("    saveFormat: ").append(toIndentedString(saveFormat)).append("\n");
-    sb.append("    clearData: ").append(toIndentedString(clearData)).append("\n");
-    sb.append("    cachedFileFolder: ").append(toIndentedString(cachedFileFolder)).append("\n");
-    sb.append("    validateMergedAreas: ").append(toIndentedString(validateMergedAreas)).append("\n");
-    sb.append("    refreshChartCache: ").append(toIndentedString(refreshChartCache)).append("\n");
-    sb.append("    createDirectory: ").append(toIndentedString(createDirectory)).append("\n");
-    sb.append("    sortNames: ").append(toIndentedString(sortNames)).append("\n");
     sb.append("}");
     return sb.toString();
   }

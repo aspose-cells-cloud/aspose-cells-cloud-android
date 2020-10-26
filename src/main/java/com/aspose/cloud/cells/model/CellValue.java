@@ -26,20 +26,33 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Style;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * CellValue
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class CellValue {
+  @SerializedName("rowIndex")
   private Integer rowIndex = null;
 
+  @SerializedName("columnIndex")
   private Integer columnIndex = null;
 
+  @SerializedName("style")
   private Style style = null;
 
+  @SerializedName("type")
   private String type = null;
 
+  @SerializedName("value")
   private String value = null;
 
   public CellValue rowIndex(Integer rowIndex) {

@@ -25,25 +25,41 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * CreatePivotTableRequest
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class CreatePivotTableRequest {
+  @SerializedName("PivotFieldColumns")
   private List<Integer> pivotFieldColumns = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("UseSameSource")
   private Boolean useSameSource = null;
 
+  @SerializedName("PivotFieldData")
   private List<Integer> pivotFieldData = null;
 
+  @SerializedName("PivotFieldRows")
   private List<Integer> pivotFieldRows = null;
 
+  @SerializedName("DestCellName")
   private String destCellName = null;
 
+  @SerializedName("SourceData")
   private String sourceData = null;
 
   public CreatePivotTableRequest pivotFieldColumns(List<Integer> pivotFieldColumns) {
@@ -53,7 +69,7 @@ public class CreatePivotTableRequest {
 
   public CreatePivotTableRequest addPivotFieldColumnsItem(Integer pivotFieldColumnsItem) {
     if (this.pivotFieldColumns == null) {
-      this.pivotFieldColumns = null;
+      this.pivotFieldColumns = new ArrayList<Integer>();
     }
     this.pivotFieldColumns.add(pivotFieldColumnsItem);
     return this;
@@ -100,7 +116,7 @@ public class CreatePivotTableRequest {
    * @return useSameSource
   **/
   @ApiModelProperty(required = true, value = "")
-  public Boolean getUseSameSource() {
+  public Boolean UseSameSource() {
     return useSameSource;
   }
 
@@ -115,7 +131,7 @@ public class CreatePivotTableRequest {
 
   public CreatePivotTableRequest addPivotFieldDataItem(Integer pivotFieldDataItem) {
     if (this.pivotFieldData == null) {
-      this.pivotFieldData = null;
+      this.pivotFieldData = new ArrayList<Integer>();
     }
     this.pivotFieldData.add(pivotFieldDataItem);
     return this;
@@ -141,7 +157,7 @@ public class CreatePivotTableRequest {
 
   public CreatePivotTableRequest addPivotFieldRowsItem(Integer pivotFieldRowsItem) {
     if (this.pivotFieldRows == null) {
-      this.pivotFieldRows = null;
+      this.pivotFieldRows = new ArrayList<Integer>();
     }
     this.pivotFieldRows.add(pivotFieldRowsItem);
     return this;

@@ -29,19 +29,32 @@ import com.aspose.cloud.cells.model.DataSorter;
 import com.aspose.cloud.cells.model.FilterColumn;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * AutoFilter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class AutoFilter {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("Range")
   private String range = null;
 
+  @SerializedName("FilterColumns")
   private List<FilterColumn> filterColumns = null;
 
+  @SerializedName("Sorter")
   private DataSorter sorter = null;
 
   public AutoFilter link(Link link) {
@@ -87,7 +100,7 @@ public class AutoFilter {
 
   public AutoFilter addFilterColumnsItem(FilterColumn filterColumnsItem) {
     if (this.filterColumns == null) {
-      this.filterColumns = null;
+      this.filterColumns = new ArrayList<FilterColumn>();
     }
     this.filterColumns.add(filterColumnsItem);
     return this;

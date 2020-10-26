@@ -27,24 +27,39 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.ConditionalFormattingIcon;
 import com.aspose.cloud.cells.model.ConditionalFormattingValue;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Describe the IconSet conditional formatting rule. This conditional formatting     rule applies icons to cells according to their values.
  */
 @ApiModel(description = "Describe the IconSet conditional formatting rule. This conditional formatting     rule applies icons to cells according to their values.")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class IconSet {
+  @SerializedName("Reverse")
   private Boolean reverse = null;
 
+  @SerializedName("CfIcons")
   private List<ConditionalFormattingIcon> cfIcons = null;
 
+  @SerializedName("Cfvos")
   private List<ConditionalFormattingValue> cfvos = null;
 
+  @SerializedName("IconSetType")
   private String iconSetType = null;
 
+  @SerializedName("IsCustom")
   private Boolean isCustom = null;
 
+  @SerializedName("ShowValue")
   private Boolean showValue = null;
 
   public IconSet reverse(Boolean reverse) {
@@ -57,7 +72,7 @@ public class IconSet {
    * @return reverse
   **/
   @ApiModelProperty(value = "Get or set the flag indicating whether to reverses the default order of the   icons in this icon set.  Default value is false.             ")
-  public Boolean getReverse() {
+  public Boolean Reverse() {
     return reverse;
   }
 
@@ -72,7 +87,7 @@ public class IconSet {
 
   public IconSet addCfIconsItem(ConditionalFormattingIcon cfIconsItem) {
     if (this.cfIcons == null) {
-      this.cfIcons = null;
+      this.cfIcons = new ArrayList<ConditionalFormattingIcon>();
     }
     this.cfIcons.add(cfIconsItem);
     return this;
@@ -98,7 +113,7 @@ public class IconSet {
 
   public IconSet addCfvosItem(ConditionalFormattingValue cfvosItem) {
     if (this.cfvos == null) {
-      this.cfvos = null;
+      this.cfvos = new ArrayList<ConditionalFormattingValue>();
     }
     this.cfvos.add(cfvosItem);
     return this;
@@ -145,7 +160,7 @@ public class IconSet {
    * @return isCustom
   **/
   @ApiModelProperty(value = "Indicates whether the icon set is custom.  Default value is false.")
-  public Boolean getIsCustom() {
+  public Boolean IsCustom() {
     return isCustom;
   }
 
@@ -163,7 +178,7 @@ public class IconSet {
    * @return showValue
   **/
   @ApiModelProperty(value = "Get or set the flag indicating whether to show the values of the cells on    which this icon set is applied.  Default value is true.             ")
-  public Boolean getShowValue() {
+  public Boolean ShowValue() {
     return showValue;
   }
 

@@ -26,49 +26,46 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.OperateParameter;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * ChartOperateParameter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ChartOperateParameter extends OperateParameter {
-  private String operateType = null;
-
+  @SerializedName("string")
   private String string = null;
 
+  @SerializedName("Area")
   private String area = null;
 
+  @SerializedName("CategoryData")
   private String categoryData = null;
 
+  @SerializedName("UpperLeftRow")
   private Integer upperLeftRow = null;
 
+  @SerializedName("LowerRightColumn")
   private Integer lowerRightColumn = null;
 
+  @SerializedName("LowerRightRow")
   private Integer lowerRightRow = null;
 
+  @SerializedName("IsAutoGetSerialName")
   private Boolean isAutoGetSerialName = null;
 
+  @SerializedName("ChartType")
   private String chartType = null;
 
+  @SerializedName("IsVertical")
   private Boolean isVertical = null;
-
-  public ChartOperateParameter operateType(String operateType) {
-    this.operateType = operateType;
-    return this;
-  }
-
-   /**
-   * Get operateType
-   * @return operateType
-  **/
-  @ApiModelProperty(value = "")
-  public String getOperateType() {
-    return operateType;
-  }
-
-  public void setOperateType(String operateType) {
-    this.operateType = operateType;
-  }
 
   public ChartOperateParameter string(String string) {
     this.string = string;
@@ -188,7 +185,7 @@ public class ChartOperateParameter extends OperateParameter {
    * @return isAutoGetSerialName
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsAutoGetSerialName() {
+  public Boolean IsAutoGetSerialName() {
     return isAutoGetSerialName;
   }
 
@@ -224,7 +221,7 @@ public class ChartOperateParameter extends OperateParameter {
    * @return isVertical
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsVertical() {
+  public Boolean IsVertical() {
     return isVertical;
   }
 
@@ -242,8 +239,7 @@ public class ChartOperateParameter extends OperateParameter {
       return false;
     }
     ChartOperateParameter chartOperateParameter = (ChartOperateParameter) o;
-    return Objects.equals(this.operateType, chartOperateParameter.operateType) &&
-        Objects.equals(this.string, chartOperateParameter.string) &&
+    return Objects.equals(this.string, chartOperateParameter.string) &&
         Objects.equals(this.area, chartOperateParameter.area) &&
         Objects.equals(this.categoryData, chartOperateParameter.categoryData) &&
         Objects.equals(this.upperLeftRow, chartOperateParameter.upperLeftRow) &&
@@ -257,7 +253,7 @@ public class ChartOperateParameter extends OperateParameter {
 
   @Override
   public int hashCode() {
-    return Objects.hash(operateType, string, area, categoryData, upperLeftRow, lowerRightColumn, lowerRightRow, isAutoGetSerialName, chartType, isVertical, super.hashCode());
+    return Objects.hash(string, area, categoryData, upperLeftRow, lowerRightColumn, lowerRightRow, isAutoGetSerialName, chartType, isVertical, super.hashCode());
   }
 
 
@@ -266,7 +262,6 @@ public class ChartOperateParameter extends OperateParameter {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChartOperateParameter {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    operateType: ").append(toIndentedString(operateType)).append("\n");
     sb.append("    string: ").append(toIndentedString(string)).append("\n");
     sb.append("    area: ").append(toIndentedString(area)).append("\n");
     sb.append("    categoryData: ").append(toIndentedString(categoryData)).append("\n");

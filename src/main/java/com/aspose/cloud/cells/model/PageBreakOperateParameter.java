@@ -26,43 +26,37 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.OperateParameter;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * PageBreakOperateParameter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class PageBreakOperateParameter extends OperateParameter {
-  private String operateType = null;
-
+  @SerializedName("Index")
   private Integer index = null;
 
+  @SerializedName("EndIndex")
   private Integer endIndex = null;
 
+  @SerializedName("Column")
   private Integer column = null;
 
+  @SerializedName("StartIndex")
   private Integer startIndex = null;
 
+  @SerializedName("PageBreakType")
   private String pageBreakType = null;
 
+  @SerializedName("Row")
   private Integer row = null;
-
-  public PageBreakOperateParameter operateType(String operateType) {
-    this.operateType = operateType;
-    return this;
-  }
-
-   /**
-   * Get operateType
-   * @return operateType
-  **/
-  @ApiModelProperty(value = "")
-  public String getOperateType() {
-    return operateType;
-  }
-
-  public void setOperateType(String operateType) {
-    this.operateType = operateType;
-  }
 
   public PageBreakOperateParameter index(Integer index) {
     this.index = index;
@@ -182,8 +176,7 @@ public class PageBreakOperateParameter extends OperateParameter {
       return false;
     }
     PageBreakOperateParameter pageBreakOperateParameter = (PageBreakOperateParameter) o;
-    return Objects.equals(this.operateType, pageBreakOperateParameter.operateType) &&
-        Objects.equals(this.index, pageBreakOperateParameter.index) &&
+    return Objects.equals(this.index, pageBreakOperateParameter.index) &&
         Objects.equals(this.endIndex, pageBreakOperateParameter.endIndex) &&
         Objects.equals(this.column, pageBreakOperateParameter.column) &&
         Objects.equals(this.startIndex, pageBreakOperateParameter.startIndex) &&
@@ -194,7 +187,7 @@ public class PageBreakOperateParameter extends OperateParameter {
 
   @Override
   public int hashCode() {
-    return Objects.hash(operateType, index, endIndex, column, startIndex, pageBreakType, row, super.hashCode());
+    return Objects.hash(index, endIndex, column, startIndex, pageBreakType, row, super.hashCode());
   }
 
 
@@ -203,7 +196,6 @@ public class PageBreakOperateParameter extends OperateParameter {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageBreakOperateParameter {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    operateType: ").append(toIndentedString(operateType)).append("\n");
     sb.append("    index: ").append(toIndentedString(index)).append("\n");
     sb.append("    endIndex: ").append(toIndentedString(endIndex)).append("\n");
     sb.append("    column: ").append(toIndentedString(column)).append("\n");

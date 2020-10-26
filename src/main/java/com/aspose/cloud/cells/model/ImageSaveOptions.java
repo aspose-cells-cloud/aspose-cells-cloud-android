@@ -26,195 +26,55 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.SaveOptions;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * ImageSaveOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ImageSaveOptions extends SaveOptions {
-  private Boolean enableHTTPCompression = null;
-
-  private String saveFormat = null;
-
-  private Boolean clearData = null;
-
-  private String cachedFileFolder = null;
-
-  private Boolean validateMergedAreas = null;
-
-  private Boolean refreshChartCache = null;
-
-  private Boolean createDirectory = null;
-
-  private Boolean sortNames = null;
-
+  @SerializedName("ChartImageType")
   private String chartImageType = null;
 
+  @SerializedName("EmbededImageNameInSvg")
   private String embededImageNameInSvg = null;
 
+  @SerializedName("HorizontalResolution")
   private Integer horizontalResolution = null;
 
+  @SerializedName("ImageFormat")
   private String imageFormat = null;
 
+  @SerializedName("IsCellAutoFit")
   private Boolean isCellAutoFit = null;
 
+  @SerializedName("OnePagePerSheet")
   private Boolean onePagePerSheet = null;
 
+  @SerializedName("OnlyArea")
   private Boolean onlyArea = null;
 
+  @SerializedName("PrintingPage")
   private String printingPage = null;
 
+  @SerializedName("PrintWithStatusDialog")
   private Integer printWithStatusDialog = null;
 
+  @SerializedName("Quality")
   private Integer quality = null;
 
+  @SerializedName("TiffCompression")
   private String tiffCompression = null;
 
+  @SerializedName("VerticalResolution")
   private Integer verticalResolution = null;
-
-  public ImageSaveOptions enableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-    return this;
-  }
-
-   /**
-   * Get enableHTTPCompression
-   * @return enableHTTPCompression
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getEnableHTTPCompression() {
-    return enableHTTPCompression;
-  }
-
-  public void setEnableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-  }
-
-  public ImageSaveOptions saveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-    return this;
-  }
-
-   /**
-   * Get saveFormat
-   * @return saveFormat
-  **/
-  @ApiModelProperty(value = "")
-  public String getSaveFormat() {
-    return saveFormat;
-  }
-
-  public void setSaveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-  }
-
-  public ImageSaveOptions clearData(Boolean clearData) {
-    this.clearData = clearData;
-    return this;
-  }
-
-   /**
-   * Make the workbook empty after saving the file.
-   * @return clearData
-  **/
-  @ApiModelProperty(value = "Make the workbook empty after saving the file.")
-  public Boolean getClearData() {
-    return clearData;
-  }
-
-  public void setClearData(Boolean clearData) {
-    this.clearData = clearData;
-  }
-
-  public ImageSaveOptions cachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-    return this;
-  }
-
-   /**
-   * The cached file folder is used to store some large data.
-   * @return cachedFileFolder
-  **/
-  @ApiModelProperty(value = "The cached file folder is used to store some large data.")
-  public String getCachedFileFolder() {
-    return cachedFileFolder;
-  }
-
-  public void setCachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-  }
-
-  public ImageSaveOptions validateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-    return this;
-  }
-
-   /**
-   * Indicates whether validate merged areas before saving the file. The default value is false.             
-   * @return validateMergedAreas
-  **/
-  @ApiModelProperty(value = "Indicates whether validate merged areas before saving the file. The default value is false.             ")
-  public Boolean getValidateMergedAreas() {
-    return validateMergedAreas;
-  }
-
-  public void setValidateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-  }
-
-  public ImageSaveOptions refreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-    return this;
-  }
-
-   /**
-   * Get refreshChartCache
-   * @return refreshChartCache
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getRefreshChartCache() {
-    return refreshChartCache;
-  }
-
-  public void setRefreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-  }
-
-  public ImageSaveOptions createDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-    return this;
-  }
-
-   /**
-   * If true and the directory does not exist, the directory will be automatically created before saving the file.             
-   * @return createDirectory
-  **/
-  @ApiModelProperty(value = "If true and the directory does not exist, the directory will be automatically created before saving the file.             ")
-  public Boolean getCreateDirectory() {
-    return createDirectory;
-  }
-
-  public void setCreateDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-  }
-
-  public ImageSaveOptions sortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-    return this;
-  }
-
-   /**
-   * Get sortNames
-   * @return sortNames
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getSortNames() {
-    return sortNames;
-  }
-
-  public void setSortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-  }
 
   public ImageSaveOptions chartImageType(String chartImageType) {
     this.chartImageType = chartImageType;
@@ -298,7 +158,7 @@ public class ImageSaveOptions extends SaveOptions {
    * @return isCellAutoFit
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsCellAutoFit() {
+  public Boolean IsCellAutoFit() {
     return isCellAutoFit;
   }
 
@@ -316,7 +176,7 @@ public class ImageSaveOptions extends SaveOptions {
    * @return onePagePerSheet
   **/
   @ApiModelProperty(value = "")
-  public Boolean getOnePagePerSheet() {
+  public Boolean OnePagePerSheet() {
     return onePagePerSheet;
   }
 
@@ -334,7 +194,7 @@ public class ImageSaveOptions extends SaveOptions {
    * @return onlyArea
   **/
   @ApiModelProperty(value = "")
-  public Boolean getOnlyArea() {
+  public Boolean OnlyArea() {
     return onlyArea;
   }
 
@@ -442,15 +302,7 @@ public class ImageSaveOptions extends SaveOptions {
       return false;
     }
     ImageSaveOptions imageSaveOptions = (ImageSaveOptions) o;
-    return Objects.equals(this.enableHTTPCompression, imageSaveOptions.enableHTTPCompression) &&
-        Objects.equals(this.saveFormat, imageSaveOptions.saveFormat) &&
-        Objects.equals(this.clearData, imageSaveOptions.clearData) &&
-        Objects.equals(this.cachedFileFolder, imageSaveOptions.cachedFileFolder) &&
-        Objects.equals(this.validateMergedAreas, imageSaveOptions.validateMergedAreas) &&
-        Objects.equals(this.refreshChartCache, imageSaveOptions.refreshChartCache) &&
-        Objects.equals(this.createDirectory, imageSaveOptions.createDirectory) &&
-        Objects.equals(this.sortNames, imageSaveOptions.sortNames) &&
-        Objects.equals(this.chartImageType, imageSaveOptions.chartImageType) &&
+    return Objects.equals(this.chartImageType, imageSaveOptions.chartImageType) &&
         Objects.equals(this.embededImageNameInSvg, imageSaveOptions.embededImageNameInSvg) &&
         Objects.equals(this.horizontalResolution, imageSaveOptions.horizontalResolution) &&
         Objects.equals(this.imageFormat, imageSaveOptions.imageFormat) &&
@@ -467,7 +319,7 @@ public class ImageSaveOptions extends SaveOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableHTTPCompression, saveFormat, clearData, cachedFileFolder, validateMergedAreas, refreshChartCache, createDirectory, sortNames, chartImageType, embededImageNameInSvg, horizontalResolution, imageFormat, isCellAutoFit, onePagePerSheet, onlyArea, printingPage, printWithStatusDialog, quality, tiffCompression, verticalResolution, super.hashCode());
+    return Objects.hash(chartImageType, embededImageNameInSvg, horizontalResolution, imageFormat, isCellAutoFit, onePagePerSheet, onlyArea, printingPage, printWithStatusDialog, quality, tiffCompression, verticalResolution, super.hashCode());
   }
 
 
@@ -476,14 +328,6 @@ public class ImageSaveOptions extends SaveOptions {
     StringBuilder sb = new StringBuilder();
     sb.append("class ImageSaveOptions {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    enableHTTPCompression: ").append(toIndentedString(enableHTTPCompression)).append("\n");
-    sb.append("    saveFormat: ").append(toIndentedString(saveFormat)).append("\n");
-    sb.append("    clearData: ").append(toIndentedString(clearData)).append("\n");
-    sb.append("    cachedFileFolder: ").append(toIndentedString(cachedFileFolder)).append("\n");
-    sb.append("    validateMergedAreas: ").append(toIndentedString(validateMergedAreas)).append("\n");
-    sb.append("    refreshChartCache: ").append(toIndentedString(refreshChartCache)).append("\n");
-    sb.append("    createDirectory: ").append(toIndentedString(createDirectory)).append("\n");
-    sb.append("    sortNames: ").append(toIndentedString(sortNames)).append("\n");
     sb.append("    chartImageType: ").append(toIndentedString(chartImageType)).append("\n");
     sb.append("    embededImageNameInSvg: ").append(toIndentedString(embededImageNameInSvg)).append("\n");
     sb.append("    horizontalResolution: ").append(toIndentedString(horizontalResolution)).append("\n");

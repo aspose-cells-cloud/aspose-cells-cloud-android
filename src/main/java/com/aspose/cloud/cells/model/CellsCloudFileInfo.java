@@ -25,18 +25,30 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * CellsCloudFileInfo
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class CellsCloudFileInfo {
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("Size")
   private Long size = null;
 
+  @SerializedName("Folder")
   private String folder = null;
 
+  @SerializedName("Storage")
   private String storage = null;
 
   public CellsCloudFileInfo name(String name) {

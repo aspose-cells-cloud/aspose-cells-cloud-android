@@ -25,17 +25,28 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Describe the Top10 conditional formatting rule. This conditional formatting     rule highlights cells whose values fall in the top N or bottom N bracket,     as specified.
  */
 @ApiModel(description = "Describe the Top10 conditional formatting rule. This conditional formatting     rule highlights cells whose values fall in the top N or bottom N bracket,     as specified.")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Top10 {
+  @SerializedName("IsBottom")
   private Boolean isBottom = null;
 
+  @SerializedName("IsPercent")
   private Boolean isPercent = null;
 
+  @SerializedName("Rank")
   private Integer rank = null;
 
   public Top10 isBottom(Boolean isBottom) {
@@ -48,7 +59,7 @@ public class Top10 {
    * @return isBottom
   **/
   @ApiModelProperty(value = "Get or set the flag indicating whether a \"top/bottom n\" rule is a \"bottom    n\" rule. '1' indicates 'bottom'.  Default value is false.             ")
-  public Boolean getIsBottom() {
+  public Boolean IsBottom() {
     return isBottom;
   }
 
@@ -66,7 +77,7 @@ public class Top10 {
    * @return isPercent
   **/
   @ApiModelProperty(value = "Get or set the flag indicating whether a \"top/bottom n\" rule is a \"top/bottom     n percent\" rule.  Default value is false.")
-  public Boolean getIsPercent() {
+  public Boolean IsPercent() {
     return isPercent;
   }
 

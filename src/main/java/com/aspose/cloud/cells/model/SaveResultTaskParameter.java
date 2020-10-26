@@ -27,14 +27,24 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.ResultDestination;
 import com.aspose.cloud.cells.model.TaskParameter;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * SaveResultTaskParameter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class SaveResultTaskParameter extends TaskParameter {
+  @SerializedName("ResultSource")
   private String resultSource = null;
 
+  @SerializedName("ResultDestination")
   private ResultDestination resultDestination = null;
 
   public SaveResultTaskParameter resultSource(String resultSource) {

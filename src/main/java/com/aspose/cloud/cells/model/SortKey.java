@@ -25,16 +25,27 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * SortKey
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class SortKey {
+  @SerializedName("CustomList")
   private String customList = null;
 
+  @SerializedName("SortOrder")
   private String sortOrder = null;
 
+  @SerializedName("Key")
   private Integer key = null;
 
   public SortKey customList(String customList) {

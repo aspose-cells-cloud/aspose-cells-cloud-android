@@ -30,28 +30,8 @@ import com.aspose.cloud.cells.model.OperateParameter;
 /**
  * WorkbookOperateParameter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class WorkbookOperateParameter extends OperateParameter {
-  private String operateType = null;
-
-  public WorkbookOperateParameter operateType(String operateType) {
-    this.operateType = operateType;
-    return this;
-  }
-
-   /**
-   * Get operateType
-   * @return operateType
-  **/
-  @ApiModelProperty(value = "")
-  public String getOperateType() {
-    return operateType;
-  }
-
-  public void setOperateType(String operateType) {
-    this.operateType = operateType;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -61,14 +41,12 @@ public class WorkbookOperateParameter extends OperateParameter {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    WorkbookOperateParameter workbookOperateParameter = (WorkbookOperateParameter) o;
-    return Objects.equals(this.operateType, workbookOperateParameter.operateType) &&
-        super.equals(o);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(operateType, super.hashCode());
+    return Objects.hash(super.hashCode());
   }
 
 
@@ -77,7 +55,6 @@ public class WorkbookOperateParameter extends OperateParameter {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkbookOperateParameter {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    operateType: ").append(toIndentedString(operateType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

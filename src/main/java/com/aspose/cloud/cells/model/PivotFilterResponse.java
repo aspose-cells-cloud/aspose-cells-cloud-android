@@ -27,53 +27,22 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.PivotFilter;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * PivotFilterResponse
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class PivotFilterResponse extends CellsCloudResponse {
-  private String status = null;
-
-  private Integer code = null;
-
+  @SerializedName("PivotFilter")
   private PivotFilter pivotFilter = null;
-
-  public PivotFilterResponse status(String status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public PivotFilterResponse code(Integer code) {
-    this.code = code;
-    return this;
-  }
-
-   /**
-   * Get code
-   * @return code
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
-  }
 
   public PivotFilterResponse pivotFilter(PivotFilter pivotFilter) {
     this.pivotFilter = pivotFilter;
@@ -103,15 +72,13 @@ public class PivotFilterResponse extends CellsCloudResponse {
       return false;
     }
     PivotFilterResponse pivotFilterResponse = (PivotFilterResponse) o;
-    return Objects.equals(this.status, pivotFilterResponse.status) &&
-        Objects.equals(this.code, pivotFilterResponse.code) &&
-        Objects.equals(this.pivotFilter, pivotFilterResponse.pivotFilter) &&
+    return Objects.equals(this.pivotFilter, pivotFilterResponse.pivotFilter) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, code, pivotFilter, super.hashCode());
+    return Objects.hash(pivotFilter, super.hashCode());
   }
 
 
@@ -120,8 +87,6 @@ public class PivotFilterResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class PivotFilterResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    pivotFilter: ").append(toIndentedString(pivotFilter)).append("\n");
     sb.append("}");
     return sb.toString();

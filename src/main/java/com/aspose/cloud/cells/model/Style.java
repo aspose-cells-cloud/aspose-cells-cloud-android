@@ -31,59 +31,92 @@ import com.aspose.cloud.cells.model.Font;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
 import com.aspose.cloud.cells.model.ThemeColor;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Style
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Style {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("Pattern")
   private String pattern = null;
 
+  @SerializedName("TextDirection")
   private String textDirection = null;
 
+  @SerializedName("Custom")
   private String custom = null;
 
+  @SerializedName("ShrinkToFit")
   private Boolean shrinkToFit = null;
 
+  @SerializedName("IsDateTime")
   private Boolean isDateTime = null;
 
+  @SerializedName("CultureCustom")
   private String cultureCustom = null;
 
+  @SerializedName("RotationAngle")
   private Integer rotationAngle = null;
 
+  @SerializedName("IndentLevel")
   private Integer indentLevel = null;
 
+  @SerializedName("IsPercent")
   private Boolean isPercent = null;
 
+  @SerializedName("ForegroundColor")
   private Color foregroundColor = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("ForegroundThemeColor")
   private ThemeColor foregroundThemeColor = null;
 
+  @SerializedName("BorderCollection")
   private List<Border> borderCollection = null;
 
+  @SerializedName("IsLocked")
   private Boolean isLocked = null;
 
+  @SerializedName("VerticalAlignment")
   private String verticalAlignment = null;
 
+  @SerializedName("BackgroundColor")
   private Color backgroundColor = null;
 
+  @SerializedName("BackgroundThemeColor")
   private ThemeColor backgroundThemeColor = null;
 
+  @SerializedName("IsFormulaHidden")
   private Boolean isFormulaHidden = null;
 
+  @SerializedName("IsGradient")
   private Boolean isGradient = null;
 
+  @SerializedName("Number")
   private Integer number = null;
 
+  @SerializedName("HorizontalAlignment")
   private String horizontalAlignment = null;
 
+  @SerializedName("IsTextWrapped")
   private Boolean isTextWrapped = null;
 
+  @SerializedName("Font")
   private Font font = null;
 
   public Style link(Link link) {
@@ -168,7 +201,7 @@ public class Style {
    * @return shrinkToFit
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShrinkToFit() {
+  public Boolean ShrinkToFit() {
     return shrinkToFit;
   }
 
@@ -186,7 +219,7 @@ public class Style {
    * @return isDateTime
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsDateTime() {
+  public Boolean IsDateTime() {
     return isDateTime;
   }
 
@@ -258,7 +291,7 @@ public class Style {
    * @return isPercent
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsPercent() {
+  public Boolean IsPercent() {
     return isPercent;
   }
 
@@ -327,7 +360,7 @@ public class Style {
 
   public Style addBorderCollectionItem(Border borderCollectionItem) {
     if (this.borderCollection == null) {
-      this.borderCollection = null;
+      this.borderCollection = new ArrayList<Border>();
     }
     this.borderCollection.add(borderCollectionItem);
     return this;
@@ -356,7 +389,7 @@ public class Style {
    * @return isLocked
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsLocked() {
+  public Boolean IsLocked() {
     return isLocked;
   }
 
@@ -428,7 +461,7 @@ public class Style {
    * @return isFormulaHidden
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsFormulaHidden() {
+  public Boolean IsFormulaHidden() {
     return isFormulaHidden;
   }
 
@@ -446,7 +479,7 @@ public class Style {
    * @return isGradient
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsGradient() {
+  public Boolean IsGradient() {
     return isGradient;
   }
 
@@ -500,7 +533,7 @@ public class Style {
    * @return isTextWrapped
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsTextWrapped() {
+  public Boolean IsTextWrapped() {
     return isTextWrapped;
   }
 

@@ -27,98 +27,150 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Chart
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Chart {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("FirstSliceAngle")
   private Integer firstSliceAngle = null;
 
+  @SerializedName("Floor")
   private LinkElement floor = null;
 
+  @SerializedName("PlotEmptyCellsType")
   private String plotEmptyCellsType = null;
 
+  @SerializedName("AutoScaling")
   private Boolean autoScaling = null;
 
+  @SerializedName("Style")
   private Integer style = null;
 
+  @SerializedName("SeriesAxis")
   private LinkElement seriesAxis = null;
 
+  @SerializedName("ValueAxis")
   private LinkElement valueAxis = null;
 
+  @SerializedName("ShowDataTable")
   private Boolean showDataTable = null;
 
+  @SerializedName("Is3D")
   private Boolean is3D = null;
 
+  @SerializedName("ChartArea")
   private LinkElement chartArea = null;
 
+  @SerializedName("Elevation")
   private Integer elevation = null;
 
+  @SerializedName("SideWall")
   private LinkElement sideWall = null;
 
+  @SerializedName("Type")
   private String type = null;
 
+  @SerializedName("Title")
   private LinkElement title = null;
 
+  @SerializedName("Walls")
   private LinkElement walls = null;
 
+  @SerializedName("BackWall")
   private LinkElement backWall = null;
 
+  @SerializedName("ChartDataTable")
   private LinkElement chartDataTable = null;
 
+  @SerializedName("HeightPercent")
   private Integer heightPercent = null;
 
+  @SerializedName("GapWidth")
   private Integer gapWidth = null;
 
+  @SerializedName("Legend")
   private LinkElement legend = null;
 
+  @SerializedName("ChartObject")
   private LinkElement chartObject = null;
 
+  @SerializedName("IsRectangularCornered")
   private Boolean isRectangularCornered = null;
 
+  @SerializedName("SecondCategoryAxis")
   private LinkElement secondCategoryAxis = null;
 
+  @SerializedName("SecondValueAxis")
   private LinkElement secondValueAxis = null;
 
+  @SerializedName("Placement")
   private String placement = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("SizeWithWindow")
   private Boolean sizeWithWindow = null;
 
+  @SerializedName("RightAngleAxes")
   private Boolean rightAngleAxes = null;
 
+  @SerializedName("PlotVisibleCells")
   private Boolean plotVisibleCells = null;
 
+  @SerializedName("ShowLegend")
   private Boolean showLegend = null;
 
+  @SerializedName("PivotSource")
   private String pivotSource = null;
 
+  @SerializedName("DepthPercent")
   private Integer depthPercent = null;
 
+  @SerializedName("PrintSize")
   private String printSize = null;
 
+  @SerializedName("GapDepth")
   private Integer gapDepth = null;
 
+  @SerializedName("Shapes")
   private LinkElement shapes = null;
 
+  @SerializedName("WallsAndGridlines2D")
   private Boolean wallsAndGridlines2D = null;
 
-  private LinkElement nSeries = null;
+  @SerializedName("NSeries")
+  private LinkElement nseries = null;
 
+  @SerializedName("RotationAngle")
   private Integer rotationAngle = null;
 
+  @SerializedName("PlotArea")
   private LinkElement plotArea = null;
 
+  @SerializedName("CategoryAxis")
   private LinkElement categoryAxis = null;
 
+  @SerializedName("Perspective")
   private Integer perspective = null;
 
+  @SerializedName("HidePivotFieldButtons")
   private Boolean hidePivotFieldButtons = null;
 
+  @SerializedName("PageSetup")
   private LinkElement pageSetup = null;
 
   public Chart link(Link link) {
@@ -203,7 +255,7 @@ public class Chart {
    * @return autoScaling
   **/
   @ApiModelProperty(value = "True if Microsoft Excel scales a 3-D chart so that it's closer in size to the equivalent 2-D chart. The RightAngleAxes property must be True.")
-  public Boolean getAutoScaling() {
+  public Boolean AutoScaling() {
     return autoScaling;
   }
 
@@ -275,7 +327,7 @@ public class Chart {
    * @return showDataTable
   **/
   @ApiModelProperty(value = "Gets or sets a value indicating whether the chart displays a data table.")
-  public Boolean getShowDataTable() {
+  public Boolean ShowDataTable() {
     return showDataTable;
   }
 
@@ -293,7 +345,7 @@ public class Chart {
    * @return is3D
   **/
   @ApiModelProperty(value = "Indicates whether the chart is a 3d chart.")
-  public Boolean getIs3D() {
+  public Boolean Is3D() {
     return is3D;
   }
 
@@ -527,7 +579,7 @@ public class Chart {
    * @return isRectangularCornered
   **/
   @ApiModelProperty(value = "Gets or sets a value indicating whether the chart displays a data table.")
-  public Boolean getIsRectangularCornered() {
+  public Boolean IsRectangularCornered() {
     return isRectangularCornered;
   }
 
@@ -617,7 +669,7 @@ public class Chart {
    * @return sizeWithWindow
   **/
   @ApiModelProperty(value = "True if Microsoft Excel resizes the chart to match the size of the chart sheet window.")
-  public Boolean getSizeWithWindow() {
+  public Boolean SizeWithWindow() {
     return sizeWithWindow;
   }
 
@@ -635,7 +687,7 @@ public class Chart {
    * @return rightAngleAxes
   **/
   @ApiModelProperty(value = "True if the chart axes are at right angles.Applies only for 3-D charts(except Column3D and 3-D Pie Charts).")
-  public Boolean getRightAngleAxes() {
+  public Boolean RightAngleAxes() {
     return rightAngleAxes;
   }
 
@@ -653,7 +705,7 @@ public class Chart {
    * @return plotVisibleCells
   **/
   @ApiModelProperty(value = "Indicates whether only plot visible cells.")
-  public Boolean getPlotVisibleCells() {
+  public Boolean PlotVisibleCells() {
     return plotVisibleCells;
   }
 
@@ -671,7 +723,7 @@ public class Chart {
    * @return showLegend
   **/
   @ApiModelProperty(value = "Gets or sets a value indicating whether the chart legend will be displayed. Default is true.")
-  public Boolean getShowLegend() {
+  public Boolean ShowLegend() {
     return showLegend;
   }
 
@@ -779,7 +831,7 @@ public class Chart {
    * @return wallsAndGridlines2D
   **/
   @ApiModelProperty(value = "True if gridlines are drawn two-dimensionally on a 3-D chart.")
-  public Boolean getWallsAndGridlines2D() {
+  public Boolean WallsAndGridlines2D() {
     return wallsAndGridlines2D;
   }
 
@@ -787,22 +839,22 @@ public class Chart {
     this.wallsAndGridlines2D = wallsAndGridlines2D;
   }
 
-  public Chart nSeries(LinkElement nSeries) {
-    this.nSeries = nSeries;
+  public Chart nseries(LinkElement nseries) {
+    this.nseries = nseries;
     return this;
   }
 
    /**
    * Gets a SeriesCollection collection representing the data series in the chart.
-   * @return nSeries
+   * @return nseries
   **/
   @ApiModelProperty(value = "Gets a SeriesCollection collection representing the data series in the chart.")
-  public LinkElement getNSeries() {
-    return nSeries;
+  public LinkElement getNseries() {
+    return nseries;
   }
 
-  public void setNSeries(LinkElement nSeries) {
-    this.nSeries = nSeries;
+  public void setNseries(LinkElement nseries) {
+    this.nseries = nseries;
   }
 
   public Chart rotationAngle(Integer rotationAngle) {
@@ -887,7 +939,7 @@ public class Chart {
    * @return hidePivotFieldButtons
   **/
   @ApiModelProperty(value = "Indicates whether hide the pivot chart field buttons only when the chart is PivotChart")
-  public Boolean getHidePivotFieldButtons() {
+  public Boolean HidePivotFieldButtons() {
     return hidePivotFieldButtons;
   }
 
@@ -960,7 +1012,7 @@ public class Chart {
         Objects.equals(this.gapDepth, chart.gapDepth) &&
         Objects.equals(this.shapes, chart.shapes) &&
         Objects.equals(this.wallsAndGridlines2D, chart.wallsAndGridlines2D) &&
-        Objects.equals(this.nSeries, chart.nSeries) &&
+        Objects.equals(this.nseries, chart.nseries) &&
         Objects.equals(this.rotationAngle, chart.rotationAngle) &&
         Objects.equals(this.plotArea, chart.plotArea) &&
         Objects.equals(this.categoryAxis, chart.categoryAxis) &&
@@ -971,7 +1023,7 @@ public class Chart {
 
   @Override
   public int hashCode() {
-    return Objects.hash(link, firstSliceAngle, floor, plotEmptyCellsType, autoScaling, style, seriesAxis, valueAxis, showDataTable, is3D, chartArea, elevation, sideWall, type, title, walls, backWall, chartDataTable, heightPercent, gapWidth, legend, chartObject, isRectangularCornered, secondCategoryAxis, secondValueAxis, placement, name, sizeWithWindow, rightAngleAxes, plotVisibleCells, showLegend, pivotSource, depthPercent, printSize, gapDepth, shapes, wallsAndGridlines2D, nSeries, rotationAngle, plotArea, categoryAxis, perspective, hidePivotFieldButtons, pageSetup);
+    return Objects.hash(link, firstSliceAngle, floor, plotEmptyCellsType, autoScaling, style, seriesAxis, valueAxis, showDataTable, is3D, chartArea, elevation, sideWall, type, title, walls, backWall, chartDataTable, heightPercent, gapWidth, legend, chartObject, isRectangularCornered, secondCategoryAxis, secondValueAxis, placement, name, sizeWithWindow, rightAngleAxes, plotVisibleCells, showLegend, pivotSource, depthPercent, printSize, gapDepth, shapes, wallsAndGridlines2D, nseries, rotationAngle, plotArea, categoryAxis, perspective, hidePivotFieldButtons, pageSetup);
   }
 
 
@@ -1017,7 +1069,7 @@ public class Chart {
     sb.append("    gapDepth: ").append(toIndentedString(gapDepth)).append("\n");
     sb.append("    shapes: ").append(toIndentedString(shapes)).append("\n");
     sb.append("    wallsAndGridlines2D: ").append(toIndentedString(wallsAndGridlines2D)).append("\n");
-    sb.append("    nSeries: ").append(toIndentedString(nSeries)).append("\n");
+    sb.append("    nseries: ").append(toIndentedString(nseries)).append("\n");
     sb.append("    rotationAngle: ").append(toIndentedString(rotationAngle)).append("\n");
     sb.append("    plotArea: ").append(toIndentedString(plotArea)).append("\n");
     sb.append("    categoryAxis: ").append(toIndentedString(categoryAxis)).append("\n");

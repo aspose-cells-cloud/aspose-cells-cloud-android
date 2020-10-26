@@ -26,30 +26,48 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Color;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Font
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Font {
+  @SerializedName("IsItalic")
   private Boolean isItalic = null;
 
+  @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("DoubleSize")
   private Double doubleSize = null;
 
+  @SerializedName("Color")
   private Color color = null;
 
+  @SerializedName("IsBold")
   private Boolean isBold = null;
 
+  @SerializedName("IsSubscript")
   private Boolean isSubscript = null;
 
+  @SerializedName("IsSuperscript")
   private Boolean isSuperscript = null;
 
+  @SerializedName("IsStrikeout")
   private Boolean isStrikeout = null;
 
+  @SerializedName("Underline")
   private String underline = null;
 
+  @SerializedName("Size")
   private Integer size = null;
 
   public Font isItalic(Boolean isItalic) {
@@ -62,7 +80,7 @@ public class Font {
    * @return isItalic
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsItalic() {
+  public Boolean IsItalic() {
     return isItalic;
   }
 
@@ -134,7 +152,7 @@ public class Font {
    * @return isBold
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsBold() {
+  public Boolean IsBold() {
     return isBold;
   }
 
@@ -152,7 +170,7 @@ public class Font {
    * @return isSubscript
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsSubscript() {
+  public Boolean IsSubscript() {
     return isSubscript;
   }
 
@@ -170,7 +188,7 @@ public class Font {
    * @return isSuperscript
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsSuperscript() {
+  public Boolean IsSuperscript() {
     return isSuperscript;
   }
 
@@ -188,7 +206,7 @@ public class Font {
    * @return isStrikeout
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsStrikeout() {
+  public Boolean IsStrikeout() {
     return isStrikeout;
   }
 

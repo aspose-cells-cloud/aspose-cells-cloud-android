@@ -26,20 +26,33 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsColor;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * ColorFilter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ColorFilter {
+  @SerializedName("Color")
   private CellsColor color = null;
 
+  @SerializedName("Pattern")
   private String pattern = null;
 
+  @SerializedName("BackgroundColor")
   private CellsColor backgroundColor = null;
 
+  @SerializedName("ForegroundColorColor")
   private CellsColor foregroundColorColor = null;
 
+  @SerializedName("FilterByFillColor")
   private String filterByFillColor = null;
 
   public ColorFilter color(CellsColor color) {

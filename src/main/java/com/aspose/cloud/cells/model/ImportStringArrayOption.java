@@ -27,100 +27,33 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.FileSource;
 import com.aspose.cloud.cells.model.ImportOption;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ImportStringArrayOption
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ImportStringArrayOption extends ImportOption {
-  private FileSource source = null;
-
-  private String importDataType = null;
-
-  private String destinationWorksheet = null;
-
-  private Boolean isInsert = null;
-
+  @SerializedName("Data")
   private List<String> data = null;
 
+  @SerializedName("IsVertical")
   private Boolean isVertical = null;
 
+  @SerializedName("FirstRow")
   private Integer firstRow = null;
 
+  @SerializedName("FirstColumn")
   private Integer firstColumn = null;
-
-  public ImportStringArrayOption source(FileSource source) {
-    this.source = source;
-    return this;
-  }
-
-   /**
-   * Get source
-   * @return source
-  **/
-  @ApiModelProperty(value = "")
-  public FileSource getSource() {
-    return source;
-  }
-
-  public void setSource(FileSource source) {
-    this.source = source;
-  }
-
-  public ImportStringArrayOption importDataType(String importDataType) {
-    this.importDataType = importDataType;
-    return this;
-  }
-
-   /**
-   * Get importDataType
-   * @return importDataType
-  **/
-  @ApiModelProperty(value = "")
-  public String getImportDataType() {
-    return importDataType;
-  }
-
-  public void setImportDataType(String importDataType) {
-    this.importDataType = importDataType;
-  }
-
-  public ImportStringArrayOption destinationWorksheet(String destinationWorksheet) {
-    this.destinationWorksheet = destinationWorksheet;
-    return this;
-  }
-
-   /**
-   * Get destinationWorksheet
-   * @return destinationWorksheet
-  **/
-  @ApiModelProperty(value = "")
-  public String getDestinationWorksheet() {
-    return destinationWorksheet;
-  }
-
-  public void setDestinationWorksheet(String destinationWorksheet) {
-    this.destinationWorksheet = destinationWorksheet;
-  }
-
-  public ImportStringArrayOption isInsert(Boolean isInsert) {
-    this.isInsert = isInsert;
-    return this;
-  }
-
-   /**
-   * Get isInsert
-   * @return isInsert
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getIsInsert() {
-    return isInsert;
-  }
-
-  public void setIsInsert(Boolean isInsert) {
-    this.isInsert = isInsert;
-  }
 
   public ImportStringArrayOption data(List<String> data) {
     this.data = data;
@@ -129,7 +62,7 @@ public class ImportStringArrayOption extends ImportOption {
 
   public ImportStringArrayOption addDataItem(String dataItem) {
     if (this.data == null) {
-      this.data = null;
+      this.data = new ArrayList<String>();
     }
     this.data.add(dataItem);
     return this;
@@ -158,7 +91,7 @@ public class ImportStringArrayOption extends ImportOption {
    * @return isVertical
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsVertical() {
+  public Boolean IsVertical() {
     return isVertical;
   }
 
@@ -212,11 +145,7 @@ public class ImportStringArrayOption extends ImportOption {
       return false;
     }
     ImportStringArrayOption importStringArrayOption = (ImportStringArrayOption) o;
-    return Objects.equals(this.source, importStringArrayOption.source) &&
-        Objects.equals(this.importDataType, importStringArrayOption.importDataType) &&
-        Objects.equals(this.destinationWorksheet, importStringArrayOption.destinationWorksheet) &&
-        Objects.equals(this.isInsert, importStringArrayOption.isInsert) &&
-        Objects.equals(this.data, importStringArrayOption.data) &&
+    return Objects.equals(this.data, importStringArrayOption.data) &&
         Objects.equals(this.isVertical, importStringArrayOption.isVertical) &&
         Objects.equals(this.firstRow, importStringArrayOption.firstRow) &&
         Objects.equals(this.firstColumn, importStringArrayOption.firstColumn) &&
@@ -225,7 +154,7 @@ public class ImportStringArrayOption extends ImportOption {
 
   @Override
   public int hashCode() {
-    return Objects.hash(source, importDataType, destinationWorksheet, isInsert, data, isVertical, firstRow, firstColumn, super.hashCode());
+    return Objects.hash(data, isVertical, firstRow, firstColumn, super.hashCode());
   }
 
 
@@ -234,10 +163,6 @@ public class ImportStringArrayOption extends ImportOption {
     StringBuilder sb = new StringBuilder();
     sb.append("class ImportStringArrayOption {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
-    sb.append("    importDataType: ").append(toIndentedString(importDataType)).append("\n");
-    sb.append("    destinationWorksheet: ").append(toIndentedString(destinationWorksheet)).append("\n");
-    sb.append("    isInsert: ").append(toIndentedString(isInsert)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    isVertical: ").append(toIndentedString(isVertical)).append("\n");
     sb.append("    firstRow: ").append(toIndentedString(firstRow)).append("\n");

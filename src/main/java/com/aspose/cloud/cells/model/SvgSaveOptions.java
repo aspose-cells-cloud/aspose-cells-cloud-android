@@ -26,173 +26,22 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.SaveOptions;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * SvgSaveOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class SvgSaveOptions extends SaveOptions {
-  private Boolean enableHTTPCompression = null;
-
-  private String saveFormat = null;
-
-  private Boolean clearData = null;
-
-  private String cachedFileFolder = null;
-
-  private Boolean validateMergedAreas = null;
-
-  private Boolean refreshChartCache = null;
-
-  private Boolean createDirectory = null;
-
-  private Boolean sortNames = null;
-
+  @SerializedName("SheetIndex")
   private Integer sheetIndex = null;
-
-  public SvgSaveOptions enableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-    return this;
-  }
-
-   /**
-   * Get enableHTTPCompression
-   * @return enableHTTPCompression
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getEnableHTTPCompression() {
-    return enableHTTPCompression;
-  }
-
-  public void setEnableHTTPCompression(Boolean enableHTTPCompression) {
-    this.enableHTTPCompression = enableHTTPCompression;
-  }
-
-  public SvgSaveOptions saveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-    return this;
-  }
-
-   /**
-   * Get saveFormat
-   * @return saveFormat
-  **/
-  @ApiModelProperty(value = "")
-  public String getSaveFormat() {
-    return saveFormat;
-  }
-
-  public void setSaveFormat(String saveFormat) {
-    this.saveFormat = saveFormat;
-  }
-
-  public SvgSaveOptions clearData(Boolean clearData) {
-    this.clearData = clearData;
-    return this;
-  }
-
-   /**
-   * Make the workbook empty after saving the file.
-   * @return clearData
-  **/
-  @ApiModelProperty(value = "Make the workbook empty after saving the file.")
-  public Boolean getClearData() {
-    return clearData;
-  }
-
-  public void setClearData(Boolean clearData) {
-    this.clearData = clearData;
-  }
-
-  public SvgSaveOptions cachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-    return this;
-  }
-
-   /**
-   * The cached file folder is used to store some large data.
-   * @return cachedFileFolder
-  **/
-  @ApiModelProperty(value = "The cached file folder is used to store some large data.")
-  public String getCachedFileFolder() {
-    return cachedFileFolder;
-  }
-
-  public void setCachedFileFolder(String cachedFileFolder) {
-    this.cachedFileFolder = cachedFileFolder;
-  }
-
-  public SvgSaveOptions validateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-    return this;
-  }
-
-   /**
-   * Indicates whether validate merged areas before saving the file. The default value is false.             
-   * @return validateMergedAreas
-  **/
-  @ApiModelProperty(value = "Indicates whether validate merged areas before saving the file. The default value is false.             ")
-  public Boolean getValidateMergedAreas() {
-    return validateMergedAreas;
-  }
-
-  public void setValidateMergedAreas(Boolean validateMergedAreas) {
-    this.validateMergedAreas = validateMergedAreas;
-  }
-
-  public SvgSaveOptions refreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-    return this;
-  }
-
-   /**
-   * Get refreshChartCache
-   * @return refreshChartCache
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getRefreshChartCache() {
-    return refreshChartCache;
-  }
-
-  public void setRefreshChartCache(Boolean refreshChartCache) {
-    this.refreshChartCache = refreshChartCache;
-  }
-
-  public SvgSaveOptions createDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-    return this;
-  }
-
-   /**
-   * If true and the directory does not exist, the directory will be automatically created before saving the file.             
-   * @return createDirectory
-  **/
-  @ApiModelProperty(value = "If true and the directory does not exist, the directory will be automatically created before saving the file.             ")
-  public Boolean getCreateDirectory() {
-    return createDirectory;
-  }
-
-  public void setCreateDirectory(Boolean createDirectory) {
-    this.createDirectory = createDirectory;
-  }
-
-  public SvgSaveOptions sortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-    return this;
-  }
-
-   /**
-   * Get sortNames
-   * @return sortNames
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getSortNames() {
-    return sortNames;
-  }
-
-  public void setSortNames(Boolean sortNames) {
-    this.sortNames = sortNames;
-  }
 
   public SvgSaveOptions sheetIndex(Integer sheetIndex) {
     this.sheetIndex = sheetIndex;
@@ -222,21 +71,13 @@ public class SvgSaveOptions extends SaveOptions {
       return false;
     }
     SvgSaveOptions svgSaveOptions = (SvgSaveOptions) o;
-    return Objects.equals(this.enableHTTPCompression, svgSaveOptions.enableHTTPCompression) &&
-        Objects.equals(this.saveFormat, svgSaveOptions.saveFormat) &&
-        Objects.equals(this.clearData, svgSaveOptions.clearData) &&
-        Objects.equals(this.cachedFileFolder, svgSaveOptions.cachedFileFolder) &&
-        Objects.equals(this.validateMergedAreas, svgSaveOptions.validateMergedAreas) &&
-        Objects.equals(this.refreshChartCache, svgSaveOptions.refreshChartCache) &&
-        Objects.equals(this.createDirectory, svgSaveOptions.createDirectory) &&
-        Objects.equals(this.sortNames, svgSaveOptions.sortNames) &&
-        Objects.equals(this.sheetIndex, svgSaveOptions.sheetIndex) &&
+    return Objects.equals(this.sheetIndex, svgSaveOptions.sheetIndex) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableHTTPCompression, saveFormat, clearData, cachedFileFolder, validateMergedAreas, refreshChartCache, createDirectory, sortNames, sheetIndex, super.hashCode());
+    return Objects.hash(sheetIndex, super.hashCode());
   }
 
 
@@ -245,14 +86,6 @@ public class SvgSaveOptions extends SaveOptions {
     StringBuilder sb = new StringBuilder();
     sb.append("class SvgSaveOptions {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    enableHTTPCompression: ").append(toIndentedString(enableHTTPCompression)).append("\n");
-    sb.append("    saveFormat: ").append(toIndentedString(saveFormat)).append("\n");
-    sb.append("    clearData: ").append(toIndentedString(clearData)).append("\n");
-    sb.append("    cachedFileFolder: ").append(toIndentedString(cachedFileFolder)).append("\n");
-    sb.append("    validateMergedAreas: ").append(toIndentedString(validateMergedAreas)).append("\n");
-    sb.append("    refreshChartCache: ").append(toIndentedString(refreshChartCache)).append("\n");
-    sb.append("    createDirectory: ").append(toIndentedString(createDirectory)).append("\n");
-    sb.append("    sortNames: ").append(toIndentedString(sortNames)).append("\n");
     sb.append("    sheetIndex: ").append(toIndentedString(sheetIndex)).append("\n");
     sb.append("}");
     return sb.toString();

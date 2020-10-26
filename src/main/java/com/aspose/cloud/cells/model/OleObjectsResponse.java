@@ -27,53 +27,22 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.OleObjects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * OleObjectsResponse
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class OleObjectsResponse extends CellsCloudResponse {
-  private String status = null;
-
-  private Integer code = null;
-
+  @SerializedName("OleObjects")
   private OleObjects oleObjects = null;
-
-  public OleObjectsResponse status(String status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public OleObjectsResponse code(Integer code) {
-    this.code = code;
-    return this;
-  }
-
-   /**
-   * Get code
-   * @return code
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
-  }
 
   public OleObjectsResponse oleObjects(OleObjects oleObjects) {
     this.oleObjects = oleObjects;
@@ -103,15 +72,13 @@ public class OleObjectsResponse extends CellsCloudResponse {
       return false;
     }
     OleObjectsResponse oleObjectsResponse = (OleObjectsResponse) o;
-    return Objects.equals(this.status, oleObjectsResponse.status) &&
-        Objects.equals(this.code, oleObjectsResponse.code) &&
-        Objects.equals(this.oleObjects, oleObjectsResponse.oleObjects) &&
+    return Objects.equals(this.oleObjects, oleObjectsResponse.oleObjects) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, code, oleObjects, super.hashCode());
+    return Objects.hash(oleObjects, super.hashCode());
   }
 
 
@@ -120,8 +87,6 @@ public class OleObjectsResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class OleObjectsResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    oleObjects: ").append(toIndentedString(oleObjects)).append("\n");
     sb.append("}");
     return sb.toString();

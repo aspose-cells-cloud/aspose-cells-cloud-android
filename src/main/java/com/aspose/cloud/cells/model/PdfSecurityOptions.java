@@ -25,30 +25,48 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * PdfSecurityOptions
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class PdfSecurityOptions {
+  @SerializedName("AnnotationsPermission")
   private Boolean annotationsPermission = null;
 
+  @SerializedName("AssembleDocumentPermission")
   private Boolean assembleDocumentPermission = null;
 
+  @SerializedName("ExtractContentPermission")
   private Boolean extractContentPermission = null;
 
+  @SerializedName("ExtractContentPermissionObsolete")
   private Boolean extractContentPermissionObsolete = null;
 
+  @SerializedName("FillFormsPermission")
   private Boolean fillFormsPermission = null;
 
+  @SerializedName("FullQualityPrintPermission")
   private Boolean fullQualityPrintPermission = null;
 
+  @SerializedName("ModifyDocumentPermission")
   private Boolean modifyDocumentPermission = null;
 
+  @SerializedName("OwnerPassword")
   private String ownerPassword = null;
 
+  @SerializedName("PrintPermission")
   private Boolean printPermission = null;
 
+  @SerializedName("UserPassword")
   private String userPassword = null;
 
   public PdfSecurityOptions annotationsPermission(Boolean annotationsPermission) {
@@ -61,7 +79,7 @@ public class PdfSecurityOptions {
    * @return annotationsPermission
   **/
   @ApiModelProperty(value = "")
-  public Boolean getAnnotationsPermission() {
+  public Boolean AnnotationsPermission() {
     return annotationsPermission;
   }
 
@@ -79,7 +97,7 @@ public class PdfSecurityOptions {
    * @return assembleDocumentPermission
   **/
   @ApiModelProperty(value = "")
-  public Boolean getAssembleDocumentPermission() {
+  public Boolean AssembleDocumentPermission() {
     return assembleDocumentPermission;
   }
 
@@ -97,7 +115,7 @@ public class PdfSecurityOptions {
    * @return extractContentPermission
   **/
   @ApiModelProperty(value = "Make the workbook empty after saving the file.")
-  public Boolean getExtractContentPermission() {
+  public Boolean ExtractContentPermission() {
     return extractContentPermission;
   }
 
@@ -115,7 +133,7 @@ public class PdfSecurityOptions {
    * @return extractContentPermissionObsolete
   **/
   @ApiModelProperty(value = "The cached file folder is used to store some large data.")
-  public Boolean getExtractContentPermissionObsolete() {
+  public Boolean ExtractContentPermissionObsolete() {
     return extractContentPermissionObsolete;
   }
 
@@ -133,7 +151,7 @@ public class PdfSecurityOptions {
    * @return fillFormsPermission
   **/
   @ApiModelProperty(value = "Indicates whether validate merged areas before saving the file. The default value is false.             ")
-  public Boolean getFillFormsPermission() {
+  public Boolean FillFormsPermission() {
     return fillFormsPermission;
   }
 
@@ -151,7 +169,7 @@ public class PdfSecurityOptions {
    * @return fullQualityPrintPermission
   **/
   @ApiModelProperty(value = "")
-  public Boolean getFullQualityPrintPermission() {
+  public Boolean FullQualityPrintPermission() {
     return fullQualityPrintPermission;
   }
 
@@ -169,7 +187,7 @@ public class PdfSecurityOptions {
    * @return modifyDocumentPermission
   **/
   @ApiModelProperty(value = "If true and the directory does not exist, the directory will be automatically created before saving the file.             ")
-  public Boolean getModifyDocumentPermission() {
+  public Boolean ModifyDocumentPermission() {
     return modifyDocumentPermission;
   }
 
@@ -205,7 +223,7 @@ public class PdfSecurityOptions {
    * @return printPermission
   **/
   @ApiModelProperty(value = "")
-  public Boolean getPrintPermission() {
+  public Boolean PrintPermission() {
     return printPermission;
   }
 

@@ -27,26 +27,42 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Row
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Row {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("Index")
   private Integer index = null;
 
+  @SerializedName("Style")
   private LinkElement style = null;
 
+  @SerializedName("GroupLevel")
   private Integer groupLevel = null;
 
+  @SerializedName("Height")
   private Double height = null;
 
+  @SerializedName("IsHeightMatched")
   private Boolean isHeightMatched = null;
 
+  @SerializedName("IsHidden")
   private Boolean isHidden = null;
 
+  @SerializedName("IsBlank")
   private Boolean isBlank = null;
 
   public Row link(Link link) {
@@ -149,7 +165,7 @@ public class Row {
    * @return isHeightMatched
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsHeightMatched() {
+  public Boolean IsHeightMatched() {
     return isHeightMatched;
   }
 
@@ -167,7 +183,7 @@ public class Row {
    * @return isHidden
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsHidden() {
+  public Boolean IsHidden() {
     return isHidden;
   }
 
@@ -185,7 +201,7 @@ public class Row {
    * @return isBlank
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsBlank() {
+  public Boolean IsBlank() {
     return isBlank;
   }
 

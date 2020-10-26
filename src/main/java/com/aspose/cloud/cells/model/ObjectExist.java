@@ -25,15 +25,25 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Object exists
  */
 @ApiModel(description = "Object exists")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ObjectExist {
+  @SerializedName("Exists")
   private Boolean exists = null;
 
+  @SerializedName("IsFolder")
   private Boolean isFolder = null;
 
   public ObjectExist exists(Boolean exists) {
@@ -46,7 +56,7 @@ public class ObjectExist {
    * @return exists
   **/
   @ApiModelProperty(required = true, value = "Indicates that the file or folder exists.")
-  public Boolean getExists() {
+  public Boolean Exists() {
     return exists;
   }
 
@@ -64,7 +74,7 @@ public class ObjectExist {
    * @return isFolder
   **/
   @ApiModelProperty(required = true, value = "True if it is a folder, false if it is a file.")
-  public Boolean getIsFolder() {
+  public Boolean IsFolder() {
     return isFolder;
   }
 

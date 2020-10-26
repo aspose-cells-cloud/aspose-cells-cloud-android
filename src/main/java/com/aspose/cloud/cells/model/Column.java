@@ -27,22 +27,36 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Column
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class Column {
+  @SerializedName("link")
   private Link link = null;
 
+  @SerializedName("Index")
   private Integer index = null;
 
+  @SerializedName("Style")
   private LinkElement style = null;
 
+  @SerializedName("GroupLevel")
   private Integer groupLevel = null;
 
+  @SerializedName("IsHidden")
   private Boolean isHidden = null;
 
+  @SerializedName("Width")
   private Double width = null;
 
   public Column link(Link link) {
@@ -127,7 +141,7 @@ public class Column {
    * @return isHidden
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsHidden() {
+  public Boolean IsHidden() {
     return isHidden;
   }
 

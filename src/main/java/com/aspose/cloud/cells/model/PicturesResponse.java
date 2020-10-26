@@ -27,53 +27,22 @@ package com.aspose.cloud.cells.model;
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudResponse;
 import com.aspose.cloud.cells.model.Pictures;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * PicturesResponse
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class PicturesResponse extends CellsCloudResponse {
-  private String status = null;
-
-  private Integer code = null;
-
+  @SerializedName("Pictures")
   private Pictures pictures = null;
-
-  public PicturesResponse status(String status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public PicturesResponse code(Integer code) {
-    this.code = code;
-    return this;
-  }
-
-   /**
-   * Get code
-   * @return code
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
-  }
 
   public PicturesResponse pictures(Pictures pictures) {
     this.pictures = pictures;
@@ -103,15 +72,13 @@ public class PicturesResponse extends CellsCloudResponse {
       return false;
     }
     PicturesResponse picturesResponse = (PicturesResponse) o;
-    return Objects.equals(this.status, picturesResponse.status) &&
-        Objects.equals(this.code, picturesResponse.code) &&
-        Objects.equals(this.pictures, picturesResponse.pictures) &&
+    return Objects.equals(this.pictures, picturesResponse.pictures) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, code, pictures, super.hashCode());
+    return Objects.hash(pictures, super.hashCode());
   }
 
 
@@ -120,8 +87,6 @@ public class PicturesResponse extends CellsCloudResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class PicturesResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    pictures: ").append(toIndentedString(pictures)).append("\n");
     sb.append("}");
     return sb.toString();

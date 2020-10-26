@@ -31,39 +31,62 @@ import com.aspose.cloud.cells.model.Font;
 import com.aspose.cloud.cells.model.Line;
 import com.aspose.cloud.cells.model.Link;
 import com.aspose.cloud.cells.model.LinkElement;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ChartArea
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ChartArea {
+  @SerializedName("IsInnerMode")
   private Boolean isInnerMode = null;
 
+  @SerializedName("ShapeProperties")
   private List<LinkElement> shapeProperties = null;
 
+  @SerializedName("AutoScaleFont")
   private Boolean autoScaleFont = null;
 
+  @SerializedName("Area")
   private Area area = null;
 
+  @SerializedName("Height")
   private Integer height = null;
 
+  @SerializedName("Width")
   private Integer width = null;
 
+  @SerializedName("BackgroundMode")
   private String backgroundMode = null;
 
+  @SerializedName("IsAutomaticSize")
   private Boolean isAutomaticSize = null;
 
+  @SerializedName("Y")
   private Integer Y = null;
 
+  @SerializedName("X")
   private Integer X = null;
 
+  @SerializedName("Shadow")
   private Boolean shadow = null;
 
+  @SerializedName("Font")
   private Font font = null;
 
+  @SerializedName("Border")
   private Line border = null;
 
+  @SerializedName("link")
   private Link link = null;
 
   public ChartArea isInnerMode(Boolean isInnerMode) {
@@ -76,7 +99,7 @@ public class ChartArea {
    * @return isInnerMode
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsInnerMode() {
+  public Boolean IsInnerMode() {
     return isInnerMode;
   }
 
@@ -91,7 +114,7 @@ public class ChartArea {
 
   public ChartArea addShapePropertiesItem(LinkElement shapePropertiesItem) {
     if (this.shapeProperties == null) {
-      this.shapeProperties = null;
+      this.shapeProperties = new ArrayList<LinkElement>();
     }
     this.shapeProperties.add(shapePropertiesItem);
     return this;
@@ -120,7 +143,7 @@ public class ChartArea {
    * @return autoScaleFont
   **/
   @ApiModelProperty(value = "")
-  public Boolean getAutoScaleFont() {
+  public Boolean AutoScaleFont() {
     return autoScaleFont;
   }
 
@@ -210,7 +233,7 @@ public class ChartArea {
    * @return isAutomaticSize
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIsAutomaticSize() {
+  public Boolean IsAutomaticSize() {
     return isAutomaticSize;
   }
 
@@ -264,7 +287,7 @@ public class ChartArea {
    * @return shadow
   **/
   @ApiModelProperty(value = "")
-  public Boolean getShadow() {
+  public Boolean Shadow() {
     return shadow;
   }
 

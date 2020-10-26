@@ -25,26 +25,42 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * AccessTokenResponse
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class AccessTokenResponse {
+  @SerializedName(".expires")
   private String expires = null;
 
+  @SerializedName("access_token")
   private String accessToken = null;
 
+  @SerializedName(".issued")
   private String issued = null;
 
+  @SerializedName("clientRefreshTokenLifeTimeInMinutes")
   private String clientRefreshTokenLifeTimeInMinutes = null;
 
+  @SerializedName("expires_in")
   private Long expiresIn = null;
 
+  @SerializedName("token_type")
   private String tokenType = null;
 
+  @SerializedName("client_id")
   private String clientId = null;
 
+  @SerializedName("refresh_token")
   private String refreshToken = null;
 
   public AccessTokenResponse expires(String expires) {

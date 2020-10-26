@@ -26,19 +26,32 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.GradientFillStop;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * GradientFill
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class GradientFill {
+  @SerializedName("FillType")
   private String fillType = null;
 
+  @SerializedName("Angle")
   private Double angle = null;
 
+  @SerializedName("GradientStops")
   private List<GradientFillStop> gradientStops = null;
 
+  @SerializedName("DirectionType")
   private String directionType = null;
 
   public GradientFill fillType(String fillType) {
@@ -84,7 +97,7 @@ public class GradientFill {
 
   public GradientFill addGradientStopsItem(GradientFillStop gradientStopsItem) {
     if (this.gradientStops == null) {
-      this.gradientStops = null;
+      this.gradientStops = new ArrayList<GradientFillStop>();
     }
     this.gradientStops.add(gradientStopsItem);
     return this;

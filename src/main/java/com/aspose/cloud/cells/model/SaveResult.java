@@ -26,13 +26,23 @@ package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
 import com.aspose.cloud.cells.model.CellsCloudFileInfo;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * SaveResult
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class SaveResult {
+  @SerializedName("Documents")
   private List<CellsCloudFileInfo> documents = null;
 
   public SaveResult documents(List<CellsCloudFileInfo> documents) {
@@ -42,7 +52,7 @@ public class SaveResult {
 
   public SaveResult addDocumentsItem(CellsCloudFileInfo documentsItem) {
     if (this.documents == null) {
-      this.documents = null;
+      this.documents = new ArrayList<CellsCloudFileInfo>();
     }
     this.documents.add(documentsItem);
     return this;

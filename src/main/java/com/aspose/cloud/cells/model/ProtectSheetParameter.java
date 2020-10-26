@@ -25,43 +25,68 @@
 package com.aspose.cloud.cells.model;
 
 import java.util.Objects;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ProtectSheetParameter
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ProtectSheetParameter {
+  @SerializedName("AllowSelectingUnlockedCell")
   private String allowSelectingUnlockedCell = null;
 
+  @SerializedName("AllowFiltering")
   private String allowFiltering = null;
 
+  @SerializedName("AllowDeletingColumn")
   private String allowDeletingColumn = null;
 
+  @SerializedName("AllowSelectingLockedCell")
   private String allowSelectingLockedCell = null;
 
+  @SerializedName("AllowUsingPivotTable")
   private String allowUsingPivotTable = null;
 
+  @SerializedName("AllowEditArea")
   private List<String> allowEditArea = null;
 
+  @SerializedName("AllowInsertingHyperlink")
   private String allowInsertingHyperlink = null;
 
+  @SerializedName("AllowFormattingCell")
   private String allowFormattingCell = null;
 
+  @SerializedName("AllowFormattingRow")
   private String allowFormattingRow = null;
 
+  @SerializedName("AllowInsertingRow")
   private String allowInsertingRow = null;
 
+  @SerializedName("AllowFormattingColumn")
   private String allowFormattingColumn = null;
 
+  @SerializedName("AllowSorting")
   private String allowSorting = null;
 
+  @SerializedName("AllowInsertingColumn")
   private String allowInsertingColumn = null;
 
+  @SerializedName("Password")
   private String password = null;
 
+  @SerializedName("AllowDeletingRow")
   private String allowDeletingRow = null;
 
+  @SerializedName("ProtectionType")
   private String protectionType = null;
 
   public ProtectSheetParameter allowSelectingUnlockedCell(String allowSelectingUnlockedCell) {
@@ -161,7 +186,7 @@ public class ProtectSheetParameter {
 
   public ProtectSheetParameter addAllowEditAreaItem(String allowEditAreaItem) {
     if (this.allowEditArea == null) {
-      this.allowEditArea = null;
+      this.allowEditArea = new ArrayList<String>();
     }
     this.allowEditArea.add(allowEditAreaItem);
     return this;

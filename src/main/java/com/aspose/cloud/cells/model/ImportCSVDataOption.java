@@ -28,104 +28,39 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.CustomParserConfig;
 import com.aspose.cloud.cells.model.FileSource;
 import com.aspose.cloud.cells.model.ImportOption;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ImportCSVDataOption
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ImportCSVDataOption extends ImportOption {
-  private FileSource source = null;
-
-  private String importDataType = null;
-
-  private String destinationWorksheet = null;
-
-  private Boolean isInsert = null;
-
+  @SerializedName("ConvertNumericData")
   private Boolean convertNumericData = null;
 
+  @SerializedName("FirstColumn")
   private Integer firstColumn = null;
 
+  @SerializedName("SourceFile")
   private String sourceFile = null;
 
+  @SerializedName("FirstRow")
   private Integer firstRow = null;
 
+  @SerializedName("SeparatorString")
   private String separatorString = null;
 
+  @SerializedName("CustomParsers")
   private List<CustomParserConfig> customParsers = null;
-
-  public ImportCSVDataOption source(FileSource source) {
-    this.source = source;
-    return this;
-  }
-
-   /**
-   * Get source
-   * @return source
-  **/
-  @ApiModelProperty(value = "")
-  public FileSource getSource() {
-    return source;
-  }
-
-  public void setSource(FileSource source) {
-    this.source = source;
-  }
-
-  public ImportCSVDataOption importDataType(String importDataType) {
-    this.importDataType = importDataType;
-    return this;
-  }
-
-   /**
-   * Get importDataType
-   * @return importDataType
-  **/
-  @ApiModelProperty(value = "")
-  public String getImportDataType() {
-    return importDataType;
-  }
-
-  public void setImportDataType(String importDataType) {
-    this.importDataType = importDataType;
-  }
-
-  public ImportCSVDataOption destinationWorksheet(String destinationWorksheet) {
-    this.destinationWorksheet = destinationWorksheet;
-    return this;
-  }
-
-   /**
-   * Get destinationWorksheet
-   * @return destinationWorksheet
-  **/
-  @ApiModelProperty(value = "")
-  public String getDestinationWorksheet() {
-    return destinationWorksheet;
-  }
-
-  public void setDestinationWorksheet(String destinationWorksheet) {
-    this.destinationWorksheet = destinationWorksheet;
-  }
-
-  public ImportCSVDataOption isInsert(Boolean isInsert) {
-    this.isInsert = isInsert;
-    return this;
-  }
-
-   /**
-   * Get isInsert
-   * @return isInsert
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getIsInsert() {
-    return isInsert;
-  }
-
-  public void setIsInsert(Boolean isInsert) {
-    this.isInsert = isInsert;
-  }
 
   public ImportCSVDataOption convertNumericData(Boolean convertNumericData) {
     this.convertNumericData = convertNumericData;
@@ -137,7 +72,7 @@ public class ImportCSVDataOption extends ImportOption {
    * @return convertNumericData
   **/
   @ApiModelProperty(value = "")
-  public Boolean getConvertNumericData() {
+  public Boolean ConvertNumericData() {
     return convertNumericData;
   }
 
@@ -224,7 +159,7 @@ public class ImportCSVDataOption extends ImportOption {
 
   public ImportCSVDataOption addCustomParsersItem(CustomParserConfig customParsersItem) {
     if (this.customParsers == null) {
-      this.customParsers = null;
+      this.customParsers = new ArrayList<CustomParserConfig>();
     }
     this.customParsers.add(customParsersItem);
     return this;
@@ -253,11 +188,7 @@ public class ImportCSVDataOption extends ImportOption {
       return false;
     }
     ImportCSVDataOption importCSVDataOption = (ImportCSVDataOption) o;
-    return Objects.equals(this.source, importCSVDataOption.source) &&
-        Objects.equals(this.importDataType, importCSVDataOption.importDataType) &&
-        Objects.equals(this.destinationWorksheet, importCSVDataOption.destinationWorksheet) &&
-        Objects.equals(this.isInsert, importCSVDataOption.isInsert) &&
-        Objects.equals(this.convertNumericData, importCSVDataOption.convertNumericData) &&
+    return Objects.equals(this.convertNumericData, importCSVDataOption.convertNumericData) &&
         Objects.equals(this.firstColumn, importCSVDataOption.firstColumn) &&
         Objects.equals(this.sourceFile, importCSVDataOption.sourceFile) &&
         Objects.equals(this.firstRow, importCSVDataOption.firstRow) &&
@@ -268,7 +199,7 @@ public class ImportCSVDataOption extends ImportOption {
 
   @Override
   public int hashCode() {
-    return Objects.hash(source, importDataType, destinationWorksheet, isInsert, convertNumericData, firstColumn, sourceFile, firstRow, separatorString, customParsers, super.hashCode());
+    return Objects.hash(convertNumericData, firstColumn, sourceFile, firstRow, separatorString, customParsers, super.hashCode());
   }
 
 
@@ -277,10 +208,6 @@ public class ImportCSVDataOption extends ImportOption {
     StringBuilder sb = new StringBuilder();
     sb.append("class ImportCSVDataOption {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
-    sb.append("    importDataType: ").append(toIndentedString(importDataType)).append("\n");
-    sb.append("    destinationWorksheet: ").append(toIndentedString(destinationWorksheet)).append("\n");
-    sb.append("    isInsert: ").append(toIndentedString(isInsert)).append("\n");
     sb.append("    convertNumericData: ").append(toIndentedString(convertNumericData)).append("\n");
     sb.append("    firstColumn: ").append(toIndentedString(firstColumn)).append("\n");
     sb.append("    sourceFile: ").append(toIndentedString(sourceFile)).append("\n");

@@ -28,94 +28,24 @@ import java.util.Objects;
 import com.aspose.cloud.cells.model.CellValue;
 import com.aspose.cloud.cells.model.FileSource;
 import com.aspose.cloud.cells.model.ImportOption;
-import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ImportBatchDataOption
  */
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-26T04:43:50.471-05:00")
 public class ImportBatchDataOption extends ImportOption {
-  private FileSource source = null;
-
-  private String importDataType = null;
-
-  private String destinationWorksheet = null;
-
-  private Boolean isInsert = null;
-
+  @SerializedName("BatchData")
   private List<CellValue> batchData = null;
-
-  public ImportBatchDataOption source(FileSource source) {
-    this.source = source;
-    return this;
-  }
-
-   /**
-   * Get source
-   * @return source
-  **/
-  @ApiModelProperty(value = "")
-  public FileSource getSource() {
-    return source;
-  }
-
-  public void setSource(FileSource source) {
-    this.source = source;
-  }
-
-  public ImportBatchDataOption importDataType(String importDataType) {
-    this.importDataType = importDataType;
-    return this;
-  }
-
-   /**
-   * Get importDataType
-   * @return importDataType
-  **/
-  @ApiModelProperty(value = "")
-  public String getImportDataType() {
-    return importDataType;
-  }
-
-  public void setImportDataType(String importDataType) {
-    this.importDataType = importDataType;
-  }
-
-  public ImportBatchDataOption destinationWorksheet(String destinationWorksheet) {
-    this.destinationWorksheet = destinationWorksheet;
-    return this;
-  }
-
-   /**
-   * Get destinationWorksheet
-   * @return destinationWorksheet
-  **/
-  @ApiModelProperty(value = "")
-  public String getDestinationWorksheet() {
-    return destinationWorksheet;
-  }
-
-  public void setDestinationWorksheet(String destinationWorksheet) {
-    this.destinationWorksheet = destinationWorksheet;
-  }
-
-  public ImportBatchDataOption isInsert(Boolean isInsert) {
-    this.isInsert = isInsert;
-    return this;
-  }
-
-   /**
-   * Get isInsert
-   * @return isInsert
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean getIsInsert() {
-    return isInsert;
-  }
-
-  public void setIsInsert(Boolean isInsert) {
-    this.isInsert = isInsert;
-  }
 
   public ImportBatchDataOption batchData(List<CellValue> batchData) {
     this.batchData = batchData;
@@ -124,7 +54,7 @@ public class ImportBatchDataOption extends ImportOption {
 
   public ImportBatchDataOption addBatchDataItem(CellValue batchDataItem) {
     if (this.batchData == null) {
-      this.batchData = null;
+      this.batchData = new ArrayList<CellValue>();
     }
     this.batchData.add(batchDataItem);
     return this;
@@ -153,17 +83,13 @@ public class ImportBatchDataOption extends ImportOption {
       return false;
     }
     ImportBatchDataOption importBatchDataOption = (ImportBatchDataOption) o;
-    return Objects.equals(this.source, importBatchDataOption.source) &&
-        Objects.equals(this.importDataType, importBatchDataOption.importDataType) &&
-        Objects.equals(this.destinationWorksheet, importBatchDataOption.destinationWorksheet) &&
-        Objects.equals(this.isInsert, importBatchDataOption.isInsert) &&
-        Objects.equals(this.batchData, importBatchDataOption.batchData) &&
+    return Objects.equals(this.batchData, importBatchDataOption.batchData) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(source, importDataType, destinationWorksheet, isInsert, batchData, super.hashCode());
+    return Objects.hash(batchData, super.hashCode());
   }
 
 
@@ -172,10 +98,6 @@ public class ImportBatchDataOption extends ImportOption {
     StringBuilder sb = new StringBuilder();
     sb.append("class ImportBatchDataOption {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
-    sb.append("    importDataType: ").append(toIndentedString(importDataType)).append("\n");
-    sb.append("    destinationWorksheet: ").append(toIndentedString(destinationWorksheet)).append("\n");
-    sb.append("    isInsert: ").append(toIndentedString(isInsert)).append("\n");
     sb.append("    batchData: ").append(toIndentedString(batchData)).append("\n");
     sb.append("}");
     return sb.toString();
