@@ -1,5 +1,5 @@
 group = 'com.aspose'
-project.version = '20.9'
+project.version = '20.10'
 
 buildscript {
     repositories {
