@@ -150,11 +150,20 @@ public class ApiClient {
 
     private HttpLoggingInterceptor loggingInterceptor;
 
-    /*
-     * Constructor for ApiClient
-     */
-    public ApiClient() {
-        httpClient = new OkHttpClient();
+	private boolean needAuth = true;
+
+	/*
+	 * Set needAuth
+	 */ 
+	public void SetNeedAuth(boolean need)
+	{
+		needAuth = need;
+	}
+	/*
+	 * Constructor for ApiClient
+	 */
+	public ApiClient() {
+		httpClient = new OkHttpClient();
 
 
         verifyingSsl = true;
@@ -186,14 +195,96 @@ public class ApiClient {
         authentications = Collections.unmodifiableMap(authentications);
     }
 
-    /**
-     * Get base path
-     *
-     * @return Baes path
-     */
-    public String getBasePath() {
-        return basePath;
-    }
+	private String _clientId;
+	private String _clientSecret;
+	private String appVersion = "v3.0";
+	private String appGrantType;
+	private DateTime getAccessTokenTime;
+
+	/**
+	 * Get access token
+	 * 
+	 * @param grantType
+	 * @param clientId
+	 * @param clientSecret
+	 * @param version
+	 * @return
+	 * @throws ApiException
+	 */
+	public String getAccessToken(String grantType, String clientId,
+			String clientSecret, String version) throws ApiException {
+		Object localVarPostBody = null;
+
+		// create path and map variables]
+		appGrantType = grantType;
+		_clientId = clientId;
+		_clientSecret = clientSecret;
+		appVersion = version;
+
+		String localVarPath = "/connect/token";
+		if (version == "v1.1") {
+			localVarPath = "/oauth2/token";
+		}
+		List<Pair> localVarQueryParams = new ArrayList<Pair>();
+
+		Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+		Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+		if (grantType != null)
+			localVarFormParams.put("grant_type", grantType);
+		if (clientId != null)
+			localVarFormParams.put("client_id", clientId);
+		if (clientSecret != null)
+			localVarFormParams.put("client_secret", clientSecret);
+
+		final String[] localVarAccepts = { "application/json" };
+		final String localVarAccept = selectHeaderAccept(localVarAccepts);
+		if (localVarAccept != null)
+			localVarHeaderParams.put("Accept", localVarAccept);
+
+		final String[] localVarContentTypes = { "application/x-www-form-urlencoded" };
+		final String localVarContentType = selectHeaderContentType(localVarContentTypes);
+		localVarHeaderParams.put("Content-Type", localVarContentType);
+
+		String[] localVarAuthNames = new String[] {};
+		
+		Request request = buildGetAccessTokenRequest(localVarPath,  localVarQueryParams, localVarPostBody,
+				localVarHeaderParams, localVarFormParams, localVarAuthNames);
+
+		com.squareup.okhttp.Call call = httpClient.newCall(request);
+		
+		Type localVarReturnType = new TypeToken<AccessTokenResponse>() {
+		}.getType();
+		ApiResponse<AccessTokenResponse> resp = execute(call,
+				localVarReturnType);
+		String accessToken = resp.getData().getAccessToken();
+		getAccessTokenTime = DateTime.now();
+		return accessToken;
+	}
+
+	public void checkAccessToken() throws ApiException {
+		if (getAccessTokenTime == null) {
+			return;
+		}
+		if((_clientId == null || _clientId.length() == 0) && (_clientSecret == null ||_clientSecret.length() == 0)){
+			return;
+        }
+		if (DateTime.now().compareTo(getAccessTokenTime.plusSeconds(86300))>0 ) {
+			String accessToken = getAccessToken(appGrantType, _clientId, _clientSecret,
+					appVersion);
+			getAccessTokenTime = DateTime.now();
+			addDefaultHeader("Authorization", "Bearer " + accessToken);
+		}
+	}
+
+	/**
+	 * Get base path
+	 *
+	 * @return Baes path
+	 */
+	public String getBasePath() {
+		return basePath;
+	}
 
     /**
      * Set base path
@@ -468,79 +559,7 @@ public class ApiClient {
     public Authentication getAuthentication(String authName) {
         return authentications.get(authName);
     }
-    private String appSid;
-    private String appKey;
-    private String appVersion = "v3.0";
-    private String appGrantType;
-    private DateTime getAccessTokenTime;
-    /**
-     * Get access token
-     * @param grantType
-     * @param clientId
-     * @param clientSecret
-     * @param version
-     * @return
-     * @throws ApiException
-     */
-    public String getAccessToken(String grantType, String clientId, String clientSecret,String version) throws ApiException {
-        Object localVarPostBody = null;
-        appGrantType = grantType;
-        appSid = clientId;
-        appKey = clientSecret;
-        appVersion = version;
-        // create path and map variables
 
-        String localVarPath = "/connect/token";
-        if( version == "v1.1")
-        {
-            localVarPath ="/oauth2/token";
-        }
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (grantType != null)
-            localVarFormParams.put("grant_type", grantType);
-        if (clientId != null)
-            localVarFormParams.put("client_id", clientId);
-        if (clientSecret != null)
-            localVarFormParams.put("client_secret", clientSecret);
-
-        final String[] localVarAccepts = {
-                "application/json"
-        };
-        final String localVarAccept = selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-                "application/x-www-form-urlencoded"
-        };
-        final String localVarContentType = selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        String[] localVarAuthNames = new String[] {  };
-
-        Request request = buildGetAccessTokenRequest(localVarPath,  localVarQueryParams, localVarPostBody,
-                localVarHeaderParams, localVarFormParams, localVarAuthNames);
-
-        com.squareup.okhttp.Call call = httpClient.newCall(request);
-        Type localVarReturnType = new TypeToken<AccessTokenResponse>(){}.getType();
-        ApiResponse<AccessTokenResponse> resp =  execute(call, localVarReturnType);
-        getAccessTokenTime = DateTime.now();
-        return resp.getData().getAccessToken();
-    }
-    public void checkAccessToken() throws ApiException {
-        if (getAccessTokenTime == null) {
-            return;
-        }
-        if (DateTime.now().compareTo(getAccessTokenTime.plusSeconds(86300))>0 ) {
-            String accessToken = getAccessToken(appGrantType, appSid, appKey,
-                    appVersion);
-            getAccessTokenTime = DateTime.now();
-            addDefaultHeader("Authorization", "Bearer " + accessToken);
-        }
-    }
     /**
      * Helper method to set username for the first HTTP basic authentication.
      *
